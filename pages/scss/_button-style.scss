@@ -1,0 +1,20 @@
+.myButton {
+  background-color: #efe3b1;
+  border-radius: 29px;
+  border: 1px solid #081f2d;
+  color: #081f2d;
+  font-size: 15px;
+  padding: 10px 45px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: white;
+    color: #081f2d;
+    border-color: #081f2d;
+    transition: 0.3s;
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}

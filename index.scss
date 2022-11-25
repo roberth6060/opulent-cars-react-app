@@ -1,0 +1,51 @@
+@import "./pages/scss/navbar-style";
+@import "./pages/scss/home-page-style";
+@import "./pages/scss/button-style";
+@import "./pages/scss/map-api-style";
+
+/**NOTE - Global Styles */
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html,
+body {
+  margin: 0;
+}
+
+.main-container {
+  // margin: auto;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  padding: 40px 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px 0;
+
+  img {
+    margin-right: 15px;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 0;
+
+  img {
+    margin-right: 15px;
+  }
+}
+
+.hidden {
+  display: none;
+}

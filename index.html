@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opulent Cars</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+
+    <!-- leaflet-Map Library (You can also use npm install leaflet) -->
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+    <script defer src="./src/script.js"></script>
+  </head>
+  <body>
+    <div id="home-page">
+      <!-- *********** HEADER SECTION *********** -->
+      <div id="home-header">
+        <!-- ***** NAVBAR ***** -->
+        <div class="navbar">
+          <input id="menu-toggle" type="checkbox" />
+          <label class="menu-button-container" for="menu-toggle">
+            <span class="menu-button"></span>
+          </label>
+          <ul class="menu">
+            <li class="active"><a href="./index.html">Home</a></li>
+            <li><a href="./pages/pioneers.html">About</a></li>
+            <li><a href="./pages/http.html">Collection</a></li>
+            <li>Opulent Cars</li>
+            <li><a href="./pages/terminology.html">Shop</a></li>
+            <li><a href="./pages/references.html">Blog</a></li>
+            <li><a href="./pages/references.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h1>Luxury Car<br />Dealership</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            impedit suscipit ea!
+          </p>
+          <a href="#" class="myButton">Shop Now</a>
+        </div>
+        <div>
+          <h3>What Color Is Your Future Car?</h3>
+        </div>
+      </div>
+
+      <!-- *********** ABOUT SECTION *********** -->
+      <div id="about-section">
+        <div class="container">
+          <div class="row">
+            <img
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+              alt="Ceo"
+              width="200"
+            />
+            <div>
+              <h2>About Us</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                fuga velit facere et saepe. Facere fugiat quod ipsum corrupti
+                aperiam amet expedita esse. Sint dolorem libero natus veritatis
+                dolor hic quas ullam a necessitatibus numquam sequi quam aut
+                rerum fuga reprehenderit magni culpa ducimus voluptas iusto
+                maxime, eveniet quo rem!...
+              </p>
+              <a href="./pages/about.html" class="myButton">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- *********** ARTICLES SECTION *********** -->
+      <div id="articles-section">
+        <div class="container">
+          <h2>Articles</h2>
+          <div class="row">
+            <!-- Card 1 -->
+            <div class="card-container">
+              <img
+                src="https://images.unsplash.com/photo-1612813562440-f3f455f77bf7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80"
+                alt="car"
+                width="200"
+                height="200"
+                style="object-fit: cover"
+              />
+              <h4>History of Luxury Cars</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                accusamus odio corporis.
+              </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card-container">
+              <img
+                src="https://images.unsplash.com/photo-1584345604325-f5091269a0d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                alt="car"
+                width="200"
+                height="200"
+                style="object-fit: cover"
+              />
+              <h4>Title</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                accusamus odio corporis.
+              </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card-container">
+              <img
+                src="https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                alt="car"
+                width="200"
+                height="200"
+                style="object-fit: cover"
+              />
+              <h4>Title</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                accusamus odio corporis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- *********** COLLECTION SECTION *********** -->
+      <div id="collection-section">
+        <div class="container">
+          <h2>Our Collection</h2>
+          <div class="row">
+            <div id="category1"></div>
+            <div>
+              <div id="category2"></div>
+              <div id="category3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- *********** FEATURED SECTION *********** -->
+      <div id="featured-section">
+        <div class="container">
+          <div class="row">
+            <img
+              src="https://images.unsplash.com/photo-1570374910698-6db3d787e6fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80"
+              alt=""
+              width="200"
+            />
+            <div>
+              <h2>Lorem Ipsum</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                illum optio libero assumenda laboriosam obcaecati quae saepe
+                perspiciatis, accusantium a.
+              </p>
+              <a href="#" class="myButton">Read More</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <h2>Lorem Ipsum</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                illum optio libero assumenda laboriosam obcaecati quae saepe
+                perspiciatis, accusantium a.
+              </p>
+              <a href="#" class="myButton">Read More</a>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1570374910698-6db3d787e6fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80"
+              alt=""
+              width="200"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- *********** LOCATION SECTION *********** -->
+      <div id="location-section">
+        <div class="container">
+          <h2>Location</h2>
+          <div id="map"></div>
+        </div>
+
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+          integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+          crossorigin=""
+        />
+      </div>
+    </div>
+  </body>
+</html>
