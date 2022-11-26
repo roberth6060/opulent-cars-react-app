@@ -1,4 +1,4 @@
-/* ========== Displaying a Map Using Leaflet Library ========== */
+/* ========= Displaying a Map Using Leaflet Library =========*/
 let map;
 let mapEvent;
 const latitude = 45.7988904;

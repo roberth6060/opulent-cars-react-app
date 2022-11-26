@@ -11,12 +11,15 @@
 html,
 body {
   margin: 0;
+  padding: 0;
 }
 
-.main-container {
-  // margin: auto;
+h1 {
+  font-size: 60px;
 }
-
+h2 {
+  font-size: 40px;
+}
 .container {
   margin: 0 auto;
   width: 80%;
