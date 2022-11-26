@@ -1,4 +1,4 @@
-# Island Apparel
+# Opulent Cars
 Luxury car dealership website created for Web and Mobile I at RIT Croatia Zagreb Campus.
 
 ## Built With
