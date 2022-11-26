@@ -242,6 +242,37 @@
   min-height: auto;
   color: aliceblue;
 }
+#home-header p {
+  padding-bottom: 5px;
+}
+#home-header .color-picker {
+  text-align: center;
+  position: relative;
+  top: 150px;
+}
+#home-header .color-picker h3 {
+  font-size: 25px;
+}
+#home-header .color-picker .colors {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 100%;
+  border-style: solid;
+  margin: 10px;
+}
+#home-header .color-picker .colors:nth-child(1) {
+  background-color: red;
+}
+#home-header .color-picker .colors:nth-child(2) {
+  background-color: purple;
+}
+#home-header .color-picker .colors:nth-child(3) {
+  background-color: yellow;
+}
+#home-header .color-picker .colors:nth-child(4) {
+  background-color: green;
+}
 
 #articles-section {
   background-color: #b3a18f;

@@ -8,6 +8,41 @@ $bg-brown: #b3a18f;
   height: 700px;
   min-height: auto;
   color: aliceblue;
+
+  p {
+    padding-bottom: 5px;
+  }
+
+  .color-picker {
+    text-align: center;
+    position: relative;
+
+    top: 150px;
+
+    h3 {
+      font-size: 25px;
+    }
+    .colors {
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      border-radius: 100%;
+      border-style: solid;
+      margin: 10px;
+      &:nth-child(1) {
+        background-color: red;
+      }
+      &:nth-child(2) {
+        background-color: purple;
+      }
+      &:nth-child(3) {
+        background-color: yellow;
+      }
+      &:nth-child(4) {
+        background-color: green;
+      }
+    }
+  }
 }
 
 #articles-section {
