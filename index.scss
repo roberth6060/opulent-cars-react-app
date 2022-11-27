@@ -2,6 +2,8 @@
 @import "./pages/scss/home-page-style";
 @import "./pages/scss/button-style";
 @import "./pages/scss/map-api-style";
+@import "./pages/scss/about-style";
+@import "./pages/scss/articles-styles";
 
 /**NOTE - Global Styles */
 * {
@@ -19,6 +21,9 @@ h1 {
 }
 h2 {
   font-size: 40px;
+}
+p {
+  line-height: 1.5;
 }
 .container {
   margin: 0 auto;

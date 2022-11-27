@@ -17,4 +17,28 @@ L.marker([latitude, longitude])
 }))
     .setPopupContent("Savska opatovina 96, 10070, Zagreb, Croatia")
     .openPopup();
+const homeheader = document.getElementById("home-header");
+const colorPicker = document.querySelector(".color-picker");
+homeheader === null || homeheader === void 0 ? void 0 : homeheader.addEventListener("mouseenter", (e) => {
+    colorPicker === null || colorPicker === void 0 ? void 0 : colorPicker.classList.remove("hidden");
+});
+homeheader === null || homeheader === void 0 ? void 0 : homeheader.addEventListener("mouseleave", () => {
+    colorPicker === null || colorPicker === void 0 ? void 0 : colorPicker.classList.add("hidden");
+});
+colorPicker === null || colorPicker === void 0 ? void 0 : colorPicker.addEventListener("click", (e) => {
+    e.preventDefault();
+    const color = e.target;
+    if (color.classList.contains("orange")) {
+        homeheader.style.backgroundImage = "url('../assets/images/orange-car.jpg')";
+    }
+    if (color.classList.contains("blue")) {
+        homeheader.style.backgroundImage = "url('../assets/images/blue-car.png')";
+    }
+    if (color.classList.contains("yellow")) {
+        homeheader.style.backgroundImage = "url('../assets/images/yellow-car.png')";
+    }
+    if (color.classList.contains("green")) {
+        homeheader.style.backgroundImage = "url('../assets/images/green-car.png')";
+    }
+});
 //# sourceMappingURL=script.js.map

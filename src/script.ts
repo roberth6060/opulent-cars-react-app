@@ -23,3 +23,35 @@ L.marker([latitude, longitude])
   )
   .setPopupContent("Savska opatovina 96, 10070, Zagreb, Croatia") //fake address
   .openPopup();
+
+/* ========= Functionality for color picker =========*/
+
+const homeheader = document.getElementById("home-header") as HTMLImageElement;
+const colorPicker = document.querySelector(".color-picker");
+
+homeheader?.addEventListener("mouseenter", (e) => {
+  colorPicker?.classList.remove("hidden");
+});
+
+homeheader?.addEventListener("mouseleave", () => {
+  colorPicker?.classList.add("hidden");
+});
+
+colorPicker?.addEventListener("click", (e) => {
+  e.preventDefault();
+  const color = e.target as HTMLTextAreaElement;
+
+  if (color.classList.contains("orange")) {
+    homeheader.style.backgroundImage = "url('../assets/images/orange-car.jpg')";
+  }
+
+  if (color.classList.contains("blue")) {
+    homeheader.style.backgroundImage = "url('../assets/images/blue-car.png')";
+  }
+  if (color.classList.contains("yellow")) {
+    homeheader.style.backgroundImage = "url('../assets/images/yellow-car.png')";
+  }
+  if (color.classList.contains("green")) {
+    homeheader.style.backgroundImage = "url('../assets/images/green-car.png')";
+  }
+});

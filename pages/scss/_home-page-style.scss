@@ -1,7 +1,7 @@
 /***** Home Section Start Starts *****/
 $bg-brown: #b3a18f;
 #home-header {
-  background-image: url("https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80");
+  background-image: url("../../assets/images/orange-car.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,11 +29,12 @@ $bg-brown: #b3a18f;
       border-radius: 100%;
       border-style: solid;
       margin: 10px;
+      cursor: pointer;
       &:nth-child(1) {
-        background-color: red;
+        background-color: orangered;
       }
       &:nth-child(2) {
-        background-color: purple;
+        background-color: blue;
       }
       &:nth-child(3) {
         background-color: yellow;
@@ -44,6 +45,8 @@ $bg-brown: #b3a18f;
     }
   }
 }
+
+//Mouserenter and mouseleave animation:
 
 #articles-section {
   background-color: $bg-brown;

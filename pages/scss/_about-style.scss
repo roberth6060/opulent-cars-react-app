@@ -1,0 +1,18 @@
+#about-section {
+  img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: top left;
+    margin-right: 30px;
+  }
+  .about-content {
+    position: relative;
+    // width: 700px;
+    .myButton {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
