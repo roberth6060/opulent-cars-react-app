@@ -12,15 +12,6 @@
   font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
 }
 
-.logo {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
-
 .navbar-bg {
   background-color: #5b7071;
 }
@@ -42,8 +33,16 @@
   color: aliceblue;
 }
 .menu .logo {
-  background-color: rgba(255, 255, 255, 0.235);
+  background-color: rgba(255, 255, 255, 0.35);
   border-radius: 5px;
+  font-family: "Rubik 80s Fade", cursive;
+  font-weight: bold;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 .menu a {
   position: relative;
@@ -552,6 +551,18 @@
   margin-left: auto;
   margin-right: auto;
 }
+#article-section figure {
+  margin-bottom: 10px;
+}
+#article-section ul {
+  display: inline-block;
+  list-style: circle;
+  padding: 0;
+}
+#article-section ul li {
+  list-style-position: inside;
+  padding-bottom: 5px;
+}
 
 #footer {
   background-color: #b3a18f;
@@ -595,6 +606,10 @@ html,
 body {
   margin: 0;
   padding: 0;
+}
+
+figure {
+  margin: 0;
 }
 
 h1 {
