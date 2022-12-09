@@ -12,6 +12,10 @@
   font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
 }
 
+.navbar-bg {
+  background-color: #5b7071;
+}
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -456,11 +460,25 @@
   background-color: #aaa;
 }
 
-.about-page .navbar {
-  background-color: #b3a18f;
-}
 .about-page .title {
   text-align: center;
+}
+
+#articles-page #articles-section {
+  background-color: white;
+}
+#articles-page #articles-section .card-container {
+  width: 400px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#articles-page #articles-section .card-container:hover {
+  background-color: rgba(0, 0, 0, 0.102);
+}
+#articles-page #articles-section .card-container img {
+  width: 100%;
 }
 
 #footer {
@@ -491,9 +509,6 @@
   padding: 5px;
 }
 
-.about-page .navbar {
-  background-color: #b3a18f;
-}
 .about-page .title {
   text-align: center;
 }

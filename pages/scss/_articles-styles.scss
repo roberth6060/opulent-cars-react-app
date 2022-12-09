@@ -1,0 +1,19 @@
+#articles-page {
+  #articles-section {
+    background-color: $arrow-clr;
+    .card-container {
+      width: 400px;
+      margin: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.102);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
