@@ -459,6 +459,9 @@
 .about-page .navbar {
   background-color: #b3a18f;
 }
+.about-page .title {
+  text-align: center;
+}
 
 #footer {
   background-color: #b3a18f;
@@ -490,6 +493,9 @@
 
 .about-page .navbar {
   background-color: #b3a18f;
+}
+.about-page .title {
+  text-align: center;
 }
 
 /**NOTE - Global Styles */
@@ -545,4 +551,8 @@ p {
 
 .hidden {
   display: none;
+}
+
+.margin-top {
+  margin-top: 50px;
 }/*# sourceMappingURL=index.css.map */
