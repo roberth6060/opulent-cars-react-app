@@ -276,6 +276,9 @@
   background-color: green;
 }
 
+#about-section h2 {
+  margin-top: 0;
+}
 #about-section img {
   width: 350px;
   height: 350px;
