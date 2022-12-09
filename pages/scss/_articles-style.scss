@@ -1,6 +1,7 @@
 #articles-page {
   #articles-section {
     background-color: $arrow-clr;
+
     .card-container {
       width: 400px;
       margin: 20px;
@@ -15,5 +16,11 @@
         width: 100%;
       }
     }
+  }
+}
+
+#articles-section {
+  a {
+    color: black;
   }
 }
