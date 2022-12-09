@@ -453,6 +453,10 @@
   background-color: #aaa;
 }
 
+.about-page .navbar {
+  background-color: #b3a18f;
+}
+
 #footer {
   background-color: #b3a18f;
   color: white;
@@ -479,6 +483,10 @@
 }
 #footer .social-media i {
   padding: 5px;
+}
+
+.about-page .navbar {
+  background-color: #b3a18f;
 }
 
 /**NOTE - Global Styles */
