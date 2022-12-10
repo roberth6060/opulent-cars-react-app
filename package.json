@@ -4,8 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "python3 -m http.server",
-    "build": "tsc -p ."
+    "start": "python3 -m http.server"
   },
   "dependencies": {
     "@types/geojson": "^7946.0.10",

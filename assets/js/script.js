@@ -29,16 +29,20 @@ colorPicker === null || colorPicker === void 0 ? void 0 : colorPicker.addEventLi
     e.preventDefault();
     const color = e.target;
     if (color.classList.contains("orange")) {
-        homeheader.style.backgroundImage = "url('../assets/images/orange-car.jpg')";
+        homeheader.style.backgroundImage =
+            "url('https://i.ibb.co/x38fnTG/orange-car.png')";
     }
     if (color.classList.contains("blue")) {
-        homeheader.style.backgroundImage = "url('../assets/images/blue-car.png')";
+        homeheader.style.backgroundImage =
+            "url('https://i.ibb.co/4jHgCWq/blue-car.png')";
     }
     if (color.classList.contains("yellow")) {
-        homeheader.style.backgroundImage = "url('../assets/images/yellow-car.png')";
+        homeheader.style.backgroundImage =
+            "url('https://i.ibb.co/xg2T2BC/yellow-car.png')";
     }
     if (color.classList.contains("green")) {
-        homeheader.style.backgroundImage = "url('../assets/images/green-car.png')";
+        homeheader.style.backgroundImage =
+            "url('https://i.ibb.co/MnwtyXG/green-car.png')";
     }
 });
 //# sourceMappingURL=script.js.map
