@@ -997,6 +997,12 @@ textarea {
     width: 99%;
   }
 }
+#shop-page .warning-content {
+  height: 300px;
+  text-align: center;
+  margin: 0;
+}
+
 /**NOTE - Global Styles */
 * {
   box-sizing: border-box;
