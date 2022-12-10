@@ -30,11 +30,11 @@ colorPicker === null || colorPicker === void 0 ? void 0 : colorPicker.addEventLi
     const color = e.target;
     if (color.classList.contains("orange")) {
         homeheader.style.backgroundImage =
-            "url('https://i.ibb.co/x38fnTG/orange-car.png')";
+            "url('https://i.ibb.co/25Ysz4P/orange-car.png')";
     }
     if (color.classList.contains("blue")) {
         homeheader.style.backgroundImage =
-            "url('https://i.ibb.co/4jHgCWq/blue-car.png')";
+            "url('https://i.ibb.co/FBFqc6r/blue-car.png')";
     }
     if (color.classList.contains("yellow")) {
         homeheader.style.backgroundImage =

@@ -254,6 +254,7 @@
   height: 700px;
   min-height: auto;
   color: aliceblue;
+  transition: all 0.6s ease-in;
 }
 #home-header p {
   padding-bottom: 5px;
