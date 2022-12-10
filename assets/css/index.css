@@ -246,6 +246,15 @@
 }
 /***** NAVBAR Ends *****/
 /***** Home Section Start Starts *****/
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url("https://i.ibb.co/25Ysz4P/orange-car.png") url("https://i.ibb.co/FBFqc6r/blue-car.png") url("https://i.ibb.co/xg2T2BC/yellow-car.png") url("https://i.ibb.co/MnwtyXG/green-car.png");
+}
+
 #home-header {
   background-image: url("../../assets/images/orange-car.jpg");
   background-position: center;
