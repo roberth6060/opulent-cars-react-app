@@ -277,6 +277,7 @@ body::after {
   font-size: 25px;
 }
 #home-header .color-picker .colors {
+  position: relative;
   width: 30px;
   height: 30px;
   background-color: white;
@@ -288,14 +289,31 @@ body::after {
 #home-header .color-picker .colors:nth-child(1) {
   background-color: orangered;
 }
+#home-header .color-picker .colors:nth-child(1):active {
+  top: 1px;
+}
 #home-header .color-picker .colors:nth-child(2) {
   background-color: blue;
+}
+#home-header .color-picker .colors:nth-child(2):active {
+  top: 1px;
 }
 #home-header .color-picker .colors:nth-child(3) {
   background-color: yellow;
 }
+#home-header .color-picker .colors:nth-child(3):active {
+  top: 1px;
+}
 #home-header .color-picker .colors:nth-child(4) {
   background-color: green;
+}
+#home-header .color-picker .colors:nth-child(4):active {
+  top: 1px;
+}
+
+.color:active {
+  position: relative;
+  top: 158px;
 }
 
 #about-section h2 {
@@ -312,6 +330,7 @@ body::after {
   position: relative;
   display: inline-block;
 }
+
 #articles-section {
   background-color: #b3a18f;
 }

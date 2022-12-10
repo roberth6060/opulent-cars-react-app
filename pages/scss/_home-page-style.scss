@@ -29,13 +29,13 @@ body::after {
   .color-picker {
     text-align: center;
     position: relative;
-
     top: 150px;
 
     h3 {
       font-size: 25px;
     }
     .colors {
+      position: relative;
       width: 30px;
       height: 30px;
       background-color: white;
@@ -45,18 +45,36 @@ body::after {
       cursor: pointer;
       &:nth-child(1) {
         background-color: orangered;
+        &:active {
+          top: 1px;
+        }
       }
       &:nth-child(2) {
         background-color: blue;
+        &:active {
+          top: 1px;
+        }
       }
       &:nth-child(3) {
         background-color: yellow;
+        &:active {
+          top: 1px;
+        }
       }
       &:nth-child(4) {
         background-color: green;
+        &:active {
+          top: 1px;
+        }
       }
     }
   }
+}
+
+//Button effect:
+.color:active {
+  position: relative;
+  top: 158px;
 }
 
 #about-section {
@@ -73,11 +91,6 @@ body::after {
   .about-content {
     position: relative;
     display: inline-block;
-    .myButton {
-      // position: absolute;
-      // bottom: 0;
-      // right: 0;
-    }
   }
 }
 
