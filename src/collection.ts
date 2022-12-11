@@ -1,9 +1,82 @@
+// type Data = {
+//   id: number;
+//   name: string;
+//   imageUrl: string;
+//   background: string;
+//   contributions: string;
+//   source: string;
+// };
+// //Global variables:
+// let isLoading: boolean = false;
+// const spinnerContainer = document.querySelector(".spinner-container");
+
+// const getData = async <T>(url: string): Promise<T> => {
+//   const response = await fetch(url);
+//   return await response.json();
+// };
+// /**Function - isLoadingStart */
+// const isLoadingStart = () => {
+//   isLoading = true;
+//   if (isLoading === true) spinnerContainer?.classList.remove("hidden");
+// };
+// /**Function - isLoadingEnd */
+// const isLoadingEnd = () => {
+//   isLoading = false;
+//   if (isLoading === false) spinnerContainer?.classList.add("hidden");
+// };
+
+// /**
+//  * Fetches the api I created containing information about internet pioneers
+//  */
+// const fetchUsers = async () => {
+//   isLoadingStart();
+//   const pioneers = await getData<Data[]>(
+//     "https://internet-pioneers-api.herokuapp.com/pioneers"
+//   );
+//   isLoadingEnd();
+//   //Renders content to DOM
+//   pioneers.map(({ name, imageUrl, contributions, background, source }) => {
+//     /**
+//      * Function - check if data type is undefined
+//      * @param listItem to be eveluated
+//      * @returns li html element
+//      */
+//     const checkIfUndefined = (listItem: string) =>
+//       typeof listItem !== "undefined" ? `<li>${listItem}</li>` : "";
+
+//     pioneersContent?.insertAdjacentHTML(
+//       "beforeend",
+//       `
+//       <figure class="card">
+//          <h3 class="title">${name}</h3>
+//          <img alt=${name} src=${imageUrl} width="200"/>
+//          <figcaption class="hidden">Source: <a href=${source}>${source?.substring(
+//         0,
+//         40
+//       )}...</a></figcaption>
+//          <p class="body">${background}</p>
+
+//          <h3>Contributions</h3>
+//          <ul>
+//           ${checkIfUndefined(contributions[0])}
+//           ${checkIfUndefined(contributions[1])}
+//           ${checkIfUndefined(contributions[2])}
+//          </ul>
+//       </figure>`
+//     );
+//   });
+// }; // end of fetchUsers
+
+// window.onload = () => {
+//   fetchUsers();
+// };
+
 /* ========= Collection Data and Functionality =========*/
 const myList = [
   {
     carName: "2019 Toyota Supra",
     carImage:
-      "https://res.cloudinary.com/dmnixrpra/image/upload/v1585878339/001_za_1.png",
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=aventador&modelRange=aventador-svj&modelVariant=co&modelYear=2019&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=imagin-grey&angle=01",
     carLbs: "365",
     carRwhp: "335",
     carPrice: "49,990",
@@ -12,7 +85,7 @@ const myList = [
   {
     carName: "Lexus LFA",
     carImage:
-      "https://res.cloudinary.com/dmnixrpra/image/upload/v1585878341/2020LEC350003_1280_03_1.png",
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=aventador&modelRange=aventador-svj&modelVariant=co&modelYear=2019&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=pspc0034&angle=01",
     carLbs: "354",
     carRwhp: "553",
     carPrice: "375,000",
@@ -21,7 +94,7 @@ const myList = [
   {
     carName: "Lamborghini Aventador",
     carImage:
-      "https://res.cloudinary.com/dmnixrpra/image/upload/v1585924300/lambo-transparent-side-view-10_1.png",
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=ford&modelFamily=mustang&modelRange=mach-1&modelVariant=co&modelYear=2021&powerTrain=fossil&transmission=0&bodySize=2&trim=0&paintId=pspc0034&angle=01",
     carLbs: "507",
     carRwhp: "729",
     carPrice: "463,000",

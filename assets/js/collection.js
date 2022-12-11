@@ -2,7 +2,7 @@
 const myList = [
     {
         carName: "2019 Toyota Supra",
-        carImage: "https://res.cloudinary.com/dmnixrpra/image/upload/v1585878339/001_za_1.png",
+        carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=aventador&modelRange=aventador-svj&modelVariant=co&modelYear=2019&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=imagin-grey&angle=01",
         carLbs: "365",
         carRwhp: "335",
         carPrice: "49,990",
@@ -10,7 +10,7 @@ const myList = [
     },
     {
         carName: "Lexus LFA",
-        carImage: "https://res.cloudinary.com/dmnixrpra/image/upload/v1585878341/2020LEC350003_1280_03_1.png",
+        carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=aventador&modelRange=aventador-svj&modelVariant=co&modelYear=2019&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=pspc0034&angle=01",
         carLbs: "354",
         carRwhp: "553",
         carPrice: "375,000",
@@ -18,7 +18,7 @@ const myList = [
     },
     {
         carName: "Lamborghini Aventador",
-        carImage: "https://res.cloudinary.com/dmnixrpra/image/upload/v1585924300/lambo-transparent-side-view-10_1.png",
+        carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=ford&modelFamily=mustang&modelRange=mach-1&modelVariant=co&modelYear=2021&powerTrain=fossil&transmission=0&bodySize=2&trim=0&paintId=pspc0034&angle=01",
         carLbs: "507",
         carRwhp: "729",
         carPrice: "463,000",
