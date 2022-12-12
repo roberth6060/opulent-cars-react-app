@@ -193,18 +193,17 @@ const createCollectionCard = (collectionType, collectionTypeElement) => {
     }
     collectionTypeElement.insertAdjacentHTML("beforeend", widgetContent);
 };
-const path = window.location.pathname;
-console.log(path);
-if (path === "/pages/collection.html") {
+const path = window.location.pathname.split("/");
+if (path[path.length - 1] === "collection.html") {
     createCollectionCard(totalCollectionData, totalCollection);
 }
-if (path === "/pages/suv-cars.html") {
+if (path[path.length - 1] === "suv-cars.html") {
     createCollectionCard(suvCarCollectionData, suvCarCollection);
 }
-if (path === "/pages/muscle-cars.html") {
+if (path[path.length - 1] === "muscle-cars.html") {
     createCollectionCard(muscleCarCollectionData, muscleCarCollection);
 }
-if (path === "/pages/sports-cars.html") {
+if (path[path.length - 1] === "sports-cars.html") {
     createCollectionCard(sportsCarCollectionData, sportsCarCollection);
 }
 //# sourceMappingURL=collection.js.map
