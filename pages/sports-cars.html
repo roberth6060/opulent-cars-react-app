@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Why Luxury Car Are So Expensive</title>
+    <title>Sports Collection</title>
     <!-- Linked CSS Stylesheet -->
     <link rel="stylesheet" href="../assets/css/index.css" />
   </head>
   <body>
-    <div class="article">
+    <div id="collection">
       <!-- ***** NAVBAR ***** -->
       <div class="navbar navbar-bg">
         <input id="menu-toggle" type="checkbox" />
@@ -19,81 +19,20 @@
         <ul class="menu">
           <li><a href="../index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
-          <li><a href="./collection.html">Collection</a></li>
+          <li class="active"><a href="./collection.html">Collection</a></li>
           <li class="logo">Opulent Cars</li>
           <li><a href="./shop.html">Shop</a></li>
-          <li class="active"><a href="./articles.html">Articles</a></li>
+          <li><a href="./articles.html">Articles</a></li>
           <li><a href="./contact.html">Contact</a></li>
         </ul>
       </div>
-      <!-- *********** article CONTENT *********** -->
-      <div id="article-section">
-        <a class="btn-back" href="./collection.html">Back</a>
-        <h2>Why People Like Luxury Cars</h2>
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1533558701576-23c65e0272fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-            alt="car"
-            width="500"
-            height="400"
-            style="object-fit: cover"
-          />
-          <figcaption>Lorem ipsum dolor sit amet.</figcaption>
-        </figure>
-        <span
-          >Created: Dec. 9, 2022<br />
-          By Robert Haye</span
-        >
-        <p>
-          People like luxury cars for a variety of reasons. For some, it's the
-          prestige and status that comes with owning a luxury car. For others,
-          it's the superior performance, design, and comfort that luxury cars
-          offer. <br />
-
-          One reason people like luxury cars is the prestige and status that
-          comes with owning one. Many people view luxury cars as a symbol of
-          success and wealth, and owning a luxury car can be a way of showing
-          off one's social and economic standing. For some people, owning a
-          luxury car is a sign that they have achieved a certain level of
-          success and are able to afford the best things in life.<br />
-
-          Another reason people like luxury cars is the superior performance and
-          design that these vehicles offer. Luxury cars are often built with
-          high-quality materials and cutting-edge technology, which can make
-          them more powerful, more efficient, and more comfortable to drive than
-          non-luxury cars. Additionally, luxury cars are often designed with an
-          emphasis on style and elegance, which can make them more visually
-          appealing and desirable to many people.<br />
-
-          Comfort is another factor that attracts people to luxury cars. Luxury
-          cars are designed with the utmost care and attention to detail, and
-          they often feature plush, high-quality materials and advanced
-          technology that can make them more comfortable to drive and ride in.
-          For example, many luxury cars have leather seats, advanced climate
-          control systems, and high-quality sound systems, which can make
-          driving a more enjoyable and relaxing experience.<br />
-
-          Furthermore, luxury cars often offer a range of advanced features and
-          technologies that are not available on non-luxury vehicles. For
-          example, many luxury cars come equipped with features such as advanced
-          safety systems, advanced infotainment systems, and advanced
-          driver-assistance technologies, which can make driving more convenient
-          and safer.<br />
-
-          In conclusion, people like luxury cars for a variety of reasons,
-          including the prestige and status that comes with owning one, the
-          superior performance and design, the comfort, and the advanced
-          features and technologies that these vehicles offer. Despite the high
-          cost of ownership, many people are willing to pay for the benefits
-          that luxury cars provide.
-        </p>
-        <!-- References -->
-        <ul>
-          <h3>References:</h3>
-          <li></li>
-          <li></li>
-        </ul>
+      <!-- *********** COLLECTION CONTENT *********** -->
+      <div class="container">
+        <h2>Our Collection of Luxury Cars</h2>
+        <div class="card-container total-collection"></div>
       </div>
     </div>
+
+    <script src="../assets/js/collection.js"></script>
   </body>
 </html>

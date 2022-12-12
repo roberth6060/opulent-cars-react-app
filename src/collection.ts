@@ -1,78 +1,80 @@
-// type Data = {
-//   id: number;
-//   name: string;
-//   imageUrl: string;
-//   background: string;
-//   contributions: string;
-//   source: string;
-// };
-// //Global variables:
-// let isLoading: boolean = false;
-// const spinnerContainer = document.querySelector(".spinner-container");
-
-// const getData = async <T>(url: string): Promise<T> => {
-//   const response = await fetch(url);
-//   return await response.json();
-// };
-// /**Function - isLoadingStart */
-// const isLoadingStart = () => {
-//   isLoading = true;
-//   if (isLoading === true) spinnerContainer?.classList.remove("hidden");
-// };
-// /**Function - isLoadingEnd */
-// const isLoadingEnd = () => {
-//   isLoading = false;
-//   if (isLoading === false) spinnerContainer?.classList.add("hidden");
-// };
-
-// /**
-//  * Fetches the api I created containing information about internet pioneers
-//  */
-// const fetchUsers = async () => {
-//   isLoadingStart();
-//   const pioneers = await getData<Data[]>(
-//     "https://internet-pioneers-api.herokuapp.com/pioneers"
-//   );
-//   isLoadingEnd();
-//   //Renders content to DOM
-//   pioneers.map(({ name, imageUrl, contributions, background, source }) => {
-//     /**
-//      * Function - check if data type is undefined
-//      * @param listItem to be eveluated
-//      * @returns li html element
-//      */
-//     const checkIfUndefined = (listItem: string) =>
-//       typeof listItem !== "undefined" ? `<li>${listItem}</li>` : "";
-
-//     pioneersContent?.insertAdjacentHTML(
-//       "beforeend",
-//       `
-//       <figure class="card">
-//          <h3 class="title">${name}</h3>
-//          <img alt=${name} src=${imageUrl} width="200"/>
-//          <figcaption class="hidden">Source: <a href=${source}>${source?.substring(
-//         0,
-//         40
-//       )}...</a></figcaption>
-//          <p class="body">${background}</p>
-
-//          <h3>Contributions</h3>
-//          <ul>
-//           ${checkIfUndefined(contributions[0])}
-//           ${checkIfUndefined(contributions[1])}
-//           ${checkIfUndefined(contributions[2])}
-//          </ul>
-//       </figure>`
-//     );
-//   });
-// }; // end of fetchUsers
-
-// window.onload = () => {
-//   fetchUsers();
-// };
-
 /* ========= Collection Data and Functionality =========*/
-const myList = [
+type CollectionType = {
+  carName: string;
+  carImage: string;
+  carLbs: string;
+  carRwhp: string;
+  carPrice: string;
+  carType: string;
+  url: string;
+};
+
+/**** Sports Car Data ********/
+const sportsCarCollection: CollectionType[] = [
+  {
+    carName: "2022 Lamborghini Huracan",
+    carImage:
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=huracan&modelRange=huracan-evo&modelVariant=co&modelYear=2022&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=pspc0041&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+    carLbs: "413",
+    carRwhp: "631",
+    carPrice: "261,497",
+    carType: "rwd",
+    url: "https://www.edmunds.com/lamborghini/huracan/#:~:text=The%20least-expensive%202022%20Lamborghini,7AM)%20which%20starts%20at%20%24209%2C409",
+  },
+  {
+    carName: "2019 Porsche 911",
+    carImage:
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=porsche&modelFamily=911&modelRange=911&modelVariant=ca&modelYear=2019&powerTrain=fossil&transmission=0&bodySize=2&trim=0&paintId=pspc0041&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+    carLbs: "723",
+    carRwhp: "502",
+    carPrice: "388,990",
+    carType: "rwd",
+    url: "https://www.edmunds.com/porsche/911/2019/vin/WP0CF2A99KS172765/?radius=100",
+  },
+  {
+    carName: "2016 McLaren 675LT Spider",
+    carImage:
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=mclaren&modelFamily=540c&modelRange=540c&modelVariant=co&modelYear=2018&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=pspc0041&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+    carLbs: "2,927",
+    carRwhp: "666",
+    carPrice: "313,000",
+    carType: "rwd",
+    url: "",
+  },
+  {
+    carName: "2020 Mercedes-Benz AMG® GT",
+    carImage:
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=mercedes&modelFamily=amg-gt&modelRange=amg-gt&modelVariant=ca&modelYear=2020&powerTrain=fossil&transmission=0&bodySize=2&trim=0&paintId=pspc0041&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+    carLbs: "3560",
+    carRwhp: "577",
+    carPrice: "185,818",
+    carType: "rwd",
+    url: "https://www.edmunds.com/mercedes-benz/amg-gt/2020/vin/W1KYJ7KAXLA029699/?radius=100",
+  },
+  {
+    carName: "2019 Toyota Supra",
+    carImage:
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=audi&modelFamily=r8&modelRange=r8&modelVariant=ca&modelYear=2021&powerTrain=fossil&transmission=0&bodySize=2&trim=performance&paintId=pspc0014&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+    carLbs: "3516.4",
+    carRwhp: "532",
+    carPrice: "166,981",
+    carType: "rwd",
+    url: "https://www.edmunds.com/audi/r8/2021/vin/WUABAAFX6M7900787/?radius=100",
+  },
+];
+
+/**** Muscle Car Data ********/
+const muscleCarCollection: CollectionType[] = [
+  {
+    carName: "2021 Ford Mustang",
+    carImage:
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=ford&modelFamily=mustang&modelRange=mach-1&modelVariant=co&modelYear=2021&powerTrain=fossil&transmission=0&bodySize=2&trim=0&paintId=pspc0096&angle=01",
+    carLbs: "365",
+    carRwhp: "335",
+    carPrice: "49,990",
+    carType: "rwd",
+    url: "https://www.carmax.com/car/beta/23246405",
+  },
   {
     carName: "2019 Toyota Supra",
     carImage:
@@ -81,109 +83,104 @@ const myList = [
     carRwhp: "335",
     carPrice: "49,990",
     carType: "rwd",
+    url: "",
   },
   {
-    carName: "Lexus LFA",
+    carName: "2022 Land Rover Range Rover Sport",
     carImage:
-      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=aventador&modelRange=aventador-svj&modelVariant=co&modelYear=2019&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=pspc0034&angle=01",
-    carLbs: "354",
-    carRwhp: "553",
-    carPrice: "375,000",
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=land-rover&modelFamily=range-rover&modelRange=range-rover&modelVariant=od&modelYear=2022&powerTrain=fossil&transmission=0&bodySize=5&trim=eu&paintId=pspc0041&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+    carLbs: "6,613",
+    carRwhp: "575",
+    carPrice: "49,990",
     carType: "rwd",
+    url: "",
   },
   {
-    carName: "Lamborghini Aventador",
+    carName: "2019 Toyota Supra",
     carImage:
-      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=ford&modelFamily=mustang&modelRange=mach-1&modelVariant=co&modelYear=2021&powerTrain=fossil&transmission=0&bodySize=2&trim=0&paintId=pspc0034&angle=01",
-    carLbs: "507",
-    carRwhp: "729",
-    carPrice: "463,000",
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=aventador&modelRange=aventador-svj&modelVariant=co&modelYear=2019&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=imagin-grey&angle=01",
+    carLbs: "365",
+    carRwhp: "335",
+    carPrice: "49,990",
+    carType: "rwd",
+    url: "",
+  },
+  {
+    carName: "2019 Toyota Supra",
+    carImage:
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=aventador&modelRange=aventador-svj&modelVariant=co&modelYear=2019&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=imagin-grey&angle=01",
+    carLbs: "365",
+    carRwhp: "335",
+    carPrice: "49,990",
+    carType: "rwd",
+    url: "",
+  },
+];
+/**** Suv Car Data ********/
+const suvCarCollection: CollectionType[] = [
+  {
+    carName: "2022 Lamborghini Urus",
+    carImage:
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=urus&modelRange=urus&modelVariant=od&modelYear=2022&powerTrain=petrol&transmission=0&bodySize=5&trim=eu&paintId=pspc0041&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+    carLbs: "627",
+    carRwhp: "641",
+    carPrice: "245,381",
     carType: "awd",
+    url: "https://www.edmunds.com/lamborghini/urus/",
   },
   {
-    carName: "Lamborghini Huracán",
+    carName: "2020 Mercedes-Benz G-Class",
     carImage:
-      "https://res.cloudinary.com/dmnixrpra/image/upload/v1585924351/137-1376257_the-last-true-supercar-lamborghini-huracan-left-side_1.png",
-    carLbs: "398",
-    carRwhp: "602",
-    carPrice: "261,000",
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=mercedes&modelFamily=g-class&modelRange=g-class&modelVariant=od&modelYear=2020&powerTrain=fossil&transmission=0&bodySize=5&trim=0&paintId=pspc0041&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+    carLbs: "6,500",
+    carRwhp: "577",
+    carPrice: "199,700",
     carType: "awd",
+    url: "https://www.edmunds.com/mercedes-benz/g-class/2020/vin/WDCYC7HJ3LX337090/?radius=100",
   },
   {
-    carName: "Bugatti Chiron",
+    carName: "2022 Land Rover Range Rover Sport",
     carImage:
-      "https://res.cloudinary.com/dmnixrpra/image/upload/v1585924401/bugatti_PNG19_1.png",
-    carLbs: "1,180",
-    carRwhp: "1479",
-    carPrice: "3,000,000",
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=land-rover&modelFamily=range-rover&modelRange=range-rover&modelVariant=od&modelYear=2022&powerTrain=fossil&transmission=0&bodySize=5&trim=eu&paintId=pspc0041&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+    carLbs: "6,613",
+    carRwhp: "575",
+    carPrice: "49,990",
+    carType: "rwd",
+    url: "",
+  },
+  {
+    carName: "2022 Tesla Model X",
+    carImage:
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=tesla&modelFamily=model-x&modelRange=model-x&modelVariant=od&modelYear=2022&powerTrain=electric&transmission=0&bodySize=5&trim=eu&paintId=pspc0041&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+    carLbs: "5,000",
+    carRwhp: "670",
+    carPrice: "127,990",
     carType: "awd",
+    url: "https://www.edmunds.com/tesla/model-x/2022/vin/7SAXCAE55NF349828/?radius=100",
   },
   {
-    carName: "Bugatti Veyron",
+    carName: "2021 Audi RS Q8",
     carImage:
-      "https://res.cloudinary.com/dmnixrpra/image/upload/v1585924491/bugatti_PNG28_1.png",
-    carLbs: "1,106",
-    carRwhp: "1200",
-    carPrice: "1,700,000",
+      "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=audi&modelFamily=q8&modelRange=q8&modelVariant=od&modelYear=2021&powerTrain=fossil&transmission=0&bodySize=5&trim=0&paintId=pspc0041&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+    carLbs: "7,700",
+    carRwhp: "591",
+    carPrice: "127,990",
     carType: "awd",
-  },
-  {
-    carName: "McLaren P1",
-    carImage: "",
-    carLbs: "",
-    carRwhp: "",
-    carPrice: "",
-    carType: "rwd",
-  },
-  {
-    carName: "Ferrari F8 Spider",
-    carImage:
-      "https://res.cloudinary.com/dmnixrpra/image/upload/v1586466868/2020_24_1.png",
-    carLbs: "568",
-    carRwhp: "710",
-    carPrice: "274,000",
-    carType: "rwd",
-  },
-  {
-    carName: "Ferrari LaFerrari",
-    carImage:
-      "https://res.cloudinary.com/dmnixrpra/image/upload/v1586467122/red-sports-car-png-4_1.png",
-    carLbs: "664",
-    carRwhp: "949",
-    carPrice: "1,400,000",
-    carType: "rwd",
-  },
-  {
-    carName: "Koenigsegg Regera",
-    carImage:
-      "https://res.cloudinary.com/dmnixrpra/image/upload/v1586467369/Koenigsegg_Regera_side5_1.png",
-    carLbs: "642",
-    carRwhp: "700",
-    carPrice: "1,900,000",
-    carType: "rwd",
-  },
-  {
-    carName: "2020 Toyota 86",
-    carImage:
-      "https://res.cloudinary.com/dmnixrpra/image/upload/v1585878340/35565_preview_1.png",
-    carLbs: "156",
-    carRwhp: "205",
-    carPrice: "27,060",
-    carType: "rwd",
-  },
-  {
-    carName: "2020 Toyota Corolla",
-    carImage:
-      "https://res.cloudinary.com/dmnixrpra/image/upload/v1585878224/2020-toyota-corolla-le-sideview_1.png",
-    carLbs: "70",
-    carRwhp: "132",
-    carPrice: "19,600",
-    carType: "fwd",
+    url: "https://www.edmunds.com/audi/rs-q8/2021/vin/WU1ARBF14MD018475/?radius=100",
   },
 ];
 
-const widget = document.querySelector(".js-widget") as HTMLElement;
+const collectionTotal = sportsCarCollection.concat(
+  muscleCarCollection,
+  suvCarCollection
+);
+
+const collection = document.querySelector(".total-collection") as HTMLElement;
+const sportsCollection = document.querySelector(
+  ".sports-collection"
+) as HTMLElement;
 const btn = document.querySelector(".button") as HTMLElement;
+
 function buildList(carNum: number) {
   if (btn) {
     btn.outerHTML = "";
@@ -193,16 +190,16 @@ function buildList(carNum: number) {
 
   let i = carNum;
   for (; i < carNum + 4; i++) {
-    if (myList[i].carImage === "") {
-      myList[i].carImage =
+    if (collectionTotal[i].carImage === "") {
+      collectionTotal[i].carImage =
         "https://res.cloudinary.com/dmnixrpra/image/upload/v1585925027/IMAGE_COMING_SOON.png";
     }
 
     // detecting if rwd awd or fwd, assigning it to wheelType variable
     var wheelType = "";
-    if (myList[i].carType == "rwd") {
+    if (collectionTotal[i].carType == "rwd") {
       wheelType = " rwhp";
-    } else if (myList[i].carType == "fwd") {
+    } else if (collectionTotal[i].carType == "fwd") {
       wheelType = " fwhp";
     } else {
       wheelType = " hp";
@@ -210,41 +207,42 @@ function buildList(carNum: number) {
 
     // looping through each car list object
     widgetContent +=
-      '<a class="car-link" href="url">' +
+      `<a class="car-link" href=${collectionTotal[i].url}>` +
       '<div class="car-card">' +
       "<h2>" +
-      myList[i].carName +
+      collectionTotal[i].carName +
       "</h2>" +
       '<img src="' +
-      myList[i].carImage +
+      collectionTotal[i].carImage +
       '">' +
       "<ul>" +
       "<li>" +
-      myList[i].carLbs +
+      collectionTotal[i].carLbs +
       " lb-ft" +
       "</li>" +
       "<li>" +
-      myList[i].carRwhp +
+      collectionTotal[i].carRwhp +
       wheelType +
       "</li>" +
       "<li>" +
       "$" +
-      myList[i].carPrice +
+      collectionTotal[i].carPrice +
       "</li>" +
       "</ul>" +
       "</div>" +
       "</a>";
   }
 
-  widget.insertAdjacentHTML("beforeend", widgetContent);
+  collection.insertAdjacentHTML("beforeend", widgetContent);
   var buttonContent = "";
-  if (i < myList.length) {
+  if (i < collectionTotal.length) {
     buttonContent +=
       '<button class="button" type="button" onclick="buildList(' +
       i +
       ')">More Cars</button>';
   }
-  widget.insertAdjacentHTML("afterend", buttonContent);
+
+  collection.insertAdjacentHTML("afterend", buttonContent);
 }
 
 buildList(0);
