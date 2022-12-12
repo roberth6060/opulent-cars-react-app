@@ -1,8 +1,8 @@
 "use strict";
-const sportsCarCollection = [
+const sportsCarCollectionData = [
     {
         carName: "2022 Lamborghini Huracan",
-        carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=huracan&modelRange=huracan-evo&modelVariant=co&modelYear=2022&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=pspc0029&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+        carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=huracan&modelRange=huracan-evo&modelVariant=co&modelYear=2022&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=pspc0034&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
         carLbs: "413",
         carRwhp: "631",
         carPrice: "261,497",
@@ -46,7 +46,7 @@ const sportsCarCollection = [
         url: "https://www.edmunds.com/audi/r8/2021/vin/WUABAAFX6M7900787/?radius=100",
     },
 ];
-const muscleCarCollection = [
+const muscleCarCollectionData = [
     {
         carName: "2021 Ford Mustang",
         carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=ford&modelFamily=mustang&modelRange=mach-1&modelVariant=co&modelYear=2021&powerTrain=fossil&transmission=0&bodySize=2&trim=0&paintId=pspc0004&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
@@ -72,28 +72,28 @@ const muscleCarCollection = [
         carRwhp: "717",
         carPrice: "85,495",
         carType: "rwd",
-        url: "",
+        url: "https://www.edmunds.com/dodge/charger/2022/srt-hellcat-redeye-widebody/",
     },
     {
-        carName: "2019 Toyota Supra",
+        carName: "2022 Ford Mustang Mach-E GT",
         carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=ford&modelFamily=mustang&modelRange=mustang-mach-e&modelVariant=od&modelYear=2020&powerTrain=fossil&transmission=0&bodySize=5&trim=0&paintId=pspc0146&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
         carLbs: "600",
         carRwhp: "480",
         carPrice: "61,995",
         carType: "rwd",
-        url: "",
+        url: "https://www.edmunds.com/ford/mustang-mach-e/2022/gt/",
     },
     {
-        carName: "2019 Toyota Supra",
-        carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=aventador&modelRange=aventador-svj&modelVariant=co&modelYear=2019&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=imagin-grey&angle=01",
+        carName: "2023 Chevy Camaro",
+        carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=chevrolet&modelFamily=camaro&modelRange=camaro&modelVariant=ca&modelYear=2023&powerTrain=fossil&transmission=0&bodySize=2&trim=0&paintId=pspc0266&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
         carLbs: "365",
         carRwhp: "335",
-        carPrice: "49,990",
+        carPrice: "66,700",
         carType: "rwd",
-        url: "",
+        url: "https://www.edmunds.com/chevrolet/camaro/",
     },
 ];
-const suvCarCollection = [
+const suvCarCollectionData = [
     {
         carName: "2022 Lamborghini Urus",
         carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=urus&modelRange=urus&modelVariant=od&modelYear=2022&powerTrain=petrol&transmission=0&bodySize=5&trim=eu&paintId=pspc0115&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
@@ -105,7 +105,7 @@ const suvCarCollection = [
     },
     {
         carName: "2020 Mercedes-Benz G-Class",
-        carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=mercedes&modelFamily=g-class&modelRange=g-class&modelVariant=od&modelYear=2020&powerTrain=fossil&transmission=0&bodySize=5&trim=0&paintId=pspc0006&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+        carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=mercedes&modelFamily=g-class&modelRange=g-class&modelVariant=od&modelYear=2022&powerTrain=fossil&transmission=0&bodySize=5&trim=0&paintId=pspc0004&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
         carLbs: "6,500",
         carRwhp: "577",
         carPrice: "199,700",
@@ -114,7 +114,7 @@ const suvCarCollection = [
     },
     {
         carName: "2022 Land Rover Range Rover Sport",
-        carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=land-rover&modelFamily=range-rover&modelRange=range-rover&modelVariant=od&modelYear=2022&powerTrain=fossil&transmission=0&bodySize=5&trim=eu&paintId=pspc0074&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
+        carImage: "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=land-rover&modelFamily=range-rover&modelRange=range-rover&modelVariant=od&modelYear=2022&powerTrain=fossil&transmission=0&bodySize=5&trim=eu&paintId=pspc0004&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
         carLbs: "6,613",
         carRwhp: "575",
         carPrice: "49,990",
@@ -140,66 +140,71 @@ const suvCarCollection = [
         url: "https://www.edmunds.com/audi/rs-q8/2021/vin/WU1ARBF14MD018475/?radius=100",
     },
 ];
-const collectionTotal = sportsCarCollection.concat(muscleCarCollection, suvCarCollection);
-const collection = document.querySelector(".total-collection");
-const sportsCollection = document.querySelector(".sports-collection");
+const totalCollectionData = sportsCarCollectionData.concat(muscleCarCollectionData, suvCarCollectionData);
+const totalCollection = document.querySelector(".total-collection");
+const sportsCarCollection = document.querySelector(".sports-collection");
+const muscleCarCollection = document.querySelector(".muscle-collection");
+const suvCarCollection = document.querySelector(".suv-collection");
 const btn = document.querySelector(".button");
 function buildList(carNum) {
-    if (btn) {
-        btn.outerHTML = "";
-    }
-    var widgetContent = "";
     let i = carNum;
-    for (; i < carNum + 4; i++) {
-        if (collectionTotal[i].carImage === "") {
-            collectionTotal[i].carImage =
-                "https://res.cloudinary.com/dmnixrpra/image/upload/v1585925027/IMAGE_COMING_SOON.png";
-        }
-        var wheelType = "";
-        if (collectionTotal[i].carType == "rwd") {
-            wheelType = " rwhp";
-        }
-        else if (collectionTotal[i].carType == "fwd") {
-            wheelType = " fwhp";
-        }
-        else {
-            wheelType = " hp";
-        }
+    for (i; i < carNum + 4; i++) {
+    }
+}
+const createCollectionCard = (collectionType, collectionTypeElement) => {
+    let i = 0;
+    var wheelType = "";
+    if (collectionType[i].carType == "rwd") {
+        wheelType = " rwhp";
+    }
+    else if (collectionType[i].carType == "fwd") {
+        wheelType = " fwhp";
+    }
+    else {
+        wheelType = " hp";
+    }
+    let widgetContent = "";
+    for (let i = 0; i < collectionType.length; i++) {
         widgetContent +=
-            `<a class="car-link" href=${collectionTotal[i].url}>` +
+            `<a class="car-link" target="_blank" href=${collectionType[i].url}>` +
                 '<div class="car-card">' +
                 "<h2>" +
-                collectionTotal[i].carName +
+                collectionType[i].carName +
                 "</h2>" +
                 '<img src="' +
-                collectionTotal[i].carImage +
+                collectionType[i].carImage +
                 '">' +
                 "<ul>" +
                 "<li>" +
-                collectionTotal[i].carLbs +
+                collectionType[i].carLbs +
                 " lb-ft" +
                 "</li>" +
                 "<li>" +
-                collectionTotal[i].carRwhp +
+                collectionType[i].carRwhp +
                 wheelType +
                 "</li>" +
                 "<li>" +
                 "$" +
-                collectionTotal[i].carPrice +
+                collectionType[i].carPrice +
                 "</li>" +
                 "</ul>" +
                 "</div>" +
                 "</a>";
     }
-    collection.insertAdjacentHTML("beforeend", widgetContent);
-    var buttonContent = "";
-    if (i < collectionTotal.length) {
-        buttonContent +=
-            '<button class="button" type="button" onclick="buildList(' +
-                i +
-                ')">More Cars</button>';
-    }
-    collection.insertAdjacentHTML("afterend", buttonContent);
+    collectionTypeElement.insertAdjacentHTML("beforeend", widgetContent);
+};
+const path = window.location.pathname;
+console.log(path);
+if (path === "/pages/collection.html") {
+    createCollectionCard(totalCollectionData, totalCollection);
 }
-buildList(0);
+if (path === "/pages/suv-cars.html") {
+    createCollectionCard(suvCarCollectionData, suvCarCollection);
+}
+if (path === "/pages/muscle-cars.html") {
+    createCollectionCard(muscleCarCollectionData, muscleCarCollection);
+}
+if (path === "/pages/sports-cars.html") {
+    createCollectionCard(sportsCarCollectionData, sportsCarCollection);
+}
 //# sourceMappingURL=collection.js.map
