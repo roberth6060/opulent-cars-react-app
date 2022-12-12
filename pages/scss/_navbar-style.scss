@@ -7,6 +7,7 @@ $laptop: 1200px;
 
 $bg: #f0ebce;
 $linkColor: aliceblue;
+$navbarbg: #5b7071;
 
 .navbar {
   display: flex;
@@ -22,7 +23,7 @@ $linkColor: aliceblue;
 }
 
 .navbar-bg {
-  background-color: #5b7071;
+  background-color: $navbarbg;
 }
 
 .menu {
@@ -41,6 +42,18 @@ $linkColor: aliceblue;
     width: 100%;
     font-size: 27px;
     color: $linkColor;
+    position: relative;
+    ul {
+      display: none;
+      padding: 15px;
+      position: absolute;
+      width: 100%;
+      margin-top: 5px;
+      background-color: $navbarbg;
+    }
+    &:hover ul {
+      display: block;
+    }
   }
   .logo {
     background-color: rgba(255, 255, 255, 0.35);
@@ -57,7 +70,6 @@ $linkColor: aliceblue;
 
   a {
     position: relative;
-    color: $linkColor;
     text-decoration: none;
     font-size: 18px;
   }
@@ -75,7 +87,6 @@ $linkColor: aliceblue;
   a:before {
     content: "";
     position: absolute;
-    // align-items: center;
     width: 100%;
     margin: auto;
     height: 3px;
@@ -83,10 +94,7 @@ $linkColor: aliceblue;
 
     background-color: $linkColor;
     visibility: hidden;
-    // -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    // // -webkit-transition: all 0.3s ease-in-out 0s;
-
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
   }

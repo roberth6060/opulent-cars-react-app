@@ -31,6 +31,18 @@
   width: 100%;
   font-size: 27px;
   color: aliceblue;
+  position: relative;
+}
+.menu li ul {
+  display: none;
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+  margin-top: 5px;
+  background-color: #5b7071;
+}
+.menu li:hover ul {
+  display: block;
 }
 .menu .logo {
   background-color: rgba(255, 255, 255, 0.35);
@@ -46,7 +58,6 @@
 }
 .menu a {
   position: relative;
-  color: aliceblue;
   text-decoration: none;
   font-size: 18px;
 }
