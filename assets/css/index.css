@@ -4,11 +4,9 @@
 .navbar {
   display: flex;
   flex-direction: row;
-  align-items: center;
   text-align: center;
   justify-content: center;
   padding: 1em;
-  font-size: 15px;
   font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
 }
 
@@ -28,24 +26,28 @@
   list-style-type: none;
 }
 .menu li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  font-size: 27px;
   color: aliceblue;
   position: relative;
+  padding: 5px 0;
 }
 .menu li ul {
   display: none;
   padding: 15px;
   position: absolute;
   width: 100%;
-  margin-top: 5px;
   background-color: #5b7071;
+  top: 50px;
   z-index: 1;
 }
 .menu li:hover ul {
   display: block;
 }
 .menu .logo {
+  font-size: 27px;
   background-color: rgba(255, 255, 255, 0.35);
   border-radius: 5px;
   font-family: "Rubik 80s Fade", cursive;
@@ -62,6 +64,7 @@
   color: aliceblue;
   text-decoration: none;
   font-size: 18px;
+  align-items: center;
 }
 .menu a:visited {
   color: aliceblue;
@@ -144,26 +147,31 @@
   transform: rotate(-405deg);
 }
 
-@media only screen and (max-width: 992px) {
-  .navbar {
-    font-size: 13px;
-  }
-  .navbar .logo span {
-    font-size: 15px;
+@media only screen and (max-width: 1200px) {
+  .navbar .logo {
+    font-size: 20px;
   }
   .menu li {
     margin: 0 3px;
     padding: 3px;
   }
+  .menu li a {
+    font-size: 15px;
+  }
 }
-@media (max-width: 840px) {
+@media (max-width: 992px) {
+  .navbar {
+    background-color: blue;
+    font-size: 13px;
+    justify-content: right;
+  }
   .menu-button-container {
     display: flex;
   }
   .menu {
     position: absolute;
     top: 0;
-    margin-top: 85px;
+    margin-top: 26px;
     left: 0;
     flex-direction: column;
     width: 100%;
@@ -190,7 +198,7 @@
     padding: 0.5em 0;
     width: 100%;
     color: red;
-    background-color: #f0ebce;
+    background-color: #5b7071;
   }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
@@ -202,9 +210,10 @@
     transform: skew(0deg);
   }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
   .navbar {
     font-size: 13px;
+    background-color: yellow;
   }
   .navbar .logo span {
     font-size: 15px;
@@ -214,7 +223,10 @@
     padding: 3px;
   }
 }
-@media (max-width: 840px) {
+@media (max-width: 576px) {
+  .navbar {
+    background-color: pink;
+  }
   .menu-button-container {
     display: flex;
   }
