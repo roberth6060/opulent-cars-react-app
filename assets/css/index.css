@@ -1058,7 +1058,6 @@ p {
   flex-direction: row;
   justify-content: center;
   padding: 15px 0;
-  flex-wrap: wrap;
 }
 .row img {
   margin-right: 15px;
