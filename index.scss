@@ -52,6 +52,18 @@ p {
   }
 }
 
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px 0;
+
+  img {
+    margin-right: 15px;
+  }
+}
+
 .col {
   display: flex;
   flex-direction: column;
@@ -71,4 +83,10 @@ p {
 
 .margin-top {
   margin-top: 50px;
+}
+//Tablet view
+@media (max-width: $laptop) {
+  .row {
+    flex-wrap: wrap;
+  }
 }
