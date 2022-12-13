@@ -86,7 +86,13 @@ p {
 }
 //Tablet view
 @media (max-width: $laptop) {
+  .container {
+    width: 90%;
+  }
   .row {
     flex-wrap: wrap;
+    & > img {
+      margin-bottom: 15px;
+    }
   }
 }

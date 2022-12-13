@@ -31,7 +31,14 @@
           <ul class="menu">
             <li class="active"><a href="./index.html">Home</a></li>
             <li><a href="./pages/about.html">About</a></li>
-            <li><a href="./pages/collection.html">Collection</a></li>
+            <li>
+              <a href="./pages/collection.html">Collection</a>
+              <ul class="dropdown">
+                <li><a href="./pages/muscle-cars.html">Muscle Cars</a></li>
+                <li><a href="./pages/suv-cars.html">Suv Cars</a></li>
+                <li><a href="./pages/sports-cars.html">Sports Cars</a></li>
+              </ul>
+            </li>
             <li class="logo">Opulent Cars</li>
             <li><a href="./pages/shop.html">Shop</a></li>
             <li><a href="./pages/articles.html">Articles</a></li>
@@ -137,12 +144,13 @@
       <div id="collection-section">
         <div class="container">
           <h2>Our Collection</h2>
-          <div class="row">
-            <div class="pepe"  id="category1"><a class="arrow-link" href="./pages/muscle-cars.html">Muscle Cars</a></div>
-            <div class="category-right-container">
-              <div class="pepe" id="category2"><a class="arrow-link" href="./pages/suv-cars.html">Suv Cars</a></div>
-              <div class="pepe" id="category3"><a class="arrow-link" href="./pages/sports-cars.html">Sports Car</a></div>
-            </div>
+          <div class="grid-collection">
+            <!-- Muscle Cars -->
+            <a id="category1" href="./pages/muscle-cars.html"><span>Muscle Cars</span></a>
+                <!-- Suv Cars -->
+             <a id="category2" class="arrow-link" href="./pages/suv-cars.html"><span>Suv Cars</span></a>
+               <!-- Sports Cars -->
+             <a class="arrow-link" id="category3" href="./pages/sports-cars.html"><span>Sports Car</span></a>
           </div>
         </div>
       </div>
