@@ -157,14 +157,9 @@
   .menu li {
     margin: 0 3px;
     padding: 3px;
-    position: static;
   }
   .menu li .dropdown {
-    position: absolute;
-    right: 150px;
-    top: 31px;
-    width: 180px;
-    padding: 0;
+    top: 36px;
   }
   .menu li .dropdown li a {
     font-size: 14px;
@@ -182,6 +177,24 @@
   .navbar {
     font-size: 13px;
     justify-content: right;
+  }
+  .navbar .menu li {
+    margin: 0 3px;
+    padding: 3px;
+    position: static;
+  }
+  .navbar .menu li .dropdown {
+    position: absolute;
+    right: 150px;
+    top: 31px;
+    width: 180px;
+    padding: 0;
+  }
+  .navbar .menu li .dropdown li a {
+    font-size: 14px;
+  }
+  .navbar .menu li a {
+    font-size: 15px;
   }
   .menu-button-container {
     display: flex;
@@ -233,7 +246,10 @@
 @media only screen and (max-width: 768px) {
   .navbar {
     font-size: 13px;
-    background-color: yellow;
+  }
+  .navbar .dropdown {
+    position: absolute;
+    right: 50px !important;
   }
   .navbar .logo span {
     font-size: 15px;

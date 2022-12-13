@@ -168,7 +168,7 @@ $navbarbg: #5b7071;
   transform: rotate(-405deg);
 }
 
-//Table view
+//Laptop View
 @media only screen and (max-width: $desktop) {
   .navbar {
     .logo {
@@ -179,13 +179,8 @@ $navbarbg: #5b7071;
     li {
       margin: 0 3px;
       padding: 3px;
-      position: static;
       .dropdown {
-        position: absolute;
-        right: 150px;
-        top: 31px;
-        width: 180px;
-        padding: 0;
+        top: 36px;
         li {
           a {
             font-size: 14px;
@@ -199,7 +194,7 @@ $navbarbg: #5b7071;
   }
 }
 
-//Laptop view
+//Tablet view
 @media (max-width: $laptop) {
   .logo {
     background-color: white !important;
@@ -209,6 +204,29 @@ $navbarbg: #5b7071;
   .navbar {
     font-size: 13px;
     justify-content: right;
+
+    .menu {
+      li {
+        margin: 0 3px;
+        padding: 3px;
+        position: static;
+        .dropdown {
+          position: absolute;
+          right: 150px;
+          top: 31px;
+          width: 180px;
+          padding: 0;
+          li {
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+        a {
+          font-size: 15px;
+        }
+      }
+    }
   }
   .menu-button-container {
     display: flex;
@@ -264,11 +282,15 @@ $navbarbg: #5b7071;
   }
 }
 
-//Table view
+//Large phone view
 @media only screen and (max-width: $tablet) {
   .navbar {
     font-size: 13px;
-    background-color: yellow;
+
+    .dropdown {
+      position: absolute;
+      right: 50px !important;
+    }
     .logo {
       span {
         font-size: 15px;
