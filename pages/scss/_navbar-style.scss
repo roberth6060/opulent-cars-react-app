@@ -16,7 +16,6 @@ $navbarbg: #5b7071;
   text-align: center;
   justify-content: center;
   padding: 1em;
-
   font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond,
     "Times New Roman", serif;
 }
@@ -45,14 +44,14 @@ $navbarbg: #5b7071;
     color: $linkColor;
     position: relative;
     padding: 5px 0;
-    ul {
+    .dropdown {
       display: none;
       padding: 15px;
       position: absolute;
       width: 100%;
       background-color: $navbarbg;
-      top: 50px;
-      z-index: 2;
+      top: 45px;
+      z-index: 3;
     }
     &:hover ul {
       display: block;
@@ -119,7 +118,6 @@ $navbarbg: #5b7071;
 .menu-button-container {
   background-color: #b3a18f;
   border-radius: 2px;
-
   display: none;
   height: 30px;
   width: 37px;
@@ -181,6 +179,19 @@ $navbarbg: #5b7071;
     li {
       margin: 0 3px;
       padding: 3px;
+      position: static;
+      .dropdown {
+        position: absolute;
+        right: 150px;
+        top: 31px;
+        width: 180px;
+        padding: 0;
+        li {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
       a {
         font-size: 15px;
       }
@@ -188,7 +199,7 @@ $navbarbg: #5b7071;
   }
 }
 
-//Mobile view
+//Laptop view
 @media (max-width: $laptop) {
   .logo {
     background-color: white !important;
@@ -196,7 +207,6 @@ $navbarbg: #5b7071;
     color: $navbarbg !important;
   }
   .navbar {
-    // background-color: blue;
     font-size: 13px;
     justify-content: right;
   }
@@ -210,7 +220,7 @@ $navbarbg: #5b7071;
     flex-direction: column;
     width: 100%;
     justify-content: center;
-    z-index: 9;
+    z-index: 2;
   }
   #menu-toggle ~ .menu li {
     display: none;
