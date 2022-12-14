@@ -9,7 +9,10 @@
     margin-bottom: 20px;
     object-fit: cover;
   }
-
+  iframe {
+    max-width: 100%;
+    width: 580px;
+  }
   figure {
     margin-bottom: 10px;
     img {
@@ -20,7 +23,8 @@
   }
 
   ul {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     list-style: circle;
     padding: 0;
 

@@ -769,6 +769,10 @@ body::after {
   margin-bottom: 20px;
   object-fit: cover;
 }
+#article-section iframe {
+  max-width: 100%;
+  width: 580px;
+}
 #article-section figure {
   margin-bottom: 10px;
 }
@@ -778,7 +782,8 @@ body::after {
   height: 380px;
 }
 #article-section ul {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   list-style: circle;
   padding: 0;
 }
