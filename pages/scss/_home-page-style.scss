@@ -435,8 +435,15 @@ body::after {
 
 //Phone View
 @media only screen and (max-width: $phone) {
-  #articles-section {
-    background-color: pink !important;
+  h3 {
+    font-size: 18px !important;
+  }
+  #home-header {
+    height: 480px;
+    position: relative;
+    .color-picker {
+      margin: 0 !important;
+    }
   }
 }
 /***** Home Section Start Ends *****/

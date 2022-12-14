@@ -622,8 +622,15 @@ body::after {
   }
 }
 @media only screen and (max-width: 576px) {
-  #articles-section {
-    background-color: pink !important;
+  h3 {
+    font-size: 18px !important;
+  }
+  #home-header {
+    height: 480px;
+    position: relative;
+  }
+  #home-header .color-picker {
+    margin: 0 !important;
   }
 }
 /***** Home Section Start Ends *****/
@@ -1271,5 +1278,16 @@ p {
   }
   .row > img {
     margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  h1 {
+    font-size: 38px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 18px !important;
   }
 }/*# sourceMappingURL=index.css.map */
