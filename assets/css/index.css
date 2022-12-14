@@ -735,6 +735,7 @@ body::after {
 #articles-section .card-container {
   width: 400px;
   margin: 20px;
+  padding: 10px;
   cursor: pointer;
 }
 #articles-section .card-container:hover {
@@ -755,7 +756,7 @@ body::after {
   #articles-section .card-container {
     width: 330px !important;
     margin: 15px !important;
-    padding: 5px !important;
+    padding: 8px !important;
   }
 }
 #article-section {
@@ -1263,7 +1264,7 @@ p {
     width: 90%;
   }
 }
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   h1 {
     font-size: 45px;
   }
@@ -1286,8 +1287,5 @@ p {
   }
   h2 {
     font-size: 28px;
-  }
-  h3 {
-    font-size: 18px !important;
   }
 }/*# sourceMappingURL=index.css.map */

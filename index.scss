@@ -90,7 +90,7 @@ p {
 }
 
 //Tablet view
-@media (max-width: $laptop) {
+@media only screen and (max-width: $laptop) {
   h1 {
     font-size: 45px;
   }
@@ -116,8 +116,5 @@ p {
   }
   h2 {
     font-size: 28px;
-  }
-  h3 {
-    font-size: 18px !important;
   }
 }
