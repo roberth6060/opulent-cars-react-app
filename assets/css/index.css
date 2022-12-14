@@ -582,6 +582,13 @@ body::after {
   }
 }
 @media only screen and (max-width: 768px) {
+  #home-header {
+    height: 480px;
+    position: relative;
+  }
+  #home-header .color-picker {
+    top: 30px;
+  }
   .grid-collection {
     grid-template-areas: "collection1" "collection2" "collection3" !important;
     grid-template-rows: 250px 250px 250px !important;

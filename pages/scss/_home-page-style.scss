@@ -379,6 +379,13 @@ body::after {
 
 //Large Phone View
 @media only screen and (max-width: $tablet) {
+  #home-header {
+    height: 480px;
+    position: relative;
+    .color-picker {
+      top: 30px;
+    }
+  }
   .grid-collection {
     grid-template-areas:
       "collection1"
