@@ -447,3 +447,19 @@ body::after {
   }
 }
 /***** Home Section Start Ends *****/
+
+//Laptop View
+@media only screen and (max-width: $desktop) {
+}
+
+//tablet View
+@media only screen and (max-width: $laptop) {
+}
+
+//Large Phone View
+@media only screen and (max-width: $tablet) {
+}
+
+//Phone View
+@media only screen and (max-width: $phone) {
+}
