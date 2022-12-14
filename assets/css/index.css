@@ -792,6 +792,10 @@ body::after {
   padding-bottom: 5px;
 }
 
+.featured .header-img {
+  object-position: 5px 70%;
+}
+
 @media only screen and (max-width: 1200px) {
   #article-section {
     width: 60vw;
