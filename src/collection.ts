@@ -53,7 +53,7 @@ const sportsCarCollectionData: CollectionType[] = [
     url: "https://www.edmunds.com/mercedes-benz/amg-gt/2020/vin/W1KYJ7KAXLA029699/?radius=100",
   },
   {
-    carName: "2019 Toyota Supra",
+    carName: "2021 Audi R8",
     carImage:
       "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=audi&modelFamily=r8&modelRange=r8&modelVariant=ca&modelYear=2021&powerTrain=fossil&transmission=0&bodySize=2&trim=performance&paintId=pspc0039&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
     carLbs: "3516.4",

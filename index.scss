@@ -46,10 +46,6 @@ p {
   flex-direction: row;
   justify-content: center;
   padding: 15px 0;
-
-  img {
-    margin-right: 15px;
-  }
 }
 
 .flex-wrap {
@@ -84,11 +80,16 @@ p {
 .margin-top {
   margin-top: 50px;
 }
+
 //Tablet view
-@media (max-width: $laptop) {
+@media (max-width: $desktop) {
   .container {
     width: 90%;
   }
+}
+
+//Tablet view
+@media (max-width: $laptop) {
   .row {
     flex-wrap: wrap;
     & > img {

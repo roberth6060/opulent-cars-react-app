@@ -355,7 +355,6 @@ body::after {
   width: 400px;
   margin: 20px;
   padding: 10px;
-  border-radius: 10px;
   cursor: pointer;
 }
 #articles-section .card-container:hover {
@@ -368,7 +367,6 @@ body::after {
 #collection-section a {
   font-size: 35px;
   color: rgba(255, 255, 255, 0);
-  -webkit-transition: all 0.2s ease-in-out;
 }
 #collection-section a:hover {
   color: white;
@@ -383,10 +381,13 @@ body::after {
   min-height: 0; /* NEW */
   min-width: 0; /* NEW; needed for Firefox */
   overflow: hidden;
+  margin: 0 auto;
+}
+#collection-section .grid-collection .arrow-link {
+  position: relative;
 }
 #collection-section .grid-collection #category1 {
   grid-area: collection1;
-  position: relative;
   background-image: url("https://images.unsplash.com/photo-1588127333419-b9d7de223dcf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80");
   background-position: center;
   background-repeat: no-repeat;
@@ -396,19 +397,19 @@ body::after {
   object-fit: cover;
 }
 #collection-section .grid-collection #category1 span {
-  position: relative;
-  top: 262px;
+  position: absolute;
+  bottom: 70px;
 }
 #collection-section .grid-collection #category1:after {
+  content: "→";
+  display: inline-block;
   z-index: 1;
   font-size: 180px;
   font-family: "Times New Roman", Times, serif;
-  position: relative;
-  content: "→";
   color: white;
-  margin-left: -150px;
-  top: 300px;
-  display: inline-block;
+  margin-left: 25px;
+  position: absolute;
+  bottom: 0;
   -webkit-transition: all 0.2s ease-in-out;
 }
 #collection-section .grid-collection #category1:hover:after {
@@ -425,8 +426,8 @@ body::after {
   object-fit: cover;
 }
 #collection-section .grid-collection #category2 span {
-  position: relative;
-  top: 72px;
+  position: absolute;
+  bottom: 38px;
 }
 #collection-section .grid-collection #category2:after {
   z-index: 1;
@@ -435,7 +436,7 @@ body::after {
   position: relative;
   content: "→";
   color: white;
-  margin-left: -105px;
+  margin-left: 18px;
   top: 100px;
   display: inline-block;
   -webkit-transition: all 0.2s ease-in-out;
@@ -454,8 +455,8 @@ body::after {
   object-fit: cover;
 }
 #collection-section .grid-collection #category3 span {
-  position: relative;
-  top: 72px;
+  position: absolute;
+  bottom: 38px;
 }
 #collection-section .grid-collection #category3:after {
   font-size: 140px;
@@ -464,7 +465,7 @@ body::after {
   position: relative;
   content: "→";
   color: white;
-  margin-left: -130px;
+  margin-left: 18px;
   top: 100px;
   display: inline-block;
   -webkit-transition: all 0.2s ease-in-out;
@@ -476,18 +477,75 @@ body::after {
 #featured-section {
   background-color: #b3a18f;
 }
-#featured-section img {
-  width: 700px;
-  height: 350px;
+#featured-section .row {
+  height: 450px;
+}
+#featured-section .row img {
+  width: 40%;
+  height: 400px;
   object-fit: cover;
   object-position: center;
 }
-
-#location-section .container {
-  height: 800px;
-  padding-bottom: 80px;
+#featured-section .row div {
+  width: 60%;
+}
+#featured-section .row div h2 {
+  margin: 0;
+}
+#featured-section .lamborghini {
+  margin-left: 20px;
+}
+#featured-section .ferrari {
+  margin-right: 20px;
 }
 
+#location-section .container #map {
+  width: 80%;
+  height: 700px;
+  min-height: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .arrow-link {
+    position: relative;
+  }
+  .arrow-link span {
+    font-size: 30px;
+  }
+  .arrow-link:after {
+    font-size: 140px !important;
+    margin-left: 10px !important;
+  }
+  #category1:after {
+    font-size: 170px !important;
+  }
+  #category2:after {
+    top: 105px !important;
+  }
+  #category3:after {
+    top: 105px !important;
+  }
+  #location-section .container #map {
+    width: 90%;
+    height: 600px;
+    min-height: auto;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #articles-section {
+    background-color: yellow !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #articles-section {
+    background-color: rgb(183, 0, 255) !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #articles-section {
+    background-color: pink !important;
+  }
+}
 /***** Home Section Start Ends *****/
 .myButton {
   background-color: #efe3b1;
@@ -1069,9 +1127,6 @@ p {
   justify-content: center;
   padding: 15px 0;
 }
-.row img {
-  margin-right: 15px;
-}
 
 .flex-wrap {
   display: flex;
@@ -1104,10 +1159,12 @@ p {
   margin-top: 50px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .container {
     width: 90%;
   }
+}
+@media (max-width: 992px) {
   .row {
     flex-wrap: wrap;
   }
