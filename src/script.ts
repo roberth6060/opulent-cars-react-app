@@ -59,3 +59,14 @@ colorPicker?.addEventListener("click", (e) => {
       "url('https://i.ibb.co/MnwtyXG/green-car.png')";
   }
 });
+
+//contct form
+// const contactForm = document.querySelector("#contact-form") as HTMLElement;
+// contactForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   if (event.target instanceof Element) {
+//     event.target.elements.name.value = "";
+//     event.target.elements.email.value = "";
+//     event.target.elements.message.value = "";
+//   }
+// });
