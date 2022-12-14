@@ -29,7 +29,7 @@ body::after {
   .color-picker {
     text-align: center;
     position: relative;
-    top: 150px;
+    top: 100px;
 
     h3 {
       font-size: 25px;
@@ -91,22 +91,6 @@ body::after {
   .about-content {
     position: relative;
     display: inline-block;
-  }
-}
-
-#articles-section {
-  background-color: $bg-brown;
-  .card-container {
-    width: 400px;
-    margin: 20px;
-    padding: 10px;
-    cursor: pointer;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.102);
-    }
-    img {
-      width: 100%;
-    }
   }
 }
 
@@ -236,7 +220,6 @@ body::after {
 #featured-section {
   background-color: $bg-brown;
   .row {
-    height: 450px;
     img {
       width: 40%;
       height: 400px;
@@ -260,10 +243,6 @@ body::after {
 
 #location-section {
   .container {
-    // // height: 800px;
-    // // width: 800px;
-    // padding-bottom: 80px;
-
     #map {
       width: 80%;
       height: 700px;
@@ -318,6 +297,69 @@ body::after {
 
 //tablet View
 @media only screen and (max-width: $laptop) {
+  #home-header {
+    height: 580px;
+    position: relative;
+    .color-picker {
+      top: 80px;
+    }
+  }
+
+  .arrow-link {
+    position: relative;
+    span {
+      font-size: 25px !important;
+    }
+    &:after {
+      font-size: 100px !important;
+      margin-left: 5px !important;
+    }
+
+    &:hover:after {
+      transform: translateX(90px) !important;
+    }
+  }
+  #category1 {
+    &:after {
+      font-size: 130px !important;
+      top: 345px !important;
+    }
+    &:hover:after {
+      transform: translateX(125px) !important;
+    }
+  }
+  #category2 {
+    &:after {
+      top: 135px !important;
+    }
+  }
+  #category3 {
+    &:after {
+      top: 135px !important;
+    }
+    &:hover:after {
+      transform: translateX(105px) !important;
+    }
+  }
+
+  .color-picker {
+    text-align: center;
+    position: relative;
+    top: 150px;
+
+    h3 {
+      font-size: 20px !important;
+    }
+    .colors {
+      position: relative;
+      width: 26px !important;
+      height: 26px !important;
+      background-color: white;
+      border-radius: 100%;
+      border-style: solid;
+      margin: 10px;
+    }
+  }
   #articles-section {
     background-color: yellow !important;
   }

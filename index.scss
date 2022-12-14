@@ -46,6 +46,7 @@ p {
   flex-direction: row;
   justify-content: center;
   padding: 15px 0;
+  min-height: auto;
 }
 
 .flex-wrap {
@@ -90,6 +91,16 @@ p {
 
 //Tablet view
 @media (max-width: $laptop) {
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+
+  .container {
+    width: 95%;
+  }
   .row {
     flex-wrap: wrap;
     & > img {

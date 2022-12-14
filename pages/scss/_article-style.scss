@@ -18,3 +18,14 @@
     }
   }
 }
+
+//tablet View
+@media only screen and (max-width: $laptop) {
+  #articles-section {
+    .card-container {
+      width: 330px !important;
+      margin: 15px !important;
+      padding: 5px !important;
+    }
+  }
+}

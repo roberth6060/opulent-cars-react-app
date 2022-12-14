@@ -1,26 +1,41 @@
+#articles-section {
+  background-color: $bg-brown;
+  a {
+    color: black;
+  }
+  .card-container {
+    width: 400px;
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.102);
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
 #articles-page {
   #articles-section {
-    background-color: $arrow-clr;
+    background-color: white;
 
     .card-container {
-      width: 400px;
-      margin: 20px;
-      padding: 10px;
-      border-radius: 10px;
-      cursor: pointer;
       &:hover {
         background-color: rgba(0, 0, 0, 0.102);
-      }
-
-      img {
-        width: 100%;
       }
     }
   }
 }
 
-#articles-section {
-  a {
-    color: black;
+//tablet View
+@media only screen and (max-width: $laptop) {
+  #articles-section {
+    .card-container {
+      width: 330px !important;
+      margin: 15px !important;
+      padding: 5px !important;
+    }
   }
 }
