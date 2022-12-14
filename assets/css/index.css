@@ -759,12 +759,23 @@ body::after {
   }
 }
 #article-section {
-  width: 70vw;
+  width: 50vw;
   margin-left: auto;
   margin-right: auto;
 }
+#article-section .header-img {
+  width: 100%;
+  height: 260px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
 #article-section figure {
   margin-bottom: 10px;
+}
+#article-section figure img {
+  width: 480px;
+  max-width: 100%;
+  height: 380px;
 }
 #article-section ul {
   display: inline-block;
@@ -776,6 +787,32 @@ body::after {
   padding-bottom: 5px;
 }
 
+@media only screen and (max-width: 1200px) {
+  #article-section {
+    width: 60vw;
+  }
+  .header-img {
+    height: 200px !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #article-section {
+    width: 70vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #article-section {
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #article-section {
+    width: 90vw;
+  }
+  .header-img {
+    height: 160px !important;
+  }
+}
 #collection {
   /* hover effect */
   /*TODO - Add feature that limits collection to show only 4 cards and a button option to add more card or decrease current number of cards*/
