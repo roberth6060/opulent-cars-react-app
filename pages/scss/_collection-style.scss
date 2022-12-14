@@ -16,7 +16,7 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr 3fr 1fr;
-    // height: 300px;
+    height: 400px;
     padding: 10px 45px;
     transition: 0.5s ease;
     width: 100%;
@@ -31,16 +31,15 @@
   }
 
   .car-card ul {
-    align-self: center;
     color: #bababa;
     display: flex;
-    font-family: roboto, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     justify-content: space-between;
     list-style-type: none;
     width: 100%;
+    align-content: center;
   }
 
   .car-card li {
@@ -73,39 +72,40 @@
     transition: 0.5s ease;
   }
 
+  /*TODO - Add feature that limits collection to show only 4 cards and a button option to add more card or decrease current number of cards*/
   /* button */
-  .button {
-    align-items: center;
-    background-color: #fff;
-    border: 0;
-    border-radius: 6px;
-    box-shadow: 0px 2px 4px #d9d9d9;
-    color: #bababa;
-    display: flex;
-    font-family: roboto, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    justify-content: center;
-    line-height: 18px;
-    margin: 3em auto 3em;
-    max-width: 200px;
-    padding: 12px;
-    text-align: center;
-    width: 100%;
-    transition: 0.2s;
-  }
+  // .button {
+  //   align-items: center;
+  //   background-color: #fff;
+  //   border: 0;
+  //   border-radius: 6px;
+  //   box-shadow: 0px 2px 4px #d9d9d9;
+  //   color: #bababa;
+  //   display: flex;
+  //   font-family: roboto, sans-serif;
+  //   font-size: 16px;
+  //   font-style: normal;
+  //   font-weight: 600;
+  //   justify-content: center;
+  //   line-height: 18px;
+  //   margin: 3em auto 3em;
+  //   max-width: 200px;
+  //   padding: 12px;
+  //   text-align: center;
+  //   width: 100%;
+  //   transition: 0.2s;
+  // }
 
-  .button:hover {
-    box-shadow: 0px 4px 4px #d9d9d9;
-    cursor: pointer;
-    transition: 0.2s;
-    color: #aaaaaa;
-  }
+  // .button:hover {
+  //   box-shadow: 0px 4px 4px #d9d9d9;
+  //   cursor: pointer;
+  //   transition: 0.2s;
+  //   color: #aaaaaa;
+  // }
 
-  .button:focus {
-    outline: 0;
-  }
+  // .button:focus {
+  //   outline: 0;
+  // }
 
   @media (max-width: 700px) {
     .card-container {
