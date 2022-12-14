@@ -239,6 +239,9 @@ body::after {
   .ferrari {
     margin-right: 20px;
   }
+  .ferrari-row {
+    flex-direction: row-reverse;
+  }
 }
 
 #location-section {
@@ -304,7 +307,19 @@ body::after {
       top: 80px;
     }
   }
-
+  #featured-section {
+    .row {
+      margin: auto;
+      width: 70%;
+      img {
+        width: 100%;
+      }
+      div {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
   .arrow-link {
     position: relative;
     span {
@@ -359,9 +374,6 @@ body::after {
       border-style: solid;
       margin: 10px;
     }
-  }
-  #articles-section {
-    background-color: yellow !important;
   }
 }
 

@@ -479,6 +479,9 @@ body::after {
 #featured-section .ferrari {
   margin-right: 20px;
 }
+#featured-section .ferrari-row {
+  flex-direction: row-reverse;
+}
 
 #location-section .container #map {
   width: 80%;
@@ -519,6 +522,17 @@ body::after {
   }
   #home-header .color-picker {
     top: 80px;
+  }
+  #featured-section .row {
+    margin: auto;
+    width: 70%;
+  }
+  #featured-section .row img {
+    width: 100%;
+  }
+  #featured-section .row div {
+    width: 100%;
+    margin: 0;
   }
   .arrow-link {
     position: relative;
@@ -565,9 +579,6 @@ body::after {
     border-radius: 100%;
     border-style: solid;
     margin: 10px;
-  }
-  #articles-section {
-    background-color: yellow !important;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -682,7 +693,6 @@ body::after {
 #articles-section .card-container {
   width: 400px;
   margin: 20px;
-  padding: 10px;
   cursor: pointer;
 }
 #articles-section .card-container:hover {
@@ -724,13 +734,6 @@ body::after {
   padding-bottom: 5px;
 }
 
-@media only screen and (max-width: 992px) {
-  #articles-section .card-container {
-    width: 330px !important;
-    margin: 15px !important;
-    padding: 5px !important;
-  }
-}
 #collection {
   /* hover effect */
   /* button */
