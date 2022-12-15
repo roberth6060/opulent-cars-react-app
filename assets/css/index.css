@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /***** NAVBAR Start *****/
 @import url(https://fonts.googleapis.com/css?family=Raleway);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 .navbar {
   display: flex;
   flex-direction: row;
@@ -981,14 +980,6 @@ textarea {
 form {
   padding: 37.5px;
   margin: 50px 0;
-}
-
-h2 {
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 7px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .underline {
