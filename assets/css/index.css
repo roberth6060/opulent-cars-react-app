@@ -455,7 +455,7 @@ body::after {
   -webkit-transition: all 0.2s ease-in-out;
 }
 #collection-section .grid-collection #category3:hover:after {
-  transform: translateX(135px);
+  transform: translateX(145px);
 }
 
 #featured-section {
@@ -509,6 +509,9 @@ body::after {
   #category3:after {
     top: 105px !important;
   }
+  #category3:hover:after {
+    transform: translateX(140px) !important;
+  }
   #location-section .container #map {
     width: 90%;
     height: 600px;
@@ -561,7 +564,7 @@ body::after {
     top: 135px !important;
   }
   #category3:hover:after {
-    transform: translateX(105px) !important;
+    transform: translateX(115px) !important;
   }
   .color-picker {
     text-align: center;

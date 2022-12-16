@@ -211,7 +211,7 @@ body::after {
       }
 
       &:hover:after {
-        transform: translateX(135px);
+        transform: translateX(145px);
       }
     }
   }
@@ -285,6 +285,10 @@ body::after {
     &:after {
       top: 105px !important;
     }
+
+    &:hover:after {
+      transform: translateX(140px) !important;
+    }
   }
 
   #location-section {
@@ -353,7 +357,7 @@ body::after {
       top: 135px !important;
     }
     &:hover:after {
-      transform: translateX(105px) !important;
+      transform: translateX(115px) !important;
     }
   }
 
