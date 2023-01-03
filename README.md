@@ -2,7 +2,7 @@
 Luxury car dealership website created for Web and Mobile I at RIT Croatia Zagreb Campus.
 
 ## Note
-Currently converting website to react and then I will add features such as MySQL for CRUD, user sign up, login, and car renting and procurement online. 
+Currently converting website to react and then I will add features such as MySQL for CRUD, user sign up, login, and car renting and procurement online using strip payment (only development functionality).
 
 ## Built With
 
