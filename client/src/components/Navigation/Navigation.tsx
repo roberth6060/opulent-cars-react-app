@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
-import { NavContainer } from "./style/Navigation";
+import { NavContainer, NavLink } from "./style/Navigation-style";
+
 const Navigation = ()=> {
     return (
       <Fragment>
@@ -10,10 +11,10 @@ const Navigation = ()=> {
             <span className="menu-button"></span>
           </label>
           <ul className="menu">
-            <li className="active"><a href="./index.html">Home</a></li>
-            <li><a href="./pages/about.html">About</a></li>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to ="/about">About</NavLink>
             <li>
-              <a href="./pages/collection.html">Collection</a>
+            <NavLink to ="/collection">Collection</NavLink>
               <ul className="dropdown">
                 <li><a href="./pages/muscle-cars.html">Muscle Cars</a></li>
                 <li><a href="./pages/suv-cars.html">Suv Cars</a></li>
@@ -21,9 +22,9 @@ const Navigation = ()=> {
               </ul>
             </li>
             <li className="logo">Opulent Cars</li>
-            <li><a href="./pages/shop.html">Shop</a></li>
-            <li><a href="./pages/articles.html">Articles</a></li>
-            <li><a href="./pages/contact.html">Contact</a></li>
+            <NavLink to ="/shop">Shop</NavLink>
+            <NavLink to ="/articles">Articles</NavLink>
+             <NavLink to ="/contact">Contact</NavLink>
           </ul>
         </NavContainer>
          <Outlet />

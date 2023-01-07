@@ -1,7 +1,10 @@
+import {HomeContainer} from "./style/Home-Style"
 import Footer from "../common/Footer/Footer";
 
 const Home = ()=> {
-    return (  <div>
+    return (  
+      <>
+    <HomeContainer>
     <div id="home-page">
       <div id="home-header">
         <div className="container">
@@ -143,8 +146,11 @@ const Home = ()=> {
           crossOrigin=""
         />
       </div>
-     <Footer/>
-    </div>) 
+     
+    </HomeContainer>
+    <Footer/>
+    </>
+    ) 
 }
 
 export default Home;

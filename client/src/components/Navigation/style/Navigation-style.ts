@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const NavContainer = styled.div`
   $phone: 576px;
@@ -7,9 +8,9 @@ export const NavContainer = styled.div`
   $desktop: 1200px;
 
   $bg: #f0ebce;
-  $linkColor: aliceblue;
-  $navbarbg: #5b7071;
 
+  $linkColor: aliceblue;
+  background-color: #5b7071;
   .navbar {
     display: flex;
     flex-direction: row;
@@ -18,10 +19,6 @@ export const NavContainer = styled.div`
     padding: 1em;
     font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond,
       "Times New Roman", serif;
-  }
-
-  .navbar-bg {
-    background-color: $navbarbg;
   }
 
   .menu {
@@ -49,7 +46,7 @@ export const NavContainer = styled.div`
         padding: 15px;
         position: absolute;
         width: 100%;
-        background-color: $navbarbg;
+        background-color: #5b7071;
         top: 45px;
       }
       &:hover ul {
@@ -198,7 +195,7 @@ export const NavContainer = styled.div`
     .logo {
       background-color: white !important;
       border-radius: 0 !important;
-      color: $navbarbg !important;
+      color: #5b7071 !important;
     }
     .navbar {
       font-size: 13px;
@@ -266,7 +263,7 @@ export const NavContainer = styled.div`
       padding: 0.5em 0;
       width: 100%;
       color: red;
-      background-color: $navbarbg;
+      background-color: #5b7071;
     }
     .menu > li:not(:last-child) {
       border-bottom: 1px solid #444;
@@ -305,6 +302,10 @@ export const NavContainer = styled.div`
       }
     }
   }
+`;
 
-  /***** NAVBAR Ends *****/
+export const NavLink = styled(Link)`
+  list-style: none;
+  display: flex;
+  align-items: center;
 `;

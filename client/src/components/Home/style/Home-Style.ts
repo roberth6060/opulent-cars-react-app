@@ -1,0 +1,34 @@
+import styled from "styled-components";
+
+export const HomeContainer = styled.div`
+  background-color: $bg-brown;
+  color: $arrow-clr;
+
+  a {
+    color: $arrow-clr;
+    &:hover {
+      color: $bg;
+    }
+  }
+
+  ul {
+    margin: 20px;
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+
+    li {
+      margin: auto;
+    }
+  }
+  .social-media {
+    margin: 20px;
+    font-size: 30px;
+
+    align-items: center;
+
+    i {
+      padding: 5px;
+    }
+  }
+`;
