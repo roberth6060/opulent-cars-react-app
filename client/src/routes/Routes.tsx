@@ -4,6 +4,7 @@ import { lazy } from "react";
 import Shop from '../components/Shop/Shop';
 import About from '../components/About/About';
 import Articles from '../components/Articles/Articles';
+import Contact from '../components/Contact/Conatct';
 const Home = lazy (()=> import ("../components/Home/Home"));
 const Navigation = lazy (()=> import ("../components/Navigation/Navigation"));
 
@@ -35,7 +36,7 @@ const routes = [
       },
        {
         path: "contact",
-        element: <Articles />,
+        element: <Contact />,
       }    
     ],
   },
