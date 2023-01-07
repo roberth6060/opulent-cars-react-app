@@ -1,5 +1,10 @@
+import { Fragment } from "react";
+import { Outlet } from "react-router-dom";
+import { NavContainer } from "./style/Navigation";
 const Navigation = ()=> {
-    return (<div className="navbar">
+    return (
+      <Fragment>
+    <NavContainer>
           <input id="menu-toggle" type="checkbox" />
           <label className="menu-button-container" htmlFor="menu-toggle">
             <span className="menu-button"></span>
@@ -20,7 +25,10 @@ const Navigation = ()=> {
             <li><a href="./pages/articles.html">Articles</a></li>
             <li><a href="./pages/contact.html">Contact</a></li>
           </ul>
-        </div>)
+        </NavContainer>
+         <Outlet />
+         </Fragment>
+        )
 }
 
 export default Navigation;

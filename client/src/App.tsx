@@ -1,16 +1,17 @@
-import Home from './components/Home/Home';
-import Navigation from './components/Navigation/Navigation';
+import { Suspense } from "react";
 import GlobalStyle from "./GlobalStyle";
-import './App.css';
+import Routes from "./routes/Routes";
 
-function App() {
+
+
+const App: React.FC = () => {
+
   return (
-    <div className="App">
-      <GlobalStyle/>
-      <Navigation/>
-      <Home/>
-    </div>
+    <Suspense fallback={<h1>Loading...</h1>}>
+      <GlobalStyle />
+      <Routes/>
+    </Suspense>
   );
-}
+};
 
 export default App;
