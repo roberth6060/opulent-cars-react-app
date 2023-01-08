@@ -2,14 +2,6 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.div`
   background-color: $bg-brown;
-  color: $arrow-clr;
-
-  a {
-    color: $arrow-clr;
-    &:hover {
-      color: $bg;
-    }
-  }
 
   ul {
     margin: 20px;
@@ -31,4 +23,12 @@ export const HomeContainer = styled.div`
       padding: 5px;
     }
   }
+`;
+
+export const HomeHeader = styled.div`
+  background-image: url("https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
 `;

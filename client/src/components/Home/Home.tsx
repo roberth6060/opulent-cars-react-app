@@ -1,11 +1,11 @@
-import {HomeContainer} from "./style/Home-Style"
+import {HomeContainer, HomeHeader} from "./style/Home-Style"
 import Footer from "../common/Footer/Footer";
 
 const Home = ()=> {
     return (  
       <>
     <HomeContainer>
-    <div id="home-page">
+    <HomeHeader>
       <div id="home-header">
         <div className="container">
           <h1>Luxury Car<br />Dealership</h1>
@@ -28,7 +28,7 @@ const Home = ()=> {
           </div>
         </div>
       </div>
-    </div>
+    </HomeHeader>
       <div id="about-section">
         <div className="container">
           <div className="row">
