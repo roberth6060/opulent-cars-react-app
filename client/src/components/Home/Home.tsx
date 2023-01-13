@@ -1,20 +1,23 @@
-import {HomeContainer, HomeHeader} from "./style/Home-Style";
+import {HomeContainer, HomeHeader, ColorPicker,AboutSection, CollectionSection, FeaturedSection,Container} from "./style/Home-Style";
 import { BaseButton } from "../common/Button/style/Button";
 import Footer from "../common/Footer/Footer";
+import ArticleItems from "../common/ArticleItems/ArticleItems";
+import LeafLetMap from "../common/LeafLetMap/LeafLetMap";
+
+
+
 
 const Home = ()=> {
     return (  
-      <>
     <HomeContainer>
     <HomeHeader>
-      <div id="home-header">
-        <div className="container">
+      <Container>
           <h1>Luxury Car<br />Dealership</h1>
           <p>
             Our cars are the embodiment of luxury, performance, and refinement.
           </p>
           <BaseButton>Shop Now</BaseButton>
-          <div className="color-picker hidden ">
+          <ColorPicker>
             <h3>What Color Is Your Future Car?</h3>
             <div className="row">
               <span className="colors orange">
@@ -26,12 +29,11 @@ const Home = ()=> {
               <span className="colors green">
               </span>
             </div>
-          </div>
-        </div>
-      </div>
+          </ColorPicker>
+          </Container>
     </HomeHeader>
-      <div id="about-section">
-        <div className="container">
+      <AboutSection className="container">
+        <Container>
           <div className="row">
             <img
               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
@@ -43,51 +45,16 @@ const Home = ()=> {
               <p>
                 At Opulent Cars, we are proud to offer an exceptional selection of the world's finest luxury cars to the Croatian market. Our showroom is home to some of the most sought-after brands, including Ford Mustang, Lamborghini, and Ferrari...
               </p>
-              <a href="./pages/about.html" className="myButton">Read More</a>
+              <BaseButton>Read More</BaseButton>
             </div>
-          </div>
         </div>
-      </div>
-
-      <div id="articles-section">
-        <div className="container">
-          <h2>Articles</h2>
-          <div className="row">
-            <a href="./pages/article1.html" className="card-container">
-              <img
-                src="./assets/images/photo-1562522570-86db8cca0f90.avif"
-                alt="car"
-              />
-              <h4>History of Luxury Cars</h4>
-              <p>
-                The history of luxury cars can be traced back to the early 1900s, when the first luxury vehicles were....
-              </p>
-            </a>
-            <a href="./pages/article2.html" className="card-container">
-              <img
-                src="./assets/images/flavien-1WXjoRZeWq4-unsplash.jpg"
-                alt="car"
-              />
-              <h4>Why Luxury Car Are So Expensive</h4>
-              <p>
-                Luxury cars are expensive for a number of reasons. One of the main reasons is the materials and...
-              </p>
-            </a>
-            <a href="./pages/article3.html" className="card-container">
-              <img
-                src="https://images.unsplash.com/photo-1533558701576-23c65e0272fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-                alt="car"
-              />
-              <h4>Why People Like Luxury Cars</h4>
-              <p>
-                People like luxury cars for a variety of reasons. For some, it's
-                the prestige and status that comes with owning a...
-              </p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="collection-section">
+        </Container>
+      </AboutSection>
+      <Container>
+         <ArticleItems />
+      </Container>
+      <CollectionSection>
+      <Container>
         <div className="container">
           <h2>Our Collection</h2>
           <div className="grid-collection">
@@ -96,9 +63,10 @@ const Home = ()=> {
              <a className="arrow-link"  id="category3" href="./pages/sports-cars.html"><span>Sports Cars</span></a>
           </div>
         </div>
-      </div>
-      <div id="featured-section">
-        <div className="container">
+        </Container>
+      </CollectionSection>
+      <FeaturedSection>
+        <Container>
           <h2>Featured Brands</h2>
           <div className="row">
             <img
@@ -111,7 +79,7 @@ const Home = ()=> {
               <p>
                 The Lamborghini company was founded in 1963 by Ferruccio Lamborghini, an Italian businessman and automobile enthusiast. Prior to starting Lamborghini, Ferruccio had been successful in the tractor manufacturing business, but his true passion was for sports cars.Ferruccio's initial goal with Lamborghini was to produce a high-performance sports car that could compete ...
               </p>
-              <a href="./pages/lamborghini.html" className="myButton">Read More</a>
+              <BaseButton>Read More</BaseButton>
             </div>
           </div>
 
@@ -128,29 +96,16 @@ const Home = ()=> {
                 brands in the world. Ferrari was born in 1898 in Modena, Italy. He was a racing driver and
                 team manager for Alfa Romeo before starting his own company, Scuderia Ferrari, in 1929. The company acted as...
               </p>
-              <a href="./pages/ferrari.html" className="myButton">Read More</a>
+              <BaseButton>Read More</BaseButton>
             </div>
-            
           </div>
-        </div>
-      </div>
-
-      <div id="location-section">
-        <div className="container">
-          <h2>Location</h2>
-          <div id="map"></div>
-        </div>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-          integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-          crossOrigin=""
-        />
-      </div>
-     
-    </HomeContainer>
+          </Container>
+      </FeaturedSection>
+      <Container>
+        <LeafLetMap/>   
+      </Container>
     <Footer/>
-    </>
+    </HomeContainer>
     ) 
 }
 

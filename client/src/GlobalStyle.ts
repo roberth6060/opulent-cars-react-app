@@ -35,13 +35,6 @@ h2 {
 p {
   line-height: 1.5;
 }
-.container {
-  position: relative;
-  margin: 0 auto;
-  width: 80%;
-  height: 100%;
-  padding: 40px 0;
-}
 
 .row {
   display: flex;
