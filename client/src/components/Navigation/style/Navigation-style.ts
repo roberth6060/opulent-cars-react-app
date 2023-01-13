@@ -2,114 +2,21 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const NavContainer = styled.div`
-  $phone: 576px;
+  /* $phone: 576px;
   $tablet: 768px;
   $laptop: 992px;
   $desktop: 1200px;
 
-  $bg: #f0ebce;
+  $bg: #f0ebce; */
 
-  $linkColor: aliceblue;
   background-color: #5b7071;
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    padding: 1em;
-    font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond,
-      "Times New Roman", serif;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 90%;
-    z-index: 2;
-    ul {
-      list-style-type: none;
-    }
-
-    li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      color: $linkColor;
-      position: relative;
-      padding: 5px 0;
-      .dropdown {
-        display: none;
-        padding: 15px;
-        position: absolute;
-        width: 100%;
-        background-color: #5b7071;
-        top: 45px;
-      }
-      &:hover ul {
-        display: block;
-      }
-    }
-
-    .logo {
-      font-size: 27px;
-      background-color: rgba(255, 255, 255, 0.35);
-      border-radius: 5px;
-      font-family: "Rubik 80s Fade", cursive;
-      font-weight: bold;
-      -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-      -khtml-user-select: none; /* Konqueror HTML */
-      -moz-user-select: none; /* Old versions of Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
-      user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-    }
-
-    a {
-      position: relative;
-      color: $linkColor;
-      text-decoration: none;
-      font-size: 18px;
-      align-items: center;
-    }
-
-    a:visited {
-      color: $linkColor;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: $linkColor;
-      text-decoration: none;
-    }
-    a:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      margin: auto;
-      height: 3px;
-      bottom: -5px;
-      background-color: $linkColor;
-      visibility: hidden;
-      transform: scaleX(0);
-      transform: scaleX(0);
-      transition: all 0.3s ease-in-out 0s;
-    }
-
-    li.active > a:before,
-    a:hover:before {
-      visibility: visible;
-      -webkit-transform: scaleX(1);
-      transform: scaleX(1);
-    }
-
-    .dropdown a:before {
-      background-color: rgba(255, 255, 255, 0.467);
-    }
-  }
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  padding: 1em;
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond,
+    "Times New Roman", serif;
 
   .menu-button-container {
     background-color: #b3a18f;
@@ -302,6 +209,165 @@ export const NavContainer = styled.div`
       }
     }
   }
+`;
+
+export const MenuButtonContainer = styled.label.attrs({ for: "menu-toggle" })`
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    width: 40px;
+    height: 40px;
+  }
+`;
+
+export const Menu = styled.ul`
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  z-index: 2;
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    position: relative;
+    padding: 5px 0;
+
+    &:hover ul {
+      display: block;
+    }
+  }
+
+  a {
+    position: relative;
+    color: $linkColor;
+    text-decoration: none;
+    font-size: 18px;
+    align-items: center;
+  }
+
+  a:visited {
+    color: $linkColor;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $linkColor;
+    text-decoration: none;
+  }
+  a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    height: 3px;
+    bottom: -5px;
+    background-color: $linkColor;
+    visibility: hidden;
+    transform: scaleX(0);
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  li.active > a:before,
+  a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+`;
+
+export const DropDown = styled.ul`
+  display: none;
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+  background-color: #5b7071;
+  top: 45px;
+
+  & a:before {
+    background-color: rgba(255, 255, 255, 0.467);
+  }
+`;
+
+export const MenuButton = styled.span`
+  &,
+  &::before,
+  &::after {
+    display: block;
+    background-color: #4e6c50;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  &::before {
+    content: "";
+    margin-top: -8px;
+  }
+  &::after {
+    content: "";
+    margin-top: 8px;
+  }
+`;
+
+export const MenuToggle = styled.input.attrs({
+  id: "menu-toggle",
+  type: "checkbox",
+})`
+  display: none;
+  &:checked + ${MenuButtonContainer} ${MenuButton}::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  &:checked + ${MenuButtonContainer} ${MenuButton} {
+    background: rgba(255, 255, 255, 0);
+  }
+  &:checked + ${MenuButtonContainer} ${MenuButton}::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+
+  @media screen and (max-width: 800px) {
+    & ~ ${Menu} {
+      display: none;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    &:checked ~ ${Menu} {
+      display: block;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+  }
+`;
+
+export const Logo = styled.li`
+  font-size: 27px;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 5px;
+  font-family: "Rubik 80s Fade", cursive;
+  font-weight: bold;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 `;
 
 export const NavLink = styled(Link)`

@@ -1,31 +1,32 @@
 import { Fragment } from "react";
-import { Outlet } from "react-router-dom";
-import { NavContainer, NavLink } from "./style/Navigation-style";
+import {  Outlet } from "react-router-dom";
+import { NavContainer, NavLink, Menu, DropDown, Logo, MenuButtonContainer, MenuToggle, MenuButton} from "./style/Navigation-style";
 
 const Navigation = ()=> {
     return (
-      <Fragment>
+    <Fragment>
     <NavContainer>
-          <input id="menu-toggle" type="checkbox" />
-          <label className="menu-button-container" htmlFor="menu-toggle">
-            <span className="menu-button"></span>
-          </label>
-          <ul className="menu">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to ="/about">About</NavLink>
+          <MenuToggle />
+          <MenuButtonContainer>
+            <MenuButton></MenuButton>
+          </MenuButtonContainer>
+          <Menu>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
             <li>
-            <NavLink to ="/collection">Collection</NavLink>
-              <ul className="dropdown">
-                <li><a href="./pages/muscle-cars.html">Muscle Cars</a></li>
-                <li><a href="./pages/suv-cars.html">Suv Cars</a></li>
-                <li><a href="./pages/sports-cars.html">Sports Cars</a></li>
-              </ul>
+            <li><NavLink to="/collection">Collection</NavLink></li>
+              <DropDown>
+                <li><NavLink to ="/muscle">Muscle Cars</NavLink></li>
+                <li><NavLink to ="/suv">Suv Cars</NavLink></li>
+                <li><NavLink to ="/sports"></NavLink></li>
+                <li><NavLink to ="/sports">Sports Cars</NavLink></li>
+              </DropDown>
             </li>
-            <li className="logo">Opulent Cars</li>
-            <NavLink to ="/shop">Shop</NavLink>
-            <NavLink to ="/articles">Articles</NavLink>
-             <NavLink to ="/contact">Contact</NavLink>
-          </ul>
+            <Logo>Opulent Cars</Logo>
+             <li><NavLink to ="/shop">Shop</NavLink></li>
+             <li><NavLink to ="/articles">Articles</NavLink></li>
+             <li><NavLink to ="/contact">Contact</NavLink></li>
+          </Menu>
         </NavContainer>
          <Outlet />
          </Fragment>
