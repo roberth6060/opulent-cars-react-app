@@ -1,4 +1,5 @@
-import {HomeContainer, HomeHeader} from "./style/Home-Style"
+import {HomeContainer, HomeHeader} from "./style/Home-Style";
+import { BaseButton } from "../common/Button/style/Button";
 import Footer from "../common/Footer/Footer";
 
 const Home = ()=> {
@@ -12,7 +13,7 @@ const Home = ()=> {
           <p>
             Our cars are the embodiment of luxury, performance, and refinement.
           </p>
-          <a href="./pages/shop.html" className="myButton">Shop Now</a>
+          <BaseButton>Shop Now</BaseButton>
           <div className="color-picker hidden ">
             <h3>What Color Is Your Future Car?</h3>
             <div className="row">
