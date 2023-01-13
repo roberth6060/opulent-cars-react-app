@@ -2,13 +2,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const NavContainer = styled.div`
-  /* $phone: 576px;
-  $tablet: 768px;
-  $laptop: 992px;
-  $desktop: 1200px;
-
-  $bg: #f0ebce; */
-
   background-color: #5b7071;
   display: flex;
   flex-direction: row;
@@ -371,6 +364,7 @@ export const Logo = styled.li`
 `;
 
 export const NavLink = styled(Link)`
+  color: white;
   list-style: none;
   display: flex;
   align-items: center;

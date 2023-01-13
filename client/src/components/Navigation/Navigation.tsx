@@ -18,7 +18,6 @@ const Navigation = ()=> {
               <DropDown>
                 <li><NavLink to ="/muscle">Muscle Cars</NavLink></li>
                 <li><NavLink to ="/suv">Suv Cars</NavLink></li>
-                <li><NavLink to ="/sports"></NavLink></li>
                 <li><NavLink to ="/sports">Sports Cars</NavLink></li>
               </DropDown>
             </li>
