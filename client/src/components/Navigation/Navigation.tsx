@@ -16,9 +16,9 @@ const Navigation = ()=> {
             <li>
             <li><NavLink to="/collection">Collection</NavLink></li>
               <DropDown>
-                <li><NavLink to ="/muscle">Muscle Cars</NavLink></li>
-                <li><NavLink to ="/suv">Suv Cars</NavLink></li>
-                <li><NavLink to ="/sports">Sports Cars</NavLink></li>
+                <li><NavLink to ="/">Muscle Cars</NavLink></li>
+                <li><NavLink to ="/">Suv Cars</NavLink></li>
+                <li><NavLink to ="/">Sports Cars</NavLink></li>
               </DropDown>
             </li>
             <Logo>Opulent Cars</Logo>

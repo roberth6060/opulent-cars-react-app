@@ -1,9 +1,9 @@
+import { Container } from "../Home/style/Home-Style";
+
 const About = ()=> {
     return (  <div className="about-page">
-   
-    
       <div id="about-section">
-        <div className="container">
+        <Container>
           <div className="row">
             <img
               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
@@ -48,7 +48,7 @@ const About = ()=> {
               />
             </div>
           </div>
-        </div>
+        </Container>
       </div>
     </div>
     )

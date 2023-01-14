@@ -1,6 +1,8 @@
+import { ContactContainer } from "./style/ContactStyle";
+import { Container } from "../Home/style/Home-Style";
 const Contact = ()=> {
-    return ( <div id="contact-page">
-      <div className="container" id="contact">
+    return ( <ContactContainer>
+      <Container>
         <h2>Contact Us</h2>
         <div id="contact-container">
           <form action="#" method="post" id="contact_form">
@@ -64,8 +66,8 @@ const Contact = ()=> {
             </div>
           </form>
         </div>
-      </div>
-    </div>)
+      </Container>
+    </ContactContainer>)
 }
 
 export default Contact;
