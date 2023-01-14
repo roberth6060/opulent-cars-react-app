@@ -1,5 +1,6 @@
 /* ========= Collection Data and Functionality =========*/
 
+import Footer from "../common/Footer/Footer";
 import { Container } from "../Home/style/Home-Style";
 import { CollectionContainer } from "./style/CollectionStyle";
 
@@ -187,7 +188,9 @@ const totalCollectionData = sportsCarCollectionData.concat(
 const Collection = ()=> {
 
 
-  return (<CollectionContainer>
+  return (
+  <>
+  <CollectionContainer>
 
   {totalCollectionData.map(collection => {
       if (collection.carType === "rwd") {
@@ -209,7 +212,9 @@ const Collection = ()=> {
       </div>
     </a>)
   })}
- 
-  </CollectionContainer>)
+  </CollectionContainer>
+  <Footer/>
+  </>
+  )
 }
 export default Collection;

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const CollectionContainer = styled.div`
+  width: 90%;
+  margin: auto;
   box-sizing: border-box;
   display: grid;
   grid-column-gap: 50px;
