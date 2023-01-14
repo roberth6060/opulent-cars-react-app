@@ -17,7 +17,7 @@ const Home = ()=> {
             Our cars are the embodiment of luxury, performance, and refinement.
           </p>
           <BaseButton>Shop Now</BaseButton>
-          <ColorPicker>
+          <ColorPicker className="hidden">
             <h3>What Color Is Your Future Car?</h3>
             <div className="row">
               <span className="colors orange">
