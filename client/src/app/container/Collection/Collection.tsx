@@ -1,7 +1,6 @@
 /* ========= Collection Data and Functionality =========*/
-
-import Footer from "../common/Footer/Footer";
-import { Container } from "../Home/style/Home-Style";
+import Footer from "../../components/Footer/Footer";
+import { Container } from "../HomePage/style/HomePageStyle";
 import { CollectionContainer } from "./style/CollectionStyle";
 
 //Types:

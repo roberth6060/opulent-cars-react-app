@@ -1,8 +1,8 @@
-import {HomeContainer, HomeHeader, ColorPicker,AboutSection, CollectionSection, FeaturedSection,Container, GridLayout, Main, AsideTop, AsideBottom} from "./style/Home-Style";
-import { BaseButton } from "../common/Button/style/Button";
-import Footer from "../common/Footer/Footer";
-import ArticleItems from "../common/ArticleItems/ArticleItems";
-import LeafLetMap from "../common/LeafLetMap/LeafLetMap";
+import {HomeContainer, HomeHeader, ColorPicker,AboutSection, CollectionSection, FeaturedSection,Container, GridLayout, Main, AsideTop, AsideBottom} from "./style/HomePageStyle";
+import { BaseButton } from "../../components/Button/style/Button";
+import Footer from "../../components/Footer/Footer";
+import ArticleItems from "../../components/ArticleItems/ArticleItems";
+import LeafLetMap from "../../components/LeafLetMap/LeafLetMap";
 
 
 const Home = ()=> {

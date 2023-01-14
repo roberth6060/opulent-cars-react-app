@@ -1,5 +1,6 @@
-import { Container } from "../Home/style/Home-Style";
-import Footer from "../common/Footer/Footer";
+import { Container } from "../HomePage/style/HomePageStyle";
+import Footer from "../../components/Footer/Footer";
+
 const About = ()=> {
     return (  <div className="about-page">
       <div id="about-section">
