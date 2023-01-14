@@ -1,10 +1,8 @@
-import {HomeContainer, HomeHeader, ColorPicker,AboutSection, CollectionSection, FeaturedSection,Container} from "./style/Home-Style";
+import {HomeContainer, HomeHeader, ColorPicker,AboutSection, CollectionSection, FeaturedSection,Container, GridLayout, Main, AsideTop, AsideBottom} from "./style/Home-Style";
 import { BaseButton } from "../common/Button/style/Button";
 import Footer from "../common/Footer/Footer";
 import ArticleItems from "../common/ArticleItems/ArticleItems";
 import LeafLetMap from "../common/LeafLetMap/LeafLetMap";
-
-
 
 
 const Home = ()=> {
@@ -50,20 +48,21 @@ const Home = ()=> {
         </div>
         </Container>
       </AboutSection>
-      <Container>
+      <Container >
          <ArticleItems />
       </Container>
-      <CollectionSection>
-      <Container>
-        <div className="container">
+      <CollectionSection id="collection-section">
+       <Container>
           <h2>Our Collection</h2>
-          <div className="grid-collection">
-            <a className="arrow-link"  id="category1" href="./pages/muscle-cars.html"><span>Muscle Cars</span></a>
-             <a className="arrow-link"  id="category2"  href="./pages/suv-cars.html"><span>Suv Cars</span></a>
-             <a className="arrow-link"  id="category3" href="./pages/sports-cars.html"><span>Sports Cars</span></a>
-          </div>
-        </div>
+      <GridLayout>
+        <Main to="/collection" className="arrow-link"><span>Muscle Cars</span></Main>
+        <AsideTop to="/collection" className="arrow-link"/>
+        <AsideBottom to="/collection" className="arrow-link"/>
+      </GridLayout>
         </Container>
+        
+      
+   
       </CollectionSection>
       <FeaturedSection>
         <Container>
