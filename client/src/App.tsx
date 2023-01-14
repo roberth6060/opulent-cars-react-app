@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import GlobalStyle from "./GlobalStyle";
-import Routes from "./routes/Routes";
+import Routes from "./app/routes/Routes";
 import Spinner from "./app/components/Spinner/Spinner";
 
 

@@ -1,11 +1,13 @@
 import {HomeContainer, HomeHeader, ColorPicker,AboutSection, CollectionSection, FeaturedSection,Container, GridLayout, Main, AsideTop, AsideBottom} from "./style/HomePageStyle";
-import { BaseButton } from "../../components/Button/style/Button";
+
+import Button, { BUTTON_TYPE_CLASSES } from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import ArticleItems from "../../components/ArticleItems/ArticleItems";
 import LeafLetMap from "../../components/LeafLetMap/LeafLetMap";
+import BookCard from "../../components/BookCard/BookCard";
 
 
-const Home = ()=> {
+const HomePage = ()=> {
     return (  
     <HomeContainer>
     <HomeHeader>
@@ -14,7 +16,9 @@ const Home = ()=> {
           <p>
             Our cars are the embodiment of luxury, performance, and refinement.
           </p>
-          <BaseButton>Shop Now</BaseButton>
+          <Button type="button"  buttonType={BUTTON_TYPE_CLASSES.base}>Rent Car</Button>
+          <Button type="button"  buttonType={BUTTON_TYPE_CLASSES.inverted}>Sell Car</Button>
+          <BookCard/>
           <ColorPicker className="hidden">
             <h3>What Color Is Your Future Car?</h3>
             <div className="row">
@@ -43,7 +47,7 @@ const Home = ()=> {
               <p>
                 At Opulent Cars, we are proud to offer an exceptional selection of the world's finest luxury cars to the Croatian market. Our showroom is home to some of the most sought-after brands, including Ford Mustang, Lamborghini, and Ferrari...
               </p>
-              <BaseButton>Read More</BaseButton>
+              
             </div>
         </div>
         </Container>
@@ -60,9 +64,6 @@ const Home = ()=> {
         <AsideBottom to="/collection" className="arrow-link"/>
       </GridLayout>
         </Container>
-        
-      
-   
       </CollectionSection>
       <FeaturedSection>
         <Container>
@@ -78,7 +79,7 @@ const Home = ()=> {
               <p>
                 The Lamborghini company was founded in 1963 by Ferruccio Lamborghini, an Italian businessman and automobile enthusiast. Prior to starting Lamborghini, Ferruccio had been successful in the tractor manufacturing business, but his true passion was for sports cars.Ferruccio's initial goal with Lamborghini was to produce a high-performance sports car that could compete ...
               </p>
-              <BaseButton>Read More</BaseButton>
+              {/* <BaseButton>Read More</BaseButton> */}
             </div>
           </div>
 
@@ -95,7 +96,7 @@ const Home = ()=> {
                 brands in the world. Ferrari was born in 1898 in Modena, Italy. He was a racing driver and
                 team manager for Alfa Romeo before starting his own company, Scuderia Ferrari, in 1929. The company acted as...
               </p>
-              <BaseButton>Read More</BaseButton>
+              {/* <BaseButton>Read More</BaseButton> */}
             </div>
           </div>
           </Container>
@@ -108,4 +109,4 @@ const Home = ()=> {
     ) 
 }
 
-export default Home;
+export default HomePage;

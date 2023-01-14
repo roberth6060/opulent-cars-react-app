@@ -1,13 +1,13 @@
 
 import {useRoutes} from 'react-router-dom';
 import { lazy } from "react";
-import Shop from '../app/container/Shop/Shop';
-import About from '../app/container/About/About';
-import Articles from '../app/container/Articles/Articles';
-import Contact from '../app/container/Contact/Conatct';
-import Collection from '../app/container/Collection/Collection';
-const Home = lazy (()=> import ("../app/container/HomePage/Home"));
-const Navigation = lazy (()=> import ("../app/container/Navigation/Navigation"));
+import Shop from '../container/Shop/Shop';
+import About from '../container/About/About';
+import Articles from '../container/Articles/Articles';
+import Contact from '../container/Contact/Conatct';
+import Collection from '../container/Collection/Collection';
+const Home = lazy (()=> import ("../container/HomePage/HomePage"));
+const Navigation = lazy (()=> import ("../components/Navigation/Navigation"));
 
 
 const routes = [

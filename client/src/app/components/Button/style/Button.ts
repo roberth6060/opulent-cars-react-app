@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { SpinnerContainer } from "../../Spinner/style/Spinner";
 
 export const BaseButton = styled.button`
-  /* border-radius: 5px;
+  border-radius: 5px;
   min-width: 165px;
   width: auto;
   height: 50px;
@@ -24,9 +24,9 @@ export const BaseButton = styled.button`
     background-color: white;
     color: black;
     border: 1px solid black;
-  } */
+  }
 
-  background-color: #efe3b1;
+  /* background-color: #efe3b1;
   border-radius: 29px;
   border: 1px solid #081f2d;
   color: #081f2d;
@@ -43,15 +43,15 @@ export const BaseButton = styled.button`
   &:active {
     position: relative;
     top: 1px;
-  }
+  } */
 `;
 
 export const GoogleSignInButton = styled(BaseButton)`
-  background-color: #4285f4;
+  background-color: red;
   color: white;
   &:hover {
-    background-color: #357ae8;
-    border: none;
+    background-color: transparent;
+    border: red 1px solid;
   }
 `;
 
