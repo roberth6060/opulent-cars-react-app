@@ -1,4 +1,8 @@
 /* ========= Collection Data and Functionality =========*/
+
+import { Container } from "../Home/style/Home-Style";
+import { CollectionContainer } from "./style/CollectionStyle";
+
 //Types:
 type CollectionType = {
   carName: string;
@@ -177,110 +181,35 @@ const totalCollectionData = sportsCarCollectionData.concat(
   suvCarCollectionData
 );
 
-const totalCollection = document.querySelector(
-  ".total-collection"
-) as HTMLElement;
-const sportsCarCollection = document.querySelector(
-  ".sports-collection"
-) as HTMLElement;
-const muscleCarCollection = document.querySelector(
-  ".muscle-collection"
-) as HTMLElement;
-const suvCarCollection = document.querySelector(
-  ".suv-collection"
-) as HTMLElement;
-const btn = document.querySelector(".button") as HTMLElement;
+ let wheelType = "";
 
-function buildList(carNum: number) {
-  // if (btn) {
-  //   btn.outerHTML = "";
-  // }
 
-  let i = carNum;
-  for (i; i < carNum + 4; i++) {
-    // if (collectionTotal[i].carImage === "") {
-    //   collectionTotal[i].carImage =
-    //     "https://res.cloudinary.com/dmnixrpra/image/upload/v1585925027/IMAGE_COMING_SOON.png";
-    // }
-    // looping through each car list object
-  } // End of for loop
+const Collection = ()=> {
 
-  // collection.insertAdjacentHTML("beforeend", widgetContent);
-  // SportsCollection.insertAdjacentHTML("beforeend", widgetContent);
 
-  // var buttonContent = "";
-  // if (i < totalCollection.length) {
-  //   buttonContent =
-  //     '<button class="button" type="button" onclick="buildList(' +
-  //     i +
-  //     ')">More Cars</button>';
-  // } // End of if statement
-  // collection.insertAdjacentHTML("afterend", buttonContent);
-} // End of buildList function
+  return (<CollectionContainer>
 
-const createCollectionCard = (
-  collectionType: Array<CollectionType>,
-  collectionTypeElement: HTMLElement
-) => {
-  let i = 0;
-  // detecting if rwd awd or fwd, assigning it to wheelType variable
-  var wheelType = "";
-  if (collectionType[i].carType == "rwd") {
+  {totalCollectionData.map(collection => {
+      if (collection.carType === "rwd") {
     wheelType = " rwhp";
-  } else if (collectionType[i].carType == "fwd") {
+  } else if (collection.carType === "fwd") {
     wheelType = " fwhp";
   } else {
     wheelType = " hp";
   }
-
-  let widgetContent = "";
-  for (let i = 0; i < collectionType.length; i++) {
-    widgetContent +=
-      `<a class="car-link" target="_blank" href=${collectionType[i].url}>` +
-      '<div class="car-card">' +
-      "<h2>" +
-      collectionType[i].carName +
-      "</h2>" +
-      '<img src="' +
-      collectionType[i].carImage +
-      '">' +
-      "<ul>" +
-      "<li>" +
-      collectionType[i].carLbs +
-      " lb-ft" +
-      "</li>" +
-      "<li>" +
-      collectionType[i].carRwhp +
-      wheelType +
-      "</li>" +
-      "<li>" +
-      "$" +
-      collectionType[i].carPrice +
-      "</li>" +
-      "</ul>" +
-      "</div>" +
-      "</a>";
-  }
-  collectionTypeElement.insertAdjacentHTML("beforeend", widgetContent);
-};
-
-const path = window.location.pathname.split("/");
-
-if (path[path.length - 1] === "collection.html") {
-  createCollectionCard(totalCollectionData, totalCollection);
-}
-if (path[path.length - 1] === "suv-cars.html") {
-  createCollectionCard(suvCarCollectionData, suvCarCollection);
-}
-if (path[path.length - 1] === "muscle-cars.html") {
-  createCollectionCard(muscleCarCollectionData, muscleCarCollection);
-}
-if (path[path.length - 1] === "sports-cars.html") {
-  createCollectionCard(sportsCarCollectionData, sportsCarCollection);
-}
-
-
-const Collection = ()=> {
-    return <div>Collection</div>
+    return (<a className="car-link" target="_blank" href={collection.url} rel="noreferrer">
+      <div className="car-card">
+        <h2>{collection.carName}</h2>
+        <img src={collection.carImage} alt={collection.carName} />
+        <ul>
+          <li>{collection.carLbs} lb-ft</li>
+          <li>{collection.carRwhp + wheelType} </li>
+          <li>$ {collection.carPrice}</li>
+        </ul>
+      </div>
+    </a>)
+  })}
+ 
+  </CollectionContainer>)
 }
 export default Collection;

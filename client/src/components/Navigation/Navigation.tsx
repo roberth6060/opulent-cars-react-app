@@ -16,13 +16,13 @@ const Navigation = ()=> {
             <li>
             <li><NavLink to="/collection">Collection</NavLink></li>
               <DropDown>
-                <li><NavLink to ="/">Muscle Cars</NavLink></li>
-                <li><NavLink to ="/">Suv Cars</NavLink></li>
-                <li><NavLink to ="/">Sports Cars</NavLink></li>
+                <li><NavLink to ="/collection">Muscle Cars</NavLink></li>
+                <li><NavLink to ="/collection">Suv Cars</NavLink></li>
+                <li><NavLink to ="/collection">Sports Cars</NavLink></li>
               </DropDown>
             </li>
             <Logo>Opulent Cars</Logo>
-             <li><NavLink to ="/shop">Shop</NavLink></li>
+             <li><NavLink to ="/">Shop</NavLink></li>
              <li><NavLink to ="/articles">Articles</NavLink></li>
              <li><NavLink to ="/contact">Contact</NavLink></li>
           </Menu>

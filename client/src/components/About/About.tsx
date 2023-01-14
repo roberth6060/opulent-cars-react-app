@@ -1,5 +1,5 @@
 import { Container } from "../Home/style/Home-Style";
-
+import Footer from "../common/Footer/Footer";
 const About = ()=> {
     return (  <div className="about-page">
       <div id="about-section">
@@ -50,6 +50,7 @@ const About = ()=> {
           </div>
         </Container>
       </div>
+      <Footer/>
     </div>
     )
 }

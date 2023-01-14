@@ -1,5 +1,6 @@
 import { ContactContainer } from "./style/ContactStyle";
 import { Container } from "../Home/style/Home-Style";
+import Footer from "../common/Footer/Footer";
 const Contact = ()=> {
     return ( <ContactContainer>
       <Container>
@@ -67,6 +68,7 @@ const Contact = ()=> {
           </form>
         </div>
       </Container>
+      <Footer/>
     </ContactContainer>)
 }
 

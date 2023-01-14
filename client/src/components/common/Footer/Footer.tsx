@@ -1,7 +1,10 @@
+import { Container } from "../../Home/style/Home-Style";
+import { FooterContainer } from "./style/FooterStyle";
+
 const Footer = ()=> {
     return (
-    <div id="footer">
-            <div className="container">
+    <FooterContainer>
+            <Container>
            <div className="row">
             <ul>
               <h3>Opulent Cars</h3>
@@ -19,8 +22,8 @@ const Footer = ()=> {
               <a href="https://twitter.com/"><i className="fa-brands fa-twitter"></i></a>
             </div>
            </div>
-          </div>
-         </div>
+          </Container>
+         </FooterContainer>
          )
 }
 
