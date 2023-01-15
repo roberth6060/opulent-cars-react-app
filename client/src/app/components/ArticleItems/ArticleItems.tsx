@@ -7,7 +7,7 @@ const ArticleItems = ()=> {
           <div className="row">
             <a href="./pages/article1.html" className="card-container">
               <img
-                srcSet ="https://images.unsplash.com/photo-1481130763351-e3d9667e3087?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                src ="./assets/images/meet-the-worlds-oldest-luxury-automobile-the-130-year-old-daimler-motor-car-thumbnail_3.jpg.webp"
                 alt="car"
               />
               <h4>History of Luxury Cars</h4>

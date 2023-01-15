@@ -1,5 +1,6 @@
 import { Container } from "../HomePage/style/HomePageStyle";
 import Footer from "../../components/Footer/Footer";
+import { ImageContainer } from "./style/AboutStyle";
 
 const About = ()=> {
     return (  <div className="about-page">
@@ -35,20 +36,20 @@ const About = ()=> {
               </p>
             </div>
           </div>
-          <div className="margin-top">
+          <ImageContainer>
             <h2 className="title">We Strive For Excellence In Customer Service</h2>
             <div className="row">
-              <img src="../assets/images/getty-images-D1ywMW3a3Vk-unsplash.jpg" alt="Customer Service Image" />
+              <img src="./assets/images/getty-images-D1ywMW3a3Vk-unsplash.jpg" />
               <img
-                src="../assets/images/getty-images-uAVaeUoPJK8-unsplash.jpg"
+                src="./assets/images/getty-images-uAVaeUoPJK8-unsplash.jpg"
                 alt="Customer Service Image"
               />
               <img
-                src="../assets/images/getty-images-zltLLD8h540-unsplash.jpg"
+                src="./assets/images/getty-images-zltLLD8h540-unsplash.jpg"
                 alt="Customer Service Image"
               />
             </div>
-          </div>
+          </ImageContainer>
         </Container>
       </div>
       <Footer/>

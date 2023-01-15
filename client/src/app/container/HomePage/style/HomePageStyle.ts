@@ -229,6 +229,18 @@ export const FeaturedSection = styled.section`
   }
 `;
 export const HomeContainer = styled.div`
+  .book-ride {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+  }
+  .button-container {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+
   ul {
     margin: 20px;
     list-style: none;

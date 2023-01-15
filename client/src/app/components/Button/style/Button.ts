@@ -12,7 +12,6 @@ export const BaseButton = styled.button`
   font-size: 15px;
   background-color: black;
   color: white;
-  text-transform: uppercase;
   font-family: "Open Sans Condensed";
   font-weight: bolder;
   border: none;
@@ -20,30 +19,34 @@ export const BaseButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: 0.3s;
   &:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
+    transition: 0.3s;
   }
 
-  /* background-color: #efe3b1;
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+`;
+
+export const ReadMoreButton = styled(BaseButton)`
+  background-color: #efe3b1;
   border-radius: 29px;
   border: 1px solid #081f2d;
   color: #081f2d;
   font-size: 15px;
+  height: 40px;
   padding: 10px 45px;
-  cursor: pointer;
-  transition: 0.3s;
   &:hover {
     background-color: white;
     color: #081f2d;
     border-color: #081f2d;
-    transition: 0.3s;
   }
-  &:active {
-    position: relative;
-    top: 1px;
-  } */
 `;
 
 export const GoogleSignInButton = styled(BaseButton)`
