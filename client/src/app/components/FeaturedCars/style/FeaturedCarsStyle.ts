@@ -14,9 +14,13 @@ export const FeaturedCarsContainer = styled.div`
 
 export const CarsContainer = styled.div`
   max-width: 1024px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 7px;
+
+  ul {
+    display: flex;
+  }
 `;

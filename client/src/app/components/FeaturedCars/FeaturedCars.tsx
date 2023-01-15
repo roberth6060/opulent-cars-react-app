@@ -1,6 +1,16 @@
-import { ICarItem } from "../../types/CarItem";
+import Carousel, {Dots, slidesToShowPlugin} from "@brainhubeu/react-carousel"
+import '@brainhubeu/react-carousel/lib/style.css';
+import { useMediaQuery } from "react-responsive";
+import { useState } from "react";
+import { ICarItem } from "../../types/CarItemType";
 import CarItem from "../CarItem/CarItem"
+import { SCREENS } from "../Responsive";
 import { CarsContainer, FeaturedCarsContainer } from "./style/FeaturedCarsStyle"
+
+
+const FeaturedCars = ()=> {
+const [current, setCurrent] = useState(0);
+  const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
  const testCar: ICarItem = {
     name: "Audi S3 Car",
@@ -26,17 +36,48 @@ import { CarsContainer, FeaturedCarsContainer } from "./style/FeaturedCarsStyle"
     gas: "Petrol",
     
   };
+  const cars = [
+                <CarItem {...testCar}/>, 
+                <CarItem {...testCar}/>, 
+                <CarItem {...testCar}/>, 
+                <CarItem {...testCar2}/>, 
+                <CarItem {...testCar2}/>
+                ];
 
-
-const FeaturedCars = ()=> {
     return (
     <>
        <h2>Featured Cars</h2>
          <FeaturedCarsContainer>
             <CarsContainer>
-                <CarItem {...testCar} />
-                <CarItem {...testCar} />
-                <CarItem {...testCar2} />
+                <Carousel value={current} onChange={setCurrent} slides={cars} plugins={[
+                    "clickToChange",
+                    {
+                    resolve: slidesToShowPlugin,
+                    options: {
+                        numberOfSlides: 3
+                    }
+                }]}
+                breakpoints = {{
+                    640: {
+                        plugins: [{
+                            resolve: slidesToShowPlugin,
+                            options: {
+                                numberOfSlides: 1
+                            }
+                        }]
+                    },
+                       900: {
+                        plugins: [{
+                            resolve: slidesToShowPlugin,
+                            options: {
+                                numberOfSlides: 2
+                            }
+                        }]
+                    }
+                }}
+                />
+               <Dots value={current} onChange ={setCurrent} number={isMobile ? cars.length : Math.ceil(cars.length / 3)}/>
+            
             </CarsContainer>
         </FeaturedCarsContainer>
       </>
