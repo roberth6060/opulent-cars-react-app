@@ -4,6 +4,7 @@ import { FilledButton, OutLinedButton } from "./style/ButtonStyle";
 interface IButtonProps {
 theme?: "filled" | "outlined";
 text: string;
+
 }
 
 export const Button =(props: IButtonProps)=> {
