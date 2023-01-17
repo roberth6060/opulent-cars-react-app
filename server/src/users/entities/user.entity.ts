@@ -1,8 +1,25 @@
-import { ObjectType, Field, Int } from '@nestjs/graphql';
-
+import { ObjectType, Field } from '@nestjs/graphql';
+import { Schema as MongooseSchema } from 'mongoose';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 //entity: to set what is your “user” that you want to use as a resource
+
+@Schema()
 @ObjectType()
 export class User {
-  @Field(() => Int, { description: 'Example field (placeholder)' })
-  exampleField: number;
+  @Field(() => String)
+  _id: MongooseSchema.Types.ObjectId;
+  @Prop()
+  @Field(() => String, { description: 'User firstName ' })
+  firstName: string;
+  @Prop()
+  @Field(() => String, { description: 'User lastName ' })
+  lastName: string;
+  @Prop()
+  @Field(() => String, { description: 'User email ' })
+  email: string;
+  @Prop()
+  @Field(() => String, { description: 'User role' })
+  role: string;
 }
+
+export const UserSchema = SchemaFactory.createForClass(User);

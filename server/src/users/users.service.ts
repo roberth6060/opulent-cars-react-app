@@ -1,27 +1,48 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateUserInput } from './dto/create-user.input';
 import { UpdateUserInput } from './dto/update-user.input';
+import { User } from './entities/user.entity';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
 
 //service: where you should code your business logic
 @Injectable()
 export class UsersService {
+  constructor(
+    @InjectModel(User.name)
+    private readonly userModel: Model<User>,
+  ) {}
+
   create(createUserInput: CreateUserInput) {
-    return { exampleField: createUserInput.exampleField };
+    const user = new this.userModel(createUserInput);
+    return user.save();
   }
 
   findAll() {
-    return [{ exampleField: 1 }];
+    return this.userModel.find().exec();
   }
 
-  findOne(id: number) {
-    return { exampleField: id };
+  async findOne(id: string) {
+    const user = await this.userModel.findOne({ _id: id }).exec();
+    if (!user) {
+      throw new NotFoundException(`User ${id} not found`);
+    }
+    return user;
   }
 
-  update(id: number, updateUserInput: UpdateUserInput) {
-    return { exampleField: updateUserInput.id };
+  async update(id: string, updateUserInput: UpdateUserInput) {
+    const existingUser = await this.userModel
+      .findOneAndUpdate({ _id: id }, { $set: updateUserInput }, { new: true })
+      .exec();
+
+    if (!existingUser) {
+      throw new NotFoundException(`User ${id} not found`);
+    }
+    return existingUser;
   }
 
-  remove(id: number) {
-    return { exampleField: id };
+  async remove(id: string) {
+    const user = await this.findOne(id);
+    return user.remove();
   }
 }

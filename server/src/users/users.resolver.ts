@@ -1,10 +1,9 @@
-import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
+import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
 import { UsersService } from './users.service';
 import { User } from './entities/user.entity';
 import { CreateUserInput } from './dto/create-user.input';
 import { UpdateUserInput } from './dto/update-user.input';
 
-//resolver: which you can code queries (to retrieve data) and mutations (to manipulate data)
 @Resolver(() => User)
 export class UsersResolver {
   constructor(private readonly usersService: UsersService) {}
@@ -20,17 +19,17 @@ export class UsersResolver {
   }
 
   @Query(() => User, { name: 'user' })
-  findOne(@Args('id', { type: () => Int }) id: number) {
+  findOne(@Args('_id', { type: () => String }) id: string) {
     return this.usersService.findOne(id);
   }
 
   @Mutation(() => User)
   updateUser(@Args('updateUserInput') updateUserInput: UpdateUserInput) {
-    return this.usersService.update(updateUserInput.id, updateUserInput);
+    return this.usersService.update(updateUserInput._id, updateUserInput);
   }
 
   @Mutation(() => User)
-  removeUser(@Args('id', { type: () => Int }) id: number) {
+  removeUser(@Args('_id', { type: () => String }) id: string) {
     return this.usersService.remove(id);
   }
 }
