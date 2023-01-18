@@ -4,7 +4,7 @@ import { UpdateUserInput } from './dto/update-user.input';
 import { User } from './entities/user.entity';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { ListUsersInput } from './dto/list.user.input';
+import { ListUsersInput } from './dto/list-users.input';
 
 //service: where you should code your business logic
 @Injectable()
@@ -13,6 +13,12 @@ export class UsersService {
     @InjectModel(User.name)
     private readonly userModel: Model<User>,
   ) {}
+
+  async getUsers(paginationQuery: ListUsersInput) {
+    const count = await this.userModel.count();
+    const users = await this.findAll(paginationQuery);
+    return { users, count };
+  }
 
   create(createUserInput: CreateUserInput) {
     const user = new this.userModel(createUserInput);
