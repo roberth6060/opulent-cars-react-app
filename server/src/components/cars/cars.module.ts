@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { CarsResolver } from './cars.resolver';
+import { CarResolver } from './cars.resolver';
 import { CarsService } from './cars.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Car, CarSchema } from './entities/car.entity';
@@ -13,7 +13,7 @@ import { Car, CarSchema } from './entities/car.entity';
       },
     ]),
   ],
-  providers: [CarsService, CarsResolver],
+  providers: [CarsService, CarResolver],
   exports: [CarsService],
 })
 export class CarsModule {}

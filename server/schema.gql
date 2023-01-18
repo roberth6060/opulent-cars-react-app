@@ -2,6 +2,59 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Car {
+  _id: String!
+
+  """Car Name"""
+  name: String!
+
+  """Car Daily Price"""
+  dailyPrice: Float!
+
+  """Car Monthly Price"""
+  monthlyPrice: Float!
+
+  """Car Mileage"""
+  mileage: String!
+
+  """Car Gas"""
+  gas: String!
+
+  """Car gear Type"""
+  gearType: String!
+
+  """Car Url"""
+  url: String!
+}
+
+type PageDataDto {
+  count: Float!
+  limit: Float!
+  offset: Float!
+}
+
+type ListCarsResponse {
+  page: CarConnection!
+  pageData: PageDataDto
+}
+
+type CarConnection {
+  edges: [CarEdge!]
+  pageInfo: CarPageInfo
+}
+
+type CarEdge {
+  cursor: String
+  node: Car
+}
+
+type CarPageInfo {
+  startCursor: String
+  endCursor: String
+  hasPreviousPage: Boolean!
+  hasNextPage: Boolean!
+}
+
 type User {
   _id: String!
 
@@ -16,12 +69,6 @@ type User {
 
   """User role"""
   role: String!
-}
-
-type PageDataDto {
-  count: Float!
-  limit: Float!
-  offset: Float!
 }
 
 type ListUsersResponse {
@@ -47,18 +94,11 @@ type UserPageInfo {
 }
 
 type Query {
-  cars: String!
+  car(_id: String!): Car!
+  listCarsWithCursor(args: ConnectionArgs!): ListCarsResponse!
   users(listUsersInput: ListUsersInput!): [User!]!
   listUsersWithCursor(args: ConnectionArgs!): ListUsersResponse!
   user(_id: String!): User!
-}
-
-input ListUsersInput {
-  """classical limit"""
-  limit: Float!
-
-  """classical offset"""
-  offset: Float!
 }
 
 input ConnectionArgs {
@@ -75,10 +115,68 @@ input ConnectionArgs {
   last: Float
 }
 
+input ListUsersInput {
+  """classical limit"""
+  limit: Float!
+
+  """classical offset"""
+  offset: Float!
+}
+
 type Mutation {
+  createCar(createCarInput: CreateCarInput!): Car!
+  updateCar(updateCarInput: UpdateCarInput!): Car!
+  removeCar(_id: String!): Car!
   createUser(createUserInput: CreateUserInput!): User!
   updateUser(updateUserInput: UpdateUserInput!): User!
   removeUser(_id: String!): User!
+}
+
+input CreateCarInput {
+  """Car Name"""
+  name: String!
+
+  """Car Daily Price"""
+  dailyPrice: Float!
+
+  """Car Monthly Price"""
+  monthlyPrice: Float!
+
+  """Car Mileage"""
+  mileage: String!
+
+  """Car Gas"""
+  gas: String!
+
+  """Car gear Type"""
+  gearType: String!
+
+  """Car Url"""
+  url: String!
+}
+
+input UpdateCarInput {
+  """Car Name"""
+  name: String
+
+  """Car Daily Price"""
+  dailyPrice: Float
+
+  """Car Monthly Price"""
+  monthlyPrice: Float
+
+  """Car Mileage"""
+  mileage: String
+
+  """Car Gas"""
+  gas: String
+
+  """Car gear Type"""
+  gearType: String
+
+  """Car Url"""
+  url: String
+  _id: String!
 }
 
 input CreateUserInput {
