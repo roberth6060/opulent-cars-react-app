@@ -47,6 +47,7 @@ type UserPageInfo {
 }
 
 type Query {
+  cars: String!
   users(listUsersInput: ListUsersInput!): [User!]!
   listUsersWithCursor(args: ConnectionArgs!): ListUsersResponse!
   user(_id: String!): User!
