@@ -6,6 +6,9 @@ import { ICarItem } from "../../types/CarItemType";
 import CarItem from "../CarItem/CarItem"
 import { SCREENS } from "../Responsive";
 import { CarsContainer, FeaturedCarsContainer } from "./style/FeaturedCarsStyle"
+import { gql, useQuery } from "@apollo/client";
+import Spinner from "../Spinner/Spinner";
+
 
 
 const FeaturedCars = ()=> {
@@ -44,12 +47,39 @@ const [current, setCurrent] = useState(0);
                 <CarItem {...testCar2}/>
                 ];
 
+
+
+
+const GET_CARS = gql`
+     query {
+    cars(listCarsInput: { limit: 60, offset: 0 }) {
+      _id
+      name
+      dailyPrice
+      monthlyPrice
+      mileage
+      gas
+      gearType
+      url
+    }
+  }
+`
+
+ const {loading, error, data }= useQuery(GET_CARS);
+
+   if(loading) return <Spinner/>
+   if(error) return <p>Something went wrong</p>
+   console.log(data.cars)
+  //  console.log(cars);
+   const cars2 = data.cars.map((car: any)=>  <CarItem {...car}/>)
+
+
     return (
     <>
        <h2>Featured Cars</h2>
          <FeaturedCarsContainer>
             <CarsContainer>
-                <Carousel value={current} onChange={setCurrent} slides={cars} plugins={[
+                <Carousel value={current} onChange={setCurrent} slides={cars2} plugins={[
                     "clickToChange",
                     {
                     resolve: slidesToShowPlugin,
@@ -76,7 +106,7 @@ const [current, setCurrent] = useState(0);
                     }
                 }}
                 />
-               <Dots value={current} onChange ={setCurrent} number={isMobile ? cars.length : Math.ceil(cars.length / 3)}/>
+               <Dots value={current} onChange ={setCurrent} number={isMobile ? cars.length : Math.ceil(cars2.length / 3)}/>
             
             </CarsContainer>
         </FeaturedCarsContainer>

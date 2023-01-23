@@ -10,6 +10,7 @@ export const FeaturedCarsContainer = styled.div`
   margin-left: 4px;
   margin-right: 4px;
   margin-bottom: 10px;
+  margin: auto;
 `;
 
 export const CarsContainer = styled.div`

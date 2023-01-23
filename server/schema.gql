@@ -94,11 +94,20 @@ type UserPageInfo {
 }
 
 type Query {
-  car(_id: String!): Car!
+  cars(listCarsInput: ListCarsInput!): [Car!]!
   listCarsWithCursor(args: ConnectionArgs!): ListCarsResponse!
+  car(_id: String!): Car!
   users(listUsersInput: ListUsersInput!): [User!]!
   listUsersWithCursor(args: ConnectionArgs!): ListUsersResponse!
   user(_id: String!): User!
+}
+
+input ListCarsInput {
+  """classical limit"""
+  limit: Float!
+
+  """classical offset"""
+  offset: Float!
 }
 
 input ConnectionArgs {

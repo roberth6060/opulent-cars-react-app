@@ -8,8 +8,14 @@ interface ICarItemProps extends ICarItem {
 
 }
 
+
+
 const CarItem = (props: ICarItemProps)=> {
+
     const {name, url, mileage, rentingPriceDaily, rentingPriceMonthly, gearType, gas} = props;
+
+  
+
     return (
     <CarContainer>
         <CarThumbnail>
@@ -25,7 +31,6 @@ const CarItem = (props: ICarItemProps)=> {
         <Seperator/>
         <CarDetailsContainer>
 
-     
         <CarDetail>
             <SmallIcon>
                 <FontAwesomeIcon icon={faTachometerAlt}/>

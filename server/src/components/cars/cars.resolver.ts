@@ -19,7 +19,7 @@ export class CarResolver {
     return this.carsService.create(createCarInput);
   }
 
-  @Query(() => [Car], { name: 'car' })
+  @Query(() => [Car], { name: 'cars' })
   findAll(@Args('listCarsInput') listCarsInput: ListCarsInput) {
     return this.carsService.findAll(listCarsInput);
   }
