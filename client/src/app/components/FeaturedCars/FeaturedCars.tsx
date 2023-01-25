@@ -47,22 +47,19 @@ const [current, setCurrent] = useState(0);
                 <CarItem {...testCar2}/>
                 ];
 
-
-
-
 const GET_CARS = gql`
-     query {
-    cars(listCarsInput: { limit: 60, offset: 0 }) {
-      _id
-      name
-      dailyPrice
-      monthlyPrice
-      mileage
-      gas
-      gearType
-      url
-    }
+     query{
+  cars{
+    id
+    name
+    dailyPrice
+    monthlyPrice
+    mileage
+    gas
+    gearType
+    url
   }
+}
 `
 
  const {loading, error, data }= useQuery(GET_CARS);

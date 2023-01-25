@@ -1,9 +1,9 @@
-import { Field, InputType } from '@nestjs/graphql';
+// import { Field, InputType } from '@nestjs/graphql';
 
-@InputType()
-export class ListCarsInput {
-  @Field(() => Number, { description: 'classical limit' })
-  limit: number;
-  @Field(() => Number, { description: 'classical offset' })
-  offset: number;
-}
+// @InputType()
+// export class ListCarsInput {
+//   @Field(() => Number, { description: 'classical limit' })
+//   limit: number;
+//   @Field(() => Number, { description: 'classical offset' })
+//   offset: number;
+// }

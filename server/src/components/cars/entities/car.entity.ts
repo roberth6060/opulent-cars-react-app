@@ -1,38 +1,38 @@
-import { ObjectType, Field } from '@nestjs/graphql';
-import { Schema as MongooseSchema } from 'mongoose';
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Field, ObjectType } from '@nestjs/graphql';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Schema()
+@Entity({ name: 'Cars' })
 @ObjectType()
 export class Car {
-  @Field(() => String)
-  _id: MongooseSchema.Types.ObjectId;
-  @Prop()
-  @Field(() => String, { description: 'Car Name' })
+  @PrimaryGeneratedColumn('uuid')
+  @Field()
+  id: string;
+
+  @Column()
+  @Field()
   name: string;
 
-  @Prop()
-  @Field(() => Number, { description: 'Car Daily Price' })
+  @Column()
+  @Field()
   dailyPrice: number;
 
-  @Prop()
-  @Field(() => Number, { description: 'Car Monthly Price' })
+  @Column()
+  @Field()
   monthlyPrice: number;
 
-  @Prop()
-  @Field(() => String, { description: 'Car Mileage' })
+  @Column()
+  @Field()
   mileage: string;
 
-  @Prop()
-  @Field(() => String, { description: 'Car Gas' })
+  @Column()
+  @Field()
   gas: string;
 
-  @Prop()
-  @Field(() => String, { description: 'Car gear Type' })
+  @Column()
+  @Field()
   gearType: string;
 
-  @Prop()
-  @Field(() => String, { description: 'Car Url' })
+  @Column('longtext')
+  @Field()
   url: string;
 }
-export const CarSchema = SchemaFactory.createForClass(Car);

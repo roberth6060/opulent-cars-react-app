@@ -4,7 +4,7 @@ import { ConfigModule } from './config.module';
 import { DatabaseModule } from './database.module';
 
 @Module({
-  imports: [ConfigModule, DatabaseModule],
-  exports: [ConfigModule, DatabaseModule],
+  imports: [ConfigModule, DatabaseModule, GraphqlModule],
+  exports: [ConfigModule, DatabaseModule, GraphqlModule],
 })
 export class CommonModule {}
