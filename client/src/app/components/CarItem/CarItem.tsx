@@ -14,8 +14,6 @@ const CarItem = (props: ICarItemProps)=> {
 
     const {name, url, mileage, rentingPriceDaily, rentingPriceMonthly, gearType, gas} = props;
 
-  
-
     return (
     <CarContainer>
         <CarThumbnail>
