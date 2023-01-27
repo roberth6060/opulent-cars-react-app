@@ -5,12 +5,16 @@ export default gql`
     cars {
       id
       name
-      dailyPrice
-      monthlyPrice
+      carLbs
+      carRwhp
+      dailyRentingPrice
+      monthlyRentingPrice
+      carPrice
       mileage
-      gas
+      carType
       gearType
-      url
+      isFeaturedCar
+      imageUrl
     }
   }
 `;

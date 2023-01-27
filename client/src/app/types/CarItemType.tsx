@@ -1,5 +1,5 @@
 export interface ICarItem {
-    url: string;
+    imageUrl: string;
     name: string;
     mileage: string;
     gearType: string;

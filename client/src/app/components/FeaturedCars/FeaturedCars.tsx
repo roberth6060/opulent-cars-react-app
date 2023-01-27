@@ -18,7 +18,7 @@ const [current, setCurrent] = useState(0);
  const testCar: ICarItem = {
     name: "Audi S3 Car",
     mileage: "10k",
-    url:
+    imageUrl:
       "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=lamborghini&modelFamily=huracan&modelRange=huracan-evo&modelVariant=co&modelYear=2022&powerTrain=petrol&transmission=0&bodySize=2&trim=eu&paintId=pspc0034&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
     rentingPriceDaily: 70,
     rentingPriceMonthly: 1600,
@@ -30,7 +30,7 @@ const [current, setCurrent] = useState(0);
   const testCar2: ICarItem = {
     name: "HONDA cITY 5 Seater Car",
     mileage: "20k",
-    url:
+    imageUrl:
       "https://cdn.imagin.studio/getImage?&customer=usrobert-s-website&make=porsche&modelFamily=911&modelRange=911&modelVariant=ca&modelYear=2019&powerTrain=fossil&transmission=0&bodySize=2&trim=0&paintId=pspc0041&fileType=png&zoomType=fullscreen&zoomLevel=100&width=1600&angle=01",
     rentingPriceDaily: 50,
     rentingPriceMonthly: 1500,
@@ -49,15 +49,19 @@ const [current, setCurrent] = useState(0);
 
 const GET_CARS = gql`
      query{
-  cars{
+  cars {
     id
     name
-    dailyPrice
-    monthlyPrice
+    carLbs
+    carRwhp
+    dailyRentingPrice
+    monthlyRentingPrice
+    carPrice
     mileage
-    gas
+    carType
     gearType
-    url
+    isFeaturedCar
+    imageUrl
   }
 }
 `

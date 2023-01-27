@@ -1,7 +1,7 @@
-import { Field, ObjectType } from '@nestjs/graphql';
+import { ObjectType, Field, Int } from '@nestjs/graphql';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name: 'Cars' })
+@Entity({ name: 'Collection' })
 @ObjectType()
 export class Car {
   @PrimaryGeneratedColumn('uuid')
@@ -14,11 +14,23 @@ export class Car {
 
   @Column()
   @Field()
-  dailyPrice: number;
+  carLbs: number;
 
   @Column()
   @Field()
-  monthlyPrice: number;
+  carRwhp: number;
+
+  @Column()
+  @Field()
+  dailyRentingPrice: number;
+
+  @Column()
+  @Field()
+  monthlyRentingPrice: number;
+
+  @Column()
+  @Field()
+  carPrice: number;
 
   @Column()
   @Field()
@@ -26,13 +38,17 @@ export class Car {
 
   @Column()
   @Field()
-  gas: string;
+  carType: string;
 
   @Column()
   @Field()
   gearType: string;
 
+  @Column({ default: false })
+  @Field()
+  isFeaturedCar: boolean;
+
   @Column('longtext')
   @Field()
-  url: string;
+  imageUrl: string;
 }

@@ -12,12 +12,12 @@ interface ICarItemProps extends ICarItem {
 
 const CarItem = (props: ICarItemProps)=> {
 
-    const {name, url, mileage, rentingPriceDaily, rentingPriceMonthly, gearType, gas} = props;
+    const {name, imageUrl, mileage, rentingPriceDaily, rentingPriceMonthly, gearType, gas} = props;
 
     return (
     <CarContainer>
         <CarThumbnail>
-            <img src={url} alt={name}  />
+            <img src={imageUrl} alt={name}  />
         </CarThumbnail>
         <CarName>{name}</CarName>
         <PricesContainer>
