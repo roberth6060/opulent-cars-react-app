@@ -1,0 +1,58 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Car {
+  id: String!
+  name: String!
+  carLbs: Float!
+  carRwhp: Float!
+  dailyRentingPrice: Float!
+  monthlyRentingPrice: Float!
+  carPrice: Float!
+  mileage: String!
+  carType: String!
+  gearType: String!
+  isFeaturedCar: Boolean!
+  imageUrl: String!
+}
+
+type Query {
+  getAllCars: [Car!]!
+  getOneCar(id: String!): Car!
+}
+
+type Mutation {
+  addNewCar(newCarData: NewCarInput!): Car!
+  removeCar(id: String!): Car!
+  updateCar(updateCarInput: UpdateCarInput!): Car!
+}
+
+input NewCarInput {
+  name: String!
+  carLbs: Float!
+  carRwhp: Float!
+  dailyRentingPrice: Float!
+  monthlyRentingPrice: Float!
+  carPrice: Float!
+  mileage: String!
+  carType: String!
+  gearType: String!
+  isFeaturedCar: Boolean
+  imageUrl: String!
+}
+
+input UpdateCarInput {
+  name: String
+  carLbs: Float
+  carRwhp: Float
+  dailyRentingPrice: Float
+  monthlyRentingPrice: Float
+  carPrice: Float
+  mileage: String
+  carType: String
+  gearType: String
+  isFeaturedCar: Boolean
+  imageUrl: String
+  id: String!
+}

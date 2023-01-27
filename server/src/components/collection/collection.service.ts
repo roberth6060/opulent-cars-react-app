@@ -11,22 +11,24 @@ import { UpdateCarInput } from './dto/update-car.dto';
 
 @Injectable()
 export class CarsService {
-  constructor(@InjectRepository(Car) private carRepository: Repository<Car>) {}
+  constructor(
+    @InjectRepository(Car) private readonly carRepository: Repository<Car>,
+  ) {}
 
-  public async getAllCars(): Promise<Car[]> {
-    return await this.carRepository
-      .find({
-        where: {
-          isFeaturedCar: true,
-        },
-      })
-      .catch(() => {
-        throw new InternalServerErrorException();
-      });
+  async getAllCars(): Promise<Car[]> {
+    return await this.carRepository.find().catch(() => {
+      throw new InternalServerErrorException();
+    });
   }
 
-  public async addCar(newCarData: NewCarInput): Promise<Car> {
-    const newCar = this.carRepository.create(newCarData);
+  async getCar(id: string): Promise<Car> {
+    return await this.carRepository.findOneBy({
+      id,
+    });
+  }
+
+  async addCar(newCarInput: NewCarInput): Promise<Car> {
+    const newCar = this.carRepository.create(newCarInput);
     await this.carRepository.save(newCar).catch(() => {
       new InternalServerErrorException();
     });
@@ -34,7 +36,7 @@ export class CarsService {
     return newCar;
   }
 
-  public async removeCar(id: string): Promise<void> {
+  async removeCar(id: string): Promise<void> {
     await this.carRepository.delete(id).catch(() => {
       new InternalServerErrorException();
     });
