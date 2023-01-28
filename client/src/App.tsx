@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import GlobalStyle from "./GlobalStyle";
 import Routes from "./app/routes/Routes";
-import Spinner from "./app/components/Spinner/Spinner";
+import Spinner from "./app/components/common/Spinner/Spinner";
 
 
 const App: React.FC = () => {

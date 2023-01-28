@@ -1,5 +1,5 @@
+import Footer from "../common/Footer/Footer";
 import { Container } from "../HomePage/style/HomePageStyle";
-import Footer from "../../components/Footer/Footer";
 import { ImageContainer } from "./style/AboutStyle";
 
 const About = ()=> {
@@ -39,14 +39,14 @@ const About = ()=> {
           <ImageContainer>
             <h2 className="title">We Strive For Excellence In Customer Service</h2>
             <div className="row">
-              <img src="./assets/images/getty-images-D1ywMW3a3Vk-unsplash.jpg" />
+              <img src="./assets/images/getty-images-D1ywMW3a3Vk-unsplash.jpg" alt="img" />
               <img
                 src="./assets/images/getty-images-uAVaeUoPJK8-unsplash.jpg"
-                alt="Customer Service Image"
+               alt="img"
               />
               <img
                 src="./assets/images/getty-images-zltLLD8h540-unsplash.jpg"
-                alt="Customer Service Image"
+                alt="img"
               />
             </div>
           </ImageContainer>

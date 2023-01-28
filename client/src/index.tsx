@@ -6,7 +6,7 @@ import { ApolloProvider } from '@apollo/client';
 import { Provider } from 'react-redux';
 import App from './App';
 import apolloClient from './app/graphql';
-import { store } from './app/store';
+import { store } from './app/store/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

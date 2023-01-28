@@ -1,5 +1,6 @@
-import ArticleItems from "../../components/ArticleItems/ArticleItems";
-import Footer from "../../components/Footer/Footer";
+import ArticleItems from "../../components/common/ArticleItems/ArticleItems";
+import Footer from "../common/Footer/Footer";
+
 import { Container } from "../HomePage/style/HomePageStyle";
 
 const Articles = ()=> {

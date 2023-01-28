@@ -2,13 +2,13 @@ import Carousel, {Dots, slidesToShowPlugin} from "@brainhubeu/react-carousel"
 import '@brainhubeu/react-carousel/lib/style.css';
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
-import { ICarItem } from "../../types/CarItemType";
+import { ICarItem } from "../../../types/CarItemType";
 import CarItem from "../CarItem/CarItem"
 import { SCREENS } from "../Responsive";
 import { CarsContainer, FeaturedCarsContainer } from "./style/FeaturedCarsStyle"
 import { useQuery } from "@apollo/client";
 import Spinner from "../Spinner/Spinner";
-import { GET_CARS } from "../../queries/queries";
+import { GET_CARS } from "../../../queries/queries";
 
 
 

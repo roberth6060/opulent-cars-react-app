@@ -1,10 +1,10 @@
 import {HomeContainer, HomeHeader, ColorPicker,AboutSection, CollectionSection, FeaturedSection,Container, GridLayout, Main, AsideTop, AsideBottom} from "./style/HomePageStyle";
-import Button, { BUTTON_TYPE_CLASSES } from "../../components/Button/Button";
-import Footer from "../../components/Footer/Footer";
-import ArticleItems from "../../components/ArticleItems/ArticleItems";
-import LeafLetMap from "../../components/LeafLetMap/LeafLetMap";
-import BookCard from "../../components/BookCard/BookCard";
-import FeaturedCars from "../../components/FeaturedCars/FeaturedCars";
+import Button, { BUTTON_TYPE_CLASSES } from "../common/Button/Button";
+import Footer from "../common/Footer/Footer";
+import ArticleItems from "../common/ArticleItems/ArticleItems";
+import LeafLetMap from "../common/LeafLetMap/LeafLetMap";
+import BookCard from "../common/BookCard/BookCard";
+import FeaturedCars from "../../components/common/FeaturedCars/FeaturedCars";
 
 
 
