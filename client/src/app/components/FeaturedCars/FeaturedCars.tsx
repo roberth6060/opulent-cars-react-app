@@ -1,13 +1,14 @@
 import Carousel, {Dots, slidesToShowPlugin} from "@brainhubeu/react-carousel"
 import '@brainhubeu/react-carousel/lib/style.css';
 import { useMediaQuery } from "react-responsive";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ICarItem } from "../../types/CarItemType";
 import CarItem from "../CarItem/CarItem"
 import { SCREENS } from "../Responsive";
 import { CarsContainer, FeaturedCarsContainer } from "./style/FeaturedCarsStyle"
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import Spinner from "../Spinner/Spinner";
+import { GET_CARS } from "../../queries/queries";
 
 
 
@@ -18,24 +19,7 @@ const [collection, setCollection] = useState([]);
 
 const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
-const GET_CARS = gql`
-query {
-  getCars{
-    id
-    name
-    carLbs
-    carRwhp
-    dailyRentingPrice
-    monthlyRentingPrice
-    carPrice
-    mileage
-    carType
-    gearType
-    isFeaturedCar
-    imageUrl
-  }
-}
-`
+
 
  const {loading, error }= useQuery(GET_CARS, {
   onCompleted(data) {

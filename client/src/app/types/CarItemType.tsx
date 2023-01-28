@@ -1,11 +1,17 @@
 export interface ICarItem {
+    carName: string;
     imageUrl: string;
     name: string;
     mileage: string;
     gearType: string;
     rentingPriceDaily: number;
     rentingPriceMonthly: number;
-    buyingCost: number;
+    carPrice: number;
     gas: string;
     isFeaturedCar: boolean;
+    carType: string;
+    carLbs: number;
+    carRwhp: number;
+
+
 }
