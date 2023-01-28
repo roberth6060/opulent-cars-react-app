@@ -9,16 +9,16 @@ export class CarsResolver {
   constructor(private carsService: CarsService) {}
 
   @Query(() => [Car])
-  public async getAllCars(): Promise<Car[]> {
+  public async getCars(): Promise<Car[]> {
     return await this.carsService.getAllCars().catch((err) => {
       throw err;
     });
   }
 
-  @Query(() => Car)
-  getOneCar(@Args('id', { type: () => String }) id: string) {
-    return this.carsService.getCar(id);
-  }
+  // @Query(() => Car)
+  // getOneCar(@Args('id', { type: () => String }) id: string) {
+  //   return this.carsService.getCar(id);
+  // }
 
   @Mutation(() => Car)
   public async addNewCar(

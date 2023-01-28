@@ -18,8 +18,7 @@ type Car {
 }
 
 type Query {
-  getAllCars: [Car!]!
-  getOneCar(id: String!): Car!
+  getCars: [Car!]!
 }
 
 type Mutation {

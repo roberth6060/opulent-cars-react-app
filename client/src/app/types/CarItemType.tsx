@@ -7,4 +7,5 @@ export interface ICarItem {
     rentingPriceMonthly: number;
     buyingCost: number;
     gas: string;
+    isFeaturedCar: boolean;
 }
