@@ -9,7 +9,6 @@ interface ICarItemProps extends ICarItem {
 }
 
 
-console.log("object");
 const CarItem = (props: ICarItemProps)=> {
 
     const {name, imageUrl, mileage, rentingPriceDaily, rentingPriceMonthly, gearType, gas} = props;
