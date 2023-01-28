@@ -4,12 +4,14 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
   //Creat custom errors
   app.useGlobalPipes(new ValidationPipe());
   //Handle HTTP errors
   app.useGlobalFilters(new BaseExceptionFilter());
   //Connect backend to frontend (resource sharing)
-  app.enableCors();
-  await app.listen(process.env.PORT || 3000);
+  app.enableCors({ origin: '*' });
+  //Port
+  await app.listen(process.env.PORT || 5000);
 }
 bootstrap();
