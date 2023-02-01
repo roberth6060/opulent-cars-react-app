@@ -5,7 +5,8 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   text-decoration: none;
 }
-body::after {
+
+/* body::after {
   position: absolute;
   width: 0;
   height: 0;
@@ -15,7 +16,7 @@ body::after {
     url("https://i.ibb.co/FBFqc6r/blue-car.png")
     url("https://i.ibb.co/xg2T2BC/yellow-car.png")
     url("https://i.ibb.co/MnwtyXG/green-car.png");
-}
+} */
 
 html,
 body {
@@ -34,6 +35,15 @@ h2 {
 }
 p {
   line-height: 1.5;
+}
+
+/* Predefined Global Code  */
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  padding: 40px 0;
 }
 
 .row {

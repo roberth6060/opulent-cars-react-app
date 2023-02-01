@@ -461,7 +461,7 @@ export const HomeContainer = styled.div`
 
 export const SubTitle = styled.h2``;
 export const HomeHeader = styled.div`
-  background-image: url("https://i.ibb.co/25Ysz4P/orange-car.png");
+  background-image: url("https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

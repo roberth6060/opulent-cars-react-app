@@ -21,14 +21,16 @@ const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
 
 
- const {loading, error }= useQuery(GET_CARS, {
+ const {loading, error, data }= useQuery(GET_CARS, {
   onCompleted(data) {
       setCollection(data.getCars.filter((car: ICarItem)=>car.isFeaturedCar === true));
   },
  });
+ 
 
    if(loading) return <Spinner/>
    if(error) return <p>Something went wrong</p>
+   console.log(data)
 
   //Will state management with redux: 
    const cars = collection.map((car: any)=>  <CarItem {...car}/>)
