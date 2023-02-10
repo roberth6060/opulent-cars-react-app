@@ -19,7 +19,6 @@ const App: React.FC = () => {
   //useDispatch is hook that return dispatch function 
   const {setCollection} = actionDispatch(useDispatch());
 
-
   //query from graphql client and save state in redux store(to be access throughout app)
     const fetchCollection  = async ()=> {
       const collection = await CollectionService.getCollection().catch((error)=> {
