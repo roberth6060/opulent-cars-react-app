@@ -1,7 +1,7 @@
 import Carousel, {Dots, slidesToShowPlugin} from "@brainhubeu/react-carousel"
 import '@brainhubeu/react-carousel/lib/style.css';
 import { useMediaQuery } from "react-responsive";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ICollection } from "../../../types/CollectionType";
 import CarItem from "../CarItem/CarItem"
 import { SCREENS } from "../Responsive";
@@ -9,12 +9,13 @@ import { CarsContainer, FeaturedCarsContainer } from "./style/FeaturedCarsStyle"
 import { useQuery } from "@apollo/client";
 import Spinner from "../Spinner/Spinner";
 import { GET_COLLECTION } from "../../../services/collectionService/queries";
-
+import CollectionService from "../../../services/collectionService"
 
 
 const FeaturedCars = ()=> {
 const [current, setCurrent] = useState(0);
 const [collection, setCollection] = useState([]);
+
 
 
 const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
@@ -27,11 +28,8 @@ const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
   },
  });
  
- console.log(data)
-
    if(loading) return <Spinner/>
    if(error) return <p>Something went wrong</p>
-   console.log(data)
 
   //Will state management with redux: 
    const cars = collection.map((car: any)=>  <CarItem {...car}/>)

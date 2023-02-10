@@ -64,6 +64,5 @@
     "@types/leaflet": "^1.9.0",
     "@types/react": "^18.0.26",
     "@types/styled-components": "^5.1.26"
-  },
-  "proxy": "http://localhost:8000"
+  }
 }

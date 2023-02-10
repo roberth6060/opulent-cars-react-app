@@ -4,10 +4,10 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: GET_COLLECTION
+// GraphQL query operation: Get_Collection
 // ====================================================
 
-export interface GET_COLLECTION_getCars {
+export interface Get_Collection_getCars {
   __typename: "Car";
   id: string;
   name: string;
@@ -23,6 +23,6 @@ export interface GET_COLLECTION_getCars {
   imageUrl: string;
 }
 
-export interface GET_COLLECTION {
-  getCars: GET_COLLECTION_getCars[];
+export interface Get_Collection {
+  getCars: Get_Collection_getCars[];
 }
