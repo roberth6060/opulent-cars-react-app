@@ -20,13 +20,12 @@ const App: React.FC = () => {
   const {setCollection} = actionDispatch(useDispatch());
 
 
-
-
   //query from graphql client and save state in redux store(to be access throughout app)
     const fetchCollection  = async ()=> {
       const collection = await CollectionService.getCollection().catch((error)=> {
         console.log(error)
       });
+      if(collection)setCollection(collection);
       console.log("Colection", collection);
     }
 
