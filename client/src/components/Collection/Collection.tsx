@@ -1,8 +1,8 @@
 /* ========= Collection Data and Functionality =========*/
 import { useQuery } from "@apollo/client";
 import { useState } from "react";
-import { GET_CARS } from "../../services/collectionService/queries";
-import { ICarItem } from "../../types/CarItemType";
+import { GET_COLLECTION } from "../../services/collectionService/queries";
+import { ICollection } from "../../types/CollectionType";
 import Footer from "../common/Footer/Footer";
 import Spinner from "../common/Spinner/Spinner";
 import { CollectionContainer } from "./style/CollectionStyle";
@@ -14,7 +14,7 @@ import { CollectionContainer } from "./style/CollectionStyle";
 
 const Collection = ()=> {
 const [collection, setCollection] = useState([]);
- const {loading, error }= useQuery(GET_CARS, {
+ const {loading, error }= useQuery(GET_COLLECTION, {
   onCompleted(data) {
       setCollection(data.getCars);
   },
@@ -29,7 +29,7 @@ const [collection, setCollection] = useState([]);
   <CollectionContainer>
 
   {
-  collection.map((collection:ICarItem) => {
+  collection.map((collection:ICollection) => {
       if (collection.carType === "rwd") {
     wheelType = " rwhp";
   } else if (collection.carType === "fwd") {

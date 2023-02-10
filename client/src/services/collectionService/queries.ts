@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
-export const GET_CARS = gql`
-  query {
+export const GET_COLLECTION = gql`
+  query GET_COLLECTION {
     getCars {
       id
       name

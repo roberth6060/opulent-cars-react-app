@@ -1,5 +1,5 @@
-import { ICarItem } from "./CarItemType";
+import { ICollection } from "./CollectionType";
 
 export interface IHomePageState {
-  topCars: ICarItem[];
+  topCars: ICollection[];
 }

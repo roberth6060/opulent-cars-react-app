@@ -1,4 +1,4 @@
-export interface ICarItem {
+export interface ICollection {
     carName: string;
     imageUrl: string;
     name: string;

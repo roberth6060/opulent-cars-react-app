@@ -2,13 +2,13 @@ import Carousel, {Dots, slidesToShowPlugin} from "@brainhubeu/react-carousel"
 import '@brainhubeu/react-carousel/lib/style.css';
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
-import { ICarItem } from "../../../types/CarItemType";
+import { ICollection } from "../../../types/CollectionType";
 import CarItem from "../CarItem/CarItem"
 import { SCREENS } from "../Responsive";
 import { CarsContainer, FeaturedCarsContainer } from "./style/FeaturedCarsStyle"
 import { useQuery } from "@apollo/client";
 import Spinner from "../Spinner/Spinner";
-import { GET_CARS } from "../../../services/collectionService/queries";
+import { GET_COLLECTION } from "../../../services/collectionService/queries";
 
 
 
@@ -21,9 +21,9 @@ const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
 
 
- const {loading, error, data }= useQuery(GET_CARS, {
+ const {loading, error, data }= useQuery(GET_COLLECTION, {
   onCompleted(data) {
-      setCollection(data.getCars.filter((car: ICarItem)=>car.isFeaturedCar === true));
+      setCollection(data.getCars.filter((car: ICollection)=>car.isFeaturedCar === true));
   },
  });
  

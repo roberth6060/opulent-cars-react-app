@@ -1,10 +1,10 @@
 import { faEllipsis, faFillDrip, faTachometerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ICarItem } from "../../../types/CarItemType";
+import { ICollection } from "../../../types/CollectionType";
 import Button, { BUTTON_TYPE_CLASSES } from "../Button/Button";
 import { CarContainer, CarDetail, CarDetailsContainer, CarInfo, CarName, CarThumbnail, DailyPrice, MonthPrice, PricesContainer, Seperator, SmallIcon, SmallText } from "./style/CarItem";
 
-interface ICarItemProps extends ICarItem {
+interface ICarItemProps extends ICollection {
 
 }
 
