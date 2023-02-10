@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button, { BUTTON_TYPE_CLASSES } from "../Button/Button";
 import { Marginer } from "../Marginer/Marginer";
 import { CardContainer, Icon, ItemContainer, Name , LineSeperator, DateCalendar, SmallIcon} from "./style/BookCard";
-
 import 'react-calendar/dist/Calendar.css';
 import { useState } from "react";
 import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";

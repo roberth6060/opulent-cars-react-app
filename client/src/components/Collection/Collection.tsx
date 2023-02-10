@@ -1,7 +1,7 @@
 /* ========= Collection Data and Functionality =========*/
 import { useQuery } from "@apollo/client";
 import { useState } from "react";
-import { GET_CARS } from "../../queries/queries";
+import { GET_CARS } from "../../services/collectionService/queries";
 import { ICarItem } from "../../types/CarItemType";
 import Footer from "../common/Footer/Footer";
 import Spinner from "../common/Spinner/Spinner";

@@ -4,6 +4,7 @@ import ServiceImg1 from "../../assets/images/getty-images-D1ywMW3a3Vk-unsplash.j
 import ServiceImg2 from "../../assets/images/getty-images-uAVaeUoPJK8-unsplash.jpg";
 import ServiceImg3 from "../../assets/images/getty-images-zltLLD8h540-unsplash.jpg";
 import CEOImg from  "../../assets/images/photo-1560250097-0b93528c311a.avif";
+
 const About = ()=> {
     return (  
       <>

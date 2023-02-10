@@ -8,7 +8,7 @@ import { SCREENS } from "../Responsive";
 import { CarsContainer, FeaturedCarsContainer } from "./style/FeaturedCarsStyle"
 import { useQuery } from "@apollo/client";
 import Spinner from "../Spinner/Spinner";
-import { GET_CARS } from "../../../queries/queries";
+import { GET_CARS } from "../../../services/collectionService/queries";
 
 
 
@@ -27,6 +27,7 @@ const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
   },
  });
  
+ console.log(data)
 
    if(loading) return <Spinner/>
    if(error) return <p>Something went wrong</p>

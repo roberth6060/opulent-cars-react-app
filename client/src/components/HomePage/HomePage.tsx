@@ -7,7 +7,6 @@ import BookCard from "../common/BookCard/BookCard";
 import FeaturedCars from "../../components/common/FeaturedCars/FeaturedCars";
 
 
-
 const HomePage = ()=> {
     return (  
     <HomeContainer>
