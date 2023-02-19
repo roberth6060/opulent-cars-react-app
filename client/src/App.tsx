@@ -3,11 +3,10 @@ import GlobalStyle from "./GlobalStyle";
 import Routes from "./routes/Routes";
 import Spinner from "./components/common/Spinner/Spinner";
 import CollectionService from "./services/collectionService"
-import { Dispatch } from "@reduxjs/toolkit";
+import {  Dispatch } from "@reduxjs/toolkit";
 import { Get_Collection_getCars } from "./services/collectionService/__generated__/Get_Collection";
 import { useDispatch } from "react-redux";
-import {setCollection} from "./store/features/homePageSlice"
-
+import {setCollection} from "./store/features/homePageSlice";
 
   //Dispatch action and store collection state 
   const actionDispatch = (dispatch: Dispatch)=> ({
@@ -15,7 +14,6 @@ import {setCollection} from "./store/features/homePageSlice"
   });
 
 const App: React.FC = () => {
-
   //useDispatch is hook that return dispatch function 
   const {setCollection} = actionDispatch(useDispatch());
 
@@ -27,7 +25,7 @@ const App: React.FC = () => {
       if(collection)setCollection(collection);
       console.log("Colection", collection);
     }
-
+    
     useEffect(()=> {
       fetchCollection();
     }, [])

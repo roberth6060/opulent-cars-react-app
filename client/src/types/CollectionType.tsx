@@ -1,4 +1,5 @@
 export interface ICollection {
+    id: string;
     carName: string;
     imageUrl: string;
     name: string;
@@ -12,6 +13,4 @@ export interface ICollection {
     carType: string;
     carLbs: number;
     carRwhp: number;
-
-
 }

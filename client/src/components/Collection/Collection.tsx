@@ -37,7 +37,7 @@ const [collection, setCollection] = useState([]);
   } else {
     wheelType = " hp";
   }
-    return (<a className="car-link" target="_blank" href={collection.imageUrl} rel="noreferrer">
+    return (<a key={collection.id} className="car-link" target="_blank" href={collection.imageUrl} rel="noreferrer">
       <div className="car-card">
         <h2>{collection.name}</h2>
         <img src={collection.imageUrl} alt={collection.name} />

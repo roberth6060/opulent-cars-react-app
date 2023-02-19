@@ -1,6 +1,7 @@
 import Carousel, {Dots, slidesToShowPlugin} from "@brainhubeu/react-carousel"
 import '@brainhubeu/react-carousel/lib/style.css';
 import { useMediaQuery } from "react-responsive";
+import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { ICollection } from "../../../types/CollectionType";
 import CarItem from "../CarItem/CarItem"
@@ -10,13 +11,20 @@ import { useQuery } from "@apollo/client";
 import Spinner from "../Spinner/Spinner";
 import { GET_COLLECTION } from "../../../services/collectionService/queries";
 import CollectionService from "../../../services/collectionService"
+import { createSelector } from "@reduxjs/toolkit";
+import { makeSelectCollection } from "../../../store/features/homPageSelector";
+import { createGlobalStyle } from "styled-components";
 
+const stateSelector = createSelector(makeSelectCollection, (collection)=> ({collection}));
 
 const FeaturedCars = ()=> {
 const [current, setCurrent] = useState(0);
 const [collection, setCollection] = useState([]);
 
 
+//   const {collection} = useSelector(stateSelector);
+
+//   console.log("%creselect data","color: red", collection)
 
 const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
@@ -24,15 +32,20 @@ const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
  const {loading, error, data }= useQuery(GET_COLLECTION, {
   onCompleted(data) {
+
+    console.log("%cdata", "color: blue;", data)
       setCollection(data.getCars.filter((car: ICollection)=>car.isFeaturedCar === true));
   },
  });
  
-   if(loading) return <Spinner/>
-   if(error) return <p>Something went wrong</p>
+ 
+//    if(loading) return <Spinner/>
+//    if(error) return <p>Something went wrong</p>
+
+console.log(collection)
 
   //Will state management with redux: 
-   const cars = collection.map((car: any)=>  <CarItem {...car}/>)
+   const cars = collection && collection.map((car: any)=>  <CarItem {...car}/>)
     return (
     <>
        <h2>Featured Cars</h2>
