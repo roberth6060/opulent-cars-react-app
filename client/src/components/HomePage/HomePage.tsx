@@ -1,10 +1,11 @@
-import {HomeContainer, HomeHeader, ColorPicker,AboutSection, CollectionSection, FeaturedSection,Container, GridLayout, Main, AsideTop, AsideBottom} from "./style/HomePageStyle";
+import {HomeContainer, HomeHeader, ColorPicker,AboutSection, CollectionSection, FeaturedSection, GridLayout, Main, AsideTop, AsideBottom} from "./style/HomePageStyle";
 import Button, { BUTTON_TYPE_CLASSES } from "../common/Button/Button";
 import Footer from "../common/Footer/Footer";
 import ArticleItems from "../common/ArticleItems/ArticleItems";
 import LeafLetMap from "../common/LeafLetMap/LeafLetMap";
 import BookCard from "../common/BookCard/BookCard";
 import FeaturedCars from "../../components/common/FeaturedCars/FeaturedCars";
+import { Container } from "../../GlobalStyle";
 
 
 const HomePage = ()=> {

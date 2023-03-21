@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -5,18 +6,6 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   text-decoration: none;
 }
-
-/* body::after {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  z-index: -1;
-  content: url("https://i.ibb.co/25Ysz4P/orange-car.png")
-    url("https://i.ibb.co/FBFqc6r/blue-car.png")
-    url("https://i.ibb.co/xg2T2BC/yellow-car.png")
-    url("https://i.ibb.co/MnwtyXG/green-car.png");
-} */
 
 html,
 body {
@@ -38,6 +27,7 @@ p {
 }
 
 /* Predefined Global Code  */
+
 .container {
   position: relative;
   margin: 0 auto;
@@ -125,5 +115,13 @@ p {
 }
 
  `;
+
+export const Container = styled.div`
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  padding: 40px 0;
+`;
 
 export default GlobalStyle;

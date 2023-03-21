@@ -1,5 +1,4 @@
-
-import { Container } from "../../HomePage/style/HomePageStyle";
+import { Container } from "../../../GlobalStyle";
 import { FooterContainer } from "./style/FooterStyle";
 
 const Footer = ()=> {

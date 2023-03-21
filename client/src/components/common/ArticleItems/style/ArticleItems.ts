@@ -1,18 +1,20 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+export const ArticleLink = styled(Link)`
+  width: 400px;
+  margin: 20px;
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.102);
+  }
+`;
 
 export const ArticleContainer = styled.section`
   background-color: ${(props) => props.theme.main};
   a {
     color: black;
-  }
-  .card-container {
-    width: 400px;
-    margin: 20px;
-    padding: 10px;
-    cursor: pointer;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.102);
-    }
   }
 
   #articles-section {

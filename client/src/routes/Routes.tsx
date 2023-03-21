@@ -3,7 +3,7 @@ import { lazy } from "react";
 import Shop from "../components/Shop/Shop";
 import About from "../components/About/About";
 import Articles from "../components/Articles/Articles";
-import Contact from "../components/Contact/Conatct";
+import Contact from "../components/Contact/Contact";
 import Collection from "../components/Collection/Collection";
 import Article from "../components/common/Article/Article";
 const Home = lazy(() => import("../components/HomePage/HomePage"));

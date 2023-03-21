@@ -1,13 +1,5 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-
-export const Container = styled.div`
-  position: relative;
-  margin: 0 auto;
-  width: 80%;
-  height: 100%;
-  padding: 40px 0;
-`;
+import { Link } from "react-router-dom";
 
 export const AboutSection = styled.section`
   h2 {
