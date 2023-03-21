@@ -1,4 +1,4 @@
-import { Container } from "../../../GlobalStyle";
+import { Container } from "../../../style";
 
 const Article = ()=> {
     return(   

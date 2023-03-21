@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -26,47 +25,7 @@ p {
   line-height: 1.5;
 }
 
-/* Predefined Global Code  */
-
-.container {
-  position: relative;
-  margin: 0 auto;
-  width: 80%;
-  height: 100%;
-  padding: 40px 0;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 15px 0;
-  min-height: auto;
-}
-
-.flex-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  padding: 15px 0;
-
-  img {
-    margin-right: 15px;
-  }
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 15px 0;
-
-  img {
-    margin-right: 15px;
-  }
-}
-
+// Custom Classes 
 .hidden {
   display: none;
   transition: opacity 1s ease-out;
@@ -77,6 +36,7 @@ p {
   margin-top: 50px;
 }
 
+/* Predefined Styled Components  */
 //Tablet view
 @media (max-width: $desktop) {
   .container {
@@ -115,13 +75,5 @@ p {
 }
 
  `;
-
-export const Container = styled.div`
-  position: relative;
-  margin: 0 auto;
-  width: 80%;
-  height: 100%;
-  padding: 40px 0;
-`;
 
 export default GlobalStyle;

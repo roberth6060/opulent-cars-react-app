@@ -1,0 +1,25 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  padding: 40px 0;
+`;
+
+export const FlexRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px 0;
+  min-height: auto;
+`;
+
+export const FlexColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 0;
+`;

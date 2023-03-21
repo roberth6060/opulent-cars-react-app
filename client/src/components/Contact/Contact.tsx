@@ -1,6 +1,6 @@
 import { ContactContainer } from "./style/ContactStyle";
 import Footer from "../common/Footer/Footer";
-import { Container } from "../../GlobalStyle";
+import { Container } from "../../style";
 
 const Contact = ()=> {
     return ( <ContactContainer>

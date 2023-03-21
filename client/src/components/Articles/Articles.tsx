@@ -7,7 +7,6 @@ const Articles = ()=> {
     <ArticleItems/>
     <Footer/>
     </>
-    
    )
 }
 

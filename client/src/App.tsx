@@ -1,5 +1,5 @@
 import { Suspense, useEffect } from "react";
-import GlobalStyle from "./GlobalStyle";
+import GlobalStyle from "./style/GlobalStyle";
 import Routes from "./routes/Routes";
 import Spinner from "./components/common/Spinner/Spinner";
 import CollectionService from "./services/collectionService"

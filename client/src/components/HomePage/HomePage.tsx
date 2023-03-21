@@ -5,8 +5,7 @@ import ArticleItems from "../common/ArticleItems/ArticleItems";
 import LeafLetMap from "../common/LeafLetMap/LeafLetMap";
 import BookCard from "../common/BookCard/BookCard";
 import FeaturedCars from "../../components/common/FeaturedCars/FeaturedCars";
-import { Container } from "../../GlobalStyle";
-
+import { Container, FlexRow } from "../../style";
 
 const HomePage = ()=> {
     return (  
@@ -26,7 +25,7 @@ const HomePage = ()=> {
           </div>
           <ColorPicker className="hidden">
             <h3>What Color Is Your Future Car?</h3>
-            <div className="row">
+            <FlexRow>
               <span className="colors orange">
               </span>
               <span className="colors blue">
@@ -35,13 +34,13 @@ const HomePage = ()=> {
               </span>
               <span className="colors green">
               </span>
-            </div>
+            </FlexRow>
           </ColorPicker>
           </Container>
     </HomeHeader>
       <AboutSection className="container">
         <Container>
-          <div className="row">
+          <FlexRow>
             <img
               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
               alt="Ceo"
@@ -54,7 +53,7 @@ const HomePage = ()=> {
               </p>
               <Button type="button"  buttonType={BUTTON_TYPE_CLASSES.readMore}>Read More</Button>
             </div>
-        </div>
+        </FlexRow>
         </Container>
       </AboutSection>
       <Container >
