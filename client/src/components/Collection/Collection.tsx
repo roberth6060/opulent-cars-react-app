@@ -7,10 +7,7 @@ import Footer from "../common/Footer/Footer";
 import Spinner from "../common/Spinner/Spinner";
 import { CollectionContainer } from "./style/CollectionStyle";
 
-
-
  let wheelType = "";
-
 
 const Collection = ()=> {
 const [collection, setCollection] = useState([]);

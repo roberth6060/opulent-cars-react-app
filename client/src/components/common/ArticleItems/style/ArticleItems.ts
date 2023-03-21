@@ -13,12 +13,6 @@ export const ArticleContainer = styled.section`
     &:hover {
       background-color: rgba(255, 255, 255, 0.102);
     }
-    img {
-      width: 200px;
-      min-width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
   }
 
   #articles-section {
@@ -48,3 +42,10 @@ ArticleContainer.defaultProps = {
     main: "white",
   },
 };
+
+export const ArticleImage = styled.img`
+  width: 200px;
+  min-width: 100%;
+  height: 200px;
+  object-fit: cover;
+`;

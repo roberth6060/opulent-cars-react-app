@@ -14,7 +14,7 @@ const HomePage = ()=> {
       <Container>
           <h1>Luxury Car<br />Dealership</h1>
           <p>
-            Our cars are the embodiment of luxury, performance, and refinement.
+            Our cars are the embodiment of luxury, performance, and refinement
           </p>
           <div className="button-container" >
           <Button type="button"  buttonType={BUTTON_TYPE_CLASSES.base}>Rent Car</Button>
