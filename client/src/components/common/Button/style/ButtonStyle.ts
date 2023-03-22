@@ -99,17 +99,14 @@ export const BackButton = styled.button`
     height: 34px;
     margin-top: 5px;
     z-index: -1;
-
     border: 1px solid #000;
     border-left-width: 0;
     border-radius: 5px;
-
     background: #fff;
   }
 
   &:after {
     content: "";
-
     position: absolute;
     box-sizing: border-box;
     left: 11px;
@@ -117,12 +114,10 @@ export const BackButton = styled.button`
     width: 26px;
     top: 8px;
     z-index: -2;
-
     border: 1px solid #000;
     border-top: 0 transparent;
     border-right: 0 transparent;
     border-radius: 7px 5px 5px 7px;
-
     background: #fff;
 
     -webkit-transform: rotate(45deg);

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const ArticleLink = styled(Link)`
-  width: 400px;
+  width: 360px;
   margin: 20px;
   padding: 10px;
   cursor: pointer;
@@ -41,7 +41,7 @@ export const ArticleContainer = styled.section`
 
 ArticleContainer.defaultProps = {
   theme: {
-    main: "white",
+    main: "#b3a18f",
   },
 };
 

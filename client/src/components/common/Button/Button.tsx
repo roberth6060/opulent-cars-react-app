@@ -5,7 +5,7 @@ import {
   GoogleSignInButton,
   ButtonSpinner, 
   ReadMoreButton
-} from "./style/Button";
+} from "./style/ButtonStyle";
 
 //Control button type:
 export enum BUTTON_TYPE_CLASSES {

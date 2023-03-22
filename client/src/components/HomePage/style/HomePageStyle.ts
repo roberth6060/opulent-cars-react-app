@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import ImageHeader from "../../../assets/images/orange-car.jpg";
+import ImageSuv from "../../../assets/images/photo-1563720223523-491ff04651de.avif";
+import ImageMuscle from "../../../assets/images/photo-1588127333419-b9d7de223dcf.avif";
+import ImageSports from "../../../assets/images/photo-1614377284368-a6d4f911edc7.avif";
 
 export const AboutSection = styled.section`
-  h2 {
-    margin-top: 0;
-  }
   img {
     width: 350px;
     height: 350px;
@@ -27,8 +28,8 @@ export const GridLayout = styled.div`
   grid-template-columns: 65% 35%;
   grid-gap: 12px;
   width: 100%;
-  min-height: 0; /* NEW */
-  min-width: 0; /* NEW; needed for Firefox */
+  min-height: 0;
+  min-width: 0;
   overflow: hidden;
   margin: 0 auto;
   .arrow-link {
@@ -38,8 +39,7 @@ export const GridLayout = styled.div`
 
 export const Main = styled(Link)`
   grid-area: collection1;
-
-  background-image: url("https://images.unsplash.com/photo-1588127333419-b9d7de223dcf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80");
+  background-image: url(${ImageMuscle});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,7 +60,7 @@ export const AsideTop = styled(Link)`
   }
   width: 100%;
   height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1563720223523-491ff04651de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-image: url(${ImageSuv});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -74,7 +74,7 @@ export const AsideBottom = styled(Link)`
   }
   width: 100%;
   height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1614377284368-a6d4f911edc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-image: url(${ImageSports});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -194,31 +194,13 @@ export const CollectionSection = styled.section`
     }
   }
 `;
+
+export const ArticlesSection = styled.section`
+  background-color: #b3a18f;
+`;
+
 export const FeaturedSection = styled.section`
   background-color: #b3a18f;
-  .row {
-    img {
-      width: 40%;
-      height: 400px;
-      object-fit: cover;
-      object-position: center;
-    }
-    div {
-      h2 {
-        margin: 0;
-      }
-      width: 60%;
-    }
-  }
-  .lamborghini {
-    margin-left: 20px;
-  }
-  .ferrari {
-    margin-right: 20px;
-  }
-  .ferrari-row {
-    flex-direction: row-reverse;
-  }
 `;
 export const HomeContainer = styled.div`
   .book-ride {
@@ -242,19 +224,7 @@ export const HomeContainer = styled.div`
       margin: auto;
     }
   }
-  .social-media {
-    margin: 20px;
-    font-size: 30px;
-    align-items: center;
-    i {
-      padding: 5px;
-    }
-  }
-  //Button effect:
-  .color:active {
-    position: relative;
-    top: 158px;
-  }
+
   #location-section {
     .container {
       #map {
@@ -316,19 +286,6 @@ export const HomeContainer = styled.div`
       position: relative;
       .color-picker {
         top: 80px;
-      }
-    }
-    #featured-section {
-      .row {
-        margin: auto;
-        width: 70%;
-        img {
-          width: 100%;
-        }
-        div {
-          width: 100%;
-          margin: 0;
-        }
       }
     }
     .arrow-link {
@@ -453,7 +410,7 @@ export const HomeContainer = styled.div`
 
 export const SubTitle = styled.h2``;
 export const HomeHeader = styled.div`
-  background-image: url("https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80");
+  background-image: url(${ImageHeader});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -463,48 +420,5 @@ export const HomeHeader = styled.div`
   /* transition: all 0.6s ease-in; */
   p {
     padding-bottom: 5px;
-  }
-`;
-
-export const ColorPicker = styled.div.attrs({ class: "hidden" })`
-  text-align: center;
-  position: relative;
-  top: 100px;
-  h3 {
-    font-size: 25px;
-  }
-  .colors {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border-radius: 100%;
-    border-style: solid;
-    margin: 10px;
-    cursor: pointer;
-    &:nth-child(1) {
-      background-color: orangered;
-      &:active {
-        top: 1px;
-      }
-    }
-    &:nth-child(2) {
-      background-color: blue;
-      &:active {
-        top: 1px;
-      }
-    }
-    &:nth-child(3) {
-      background-color: yellow;
-      &:active {
-        top: 1px;
-      }
-    }
-    &:nth-child(4) {
-      background-color: green;
-      &:active {
-        top: 1px;
-      }
-    }
   }
 `;

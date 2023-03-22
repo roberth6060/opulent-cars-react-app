@@ -3,8 +3,9 @@ import Footer from "../common/Footer/Footer";
 
 
 const Articles = ()=> {
-    return (  <>
-    <ArticleItems/>
+    return (
+    <>
+    <ArticleItems />
     <Footer/>
     </>
    )

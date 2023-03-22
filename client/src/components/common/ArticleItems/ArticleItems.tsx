@@ -1,4 +1,4 @@
-import { ArticleContainer, ArticleLink, ArticleImage } from "./style/ArticleItems";
+import { ArticleContainer, ArticleLink, ArticleImage } from "./style/ArticleItemsStyle";
 import Article1 from  "../../../assets/images/ezgif.com-webp-to-jpg.jpg";
 import Article2 from  "../../../assets/images/photo-1552656967-7a0991a13906.avif";
 import Article3 from  "../../../assets/images/photo-1533558701576-23c65e0272fb.avif";

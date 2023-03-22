@@ -1,4 +1,4 @@
-import {HomeContainer, HomeHeader, ColorPicker,AboutSection, CollectionSection, FeaturedSection, GridLayout, Main, AsideTop, AsideBottom} from "./style/HomePageStyle";
+import {HomeContainer, HomeHeader,ArticlesSection,AboutSection, CollectionSection, FeaturedSection, GridLayout, Main, AsideTop, AsideBottom} from "./style/HomePageStyle";
 import Button, { BUTTON_TYPE_CLASSES } from "../common/Button/Button";
 import Footer from "../common/Footer/Footer";
 import ArticleItems from "../common/ArticleItems/ArticleItems";
@@ -23,19 +23,6 @@ const HomePage = ()=> {
           <div className="book-ride">
             <BookCard/>
           </div>
-          <ColorPicker className="hidden">
-            <h3>What Color Is Your Future Car?</h3>
-            <FlexRow>
-              <span className="colors orange">
-              </span>
-              <span className="colors blue">
-              </span>
-              <span className="colors yellow">
-              </span>
-              <span className="colors green">
-              </span>
-            </FlexRow>
-          </ColorPicker>
           </Container>
     </HomeHeader>
       <AboutSection className="container">
@@ -56,9 +43,9 @@ const HomePage = ()=> {
         </FlexRow>
         </Container>
       </AboutSection>
-      <Container >
-         <ArticleItems />
-      </Container>
+        <ArticlesSection>
+           <ArticleItems  />
+        </ArticlesSection>
       <CollectionSection id="collection-section">
        <Container>
           <h2>Our Collection</h2>
