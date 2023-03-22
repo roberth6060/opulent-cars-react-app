@@ -1,4 +1,5 @@
-import {HomeContainer, HomeHeader,ArticlesSection,AboutSection, CollectionSection, FeaturedSection, GridLayout, Main, AsideTop, AsideBottom} from "./style/HomePageStyle";
+import { useNavigate } from 'react-router-dom';
+import {HomeContainer, HomeHeader,ArticlesSection, AboutImage, AboutConent, CollectionSection, FeaturedSection, GridLayout, Main, AsideTop, AsideBottom} from "./style/HomePageStyle";
 import Button, { BUTTON_TYPE_CLASSES } from "../common/Button/Button";
 import Footer from "../common/Footer/Footer";
 import ArticleItems from "../common/ArticleItems/ArticleItems";
@@ -7,7 +8,14 @@ import BookCard from "../common/BookCard/BookCard";
 import FeaturedCars from "../../components/common/FeaturedCars/FeaturedCars";
 import { Container, FlexRow } from "../../style";
 
+
 const HomePage = ()=> {
+  const navigate = useNavigate();
+  // reroute 
+ const navigateAbout = ()=> {
+  navigate("/about")
+ }
+
     return (  
     <HomeContainer>
     <HomeHeader>
@@ -25,24 +33,18 @@ const HomePage = ()=> {
           </div>
           </Container>
     </HomeHeader>
-      <AboutSection className="container">
         <Container>
           <FlexRow>
-            <img
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-              alt="Ceo"
-              width="200"
-            />
-            <div className="about-content">
+            <AboutImage />
+            <AboutConent>
               <h2>About Us</h2>
               <p>
                 At Opulent Cars, we are proud to offer an exceptional selection of the world's finest luxury cars to the Croatian market. Our showroom is home to some of the most sought-after brands, including Ford Mustang, Lamborghini, and Ferrari...
               </p>
-              <Button type="button"  buttonType={BUTTON_TYPE_CLASSES.readMore}>Read More</Button>
-            </div>
+              <Button type="button" onClick={navigateAbout} buttonType={BUTTON_TYPE_CLASSES.readMore}>Read More</Button>
+            </AboutConent>
         </FlexRow>
         </Container>
-      </AboutSection>
         <ArticlesSection>
            <ArticleItems  />
         </ArticlesSection>

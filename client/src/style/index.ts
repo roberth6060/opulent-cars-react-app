@@ -9,11 +9,10 @@ export const Container = styled.div`
 `;
 
 export const FlexRow = styled.div`
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: row !important;
   justify-content: center;
-  padding: 15px 0;
   min-height: auto;
 `;
 

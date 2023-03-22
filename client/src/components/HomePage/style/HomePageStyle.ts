@@ -4,21 +4,42 @@ import ImageHeader from "../../../assets/images/orange-car.jpg";
 import ImageSuv from "../../../assets/images/photo-1563720223523-491ff04651de.avif";
 import ImageMuscle from "../../../assets/images/photo-1588127333419-b9d7de223dcf.avif";
 import ImageSports from "../../../assets/images/photo-1614377284368-a6d4f911edc7.avif";
+import CEOImage from "../../../assets/images/ceo.avif";
 
-export const AboutSection = styled.section`
-  img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    object-position: top left;
-    margin-right: 30px;
-  }
-  .about-content {
-    position: relative;
-    display: inline-block;
-  }
+/**
+ * Header Section
+ */
+export const SubTitle = styled.h2``;
+export const HomeHeader = styled.div`
+  background-image: url(${ImageHeader});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  min-height: auto;
+  color: aliceblue;
+`;
+/**
+ * About Section
+ */
+export const AboutImage = styled.img.attrs({ src: CEOImage, alt: "CEO" })`
+  width: 25%;
+  height: 24rem;
+  object-fit: cover;
+  object-position: top left;
+  align-items: center;
 `;
 
+export const AboutConent = styled.div`
+  width: 75%;
+  position: relative;
+  padding: 0 2rem;
+  display: inline-block;
+`;
+
+/**
+ * Collection Section
+ */
 export const GridLayout = styled.div`
   display: grid;
   grid-template-areas:
@@ -46,7 +67,6 @@ export const Main = styled(Link)`
   width: 100%;
   height: 100%;
   object-fit: cover;
-
   span {
     position: absolute;
     bottom: 70px;
@@ -234,7 +254,7 @@ export const HomeContainer = styled.div`
       }
     }
   }
-  //Laptop View
+  /* //Laptop View
   @media only screen and (max-width: $desktop) {
     .arrow-link {
       position: relative;
@@ -405,20 +425,5 @@ export const HomeContainer = styled.div`
         margin: 0 !important;
       }
     }
-  }
-`;
-
-export const SubTitle = styled.h2``;
-export const HomeHeader = styled.div`
-  background-image: url(${ImageHeader});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 700px;
-  min-height: auto;
-  color: aliceblue;
-  /* transition: all 0.6s ease-in; */
-  p {
-    padding-bottom: 5px;
-  }
+  } */
 `;
