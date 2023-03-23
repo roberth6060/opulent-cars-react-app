@@ -1,3 +1,5 @@
 /** Variables **/
 //Media Query Breakpoints
-export const w = "";
+
+//Global Color
+export const arrowColor = "white";

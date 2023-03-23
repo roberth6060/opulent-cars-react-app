@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import {HomeContainer, HomeHeader,ArticlesSection, AboutImage, AboutConent, CollectionSection, FeaturedSection, GridLayout, Main, AsideTop, AsideBottom} from "./style/HomePageStyle";
+import {HomeContainer, HomeHeader,ArticlesSection, AboutImage, AboutConent, CollectionSection, FeaturedSection, GridLayout, Main, AsideTop, AsideBottom, ArrowText} from "./style/HomePageStyle";
 import Button, { BUTTON_TYPE_CLASSES } from "../common/Button/Button";
 import Footer from "../common/Footer/Footer";
 import ArticleItems from "../common/ArticleItems/ArticleItems";
@@ -15,8 +15,7 @@ const HomePage = ()=> {
  const navigateAbout = ()=> {
   navigate("/about")
  }
-
-    return (  
+  return (  
     <HomeContainer>
     <HomeHeader>
       <Container>
@@ -52,9 +51,11 @@ const HomePage = ()=> {
        <Container>
           <h2>Our Collection</h2>
       <GridLayout>
-        <Main to="/collection" className="arrow-link"><span>Muscle Cars</span></Main>
-        <AsideTop to="/collection" className="arrow-link"/>
-        <AsideBottom to="/collection" className="arrow-link"/>
+        <Main to="/collection" ><ArrowText>Muscle Cars</ArrowText></Main>
+        <AsideTop to="/collection" ><ArrowText>SUV Cars</ArrowText></AsideTop>
+        <AsideBottom to="/collection" ><ArrowText>Sports Cars</ArrowText></AsideBottom>
+
+
       </GridLayout>
         </Container>
       </CollectionSection>
@@ -68,7 +69,7 @@ const HomePage = ()=> {
       </Container>
     <Footer/>
     </HomeContainer>
-    ) 
+  ) 
 }
 
 export default HomePage;
