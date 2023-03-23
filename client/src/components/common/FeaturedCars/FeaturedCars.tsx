@@ -13,7 +13,6 @@ import { GET_COLLECTION } from "../../../services/collectionService/queries";
 import CollectionService from "../../../services/collectionService"
 import { createSelector } from "@reduxjs/toolkit";
 import { makeSelectCollection } from "../../../store/features/homPageSelector";
-import { createGlobalStyle } from "styled-components";
 
 const stateSelector = createSelector(makeSelectCollection, (collection)=> ({collection}));
 
@@ -38,12 +37,6 @@ const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
   },
  });
  
- 
-//    if(loading) return <Spinner/>
-//    if(error) return <p>Something went wrong</p>
-
-console.log(collection)
-
   //Will state management with redux: 
    const cars = collection && collection.map((car: any)=>  <CarItem {...car}/>)
     return (

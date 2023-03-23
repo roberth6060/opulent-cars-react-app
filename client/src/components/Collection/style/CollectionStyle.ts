@@ -1,15 +1,18 @@
 import styled from "styled-components";
+import { bgClrLight } from "../../../style/variables";
 
 export const CollectionContainer = styled.div`
-  width: 90%;
+  background-color: ${bgClrLight};
+  width: 100%;
   margin: auto;
+
   box-sizing: border-box;
   display: grid;
   grid-column-gap: 50px;
   grid-row-gap: 50px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  padding: 1em 0;
+  padding: 1rem 2rem;
 
   .car-card {
     background-color: #fff;

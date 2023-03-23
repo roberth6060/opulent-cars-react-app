@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { bgClrLight } from "../../../style/variables";
 
 export const ContactContainer = styled.div`
+  background-color: ${bgClrLight};
   button,
   input,
   select,

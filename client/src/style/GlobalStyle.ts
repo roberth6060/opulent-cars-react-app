@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { bgClrSec } from "./variables";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -10,6 +11,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: ${bgClrSec};
 }
 figure {
   margin: 0;

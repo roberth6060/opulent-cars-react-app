@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import {HomeContainer, HomeHeader,ArticlesSection, AboutImage, AboutConent, CollectionSection, FeaturedSection, GridLayout, Main, AsideTop, AsideBottom, ArrowText} from "./style/HomePageStyle";
+import {HomeContainer, HomeHeader,ArticlesSection, AboutImage, AboutConent, CollectionSection, FeaturedSection, GridLayout, Main, AsideTop, AsideBottom, ArrowText, AboutSection, MapSection} from "./style/HomePageStyle";
 import Button, { BUTTON_TYPE_CLASSES } from "../common/Button/Button";
 import Footer from "../common/Footer/Footer";
 import ArticleItems from "../common/ArticleItems/ArticleItems";
@@ -32,6 +32,7 @@ const HomePage = ()=> {
           </div>
           </Container>
     </HomeHeader>
+     <AboutSection>
         <Container>
           <FlexRow>
             <AboutImage />
@@ -44,18 +45,17 @@ const HomePage = ()=> {
             </AboutConent>
         </FlexRow>
         </Container>
+     </AboutSection>
         <ArticlesSection>
            <ArticleItems  />
         </ArticlesSection>
-      <CollectionSection id="collection-section">
+      <CollectionSection>
        <Container>
           <h2>Our Collection</h2>
       <GridLayout>
         <Main to="/collection" ><ArrowText>Muscle Cars</ArrowText></Main>
         <AsideTop to="/collection" ><ArrowText>SUV Cars</ArrowText></AsideTop>
         <AsideBottom to="/collection" ><ArrowText>Sports Cars</ArrowText></AsideBottom>
-
-
       </GridLayout>
         </Container>
       </CollectionSection>
@@ -64,9 +64,11 @@ const HomePage = ()=> {
           <FeaturedCars/>
         </Container>
       </FeaturedSection>
-      <Container>
+      <MapSection>
+        <Container>
         <LeafLetMap/>   
       </Container>
+      </MapSection>
     <Footer/>
     </HomeContainer>
   ) 

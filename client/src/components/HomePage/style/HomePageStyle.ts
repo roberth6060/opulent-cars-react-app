@@ -5,7 +5,7 @@ import ImageSuv from "../../../assets/images/photo-1563720223523-491ff04651de.av
 import ImageMuscle from "../../../assets/images/photo-1588127333419-b9d7de223dcf.avif";
 import ImageSports from "../../../assets/images/photo-1614377284368-a6d4f911edc7.avif";
 import CEOImage from "../../../assets/images/ceo.avif";
-import { arrowColor } from "../../../style/variables";
+import { arrowColor, bgClrLight, bgClrMain } from "../../../style/variables";
 
 /**
  * Header Section
@@ -153,6 +153,7 @@ export const GridLayout = styled.div`
 `;
 
 export const CollectionSection = styled.section`
+  background-color: ${bgClrLight};
   a {
     font-size: 35px;
     color: rgba(255, 255, 255, 0);
@@ -162,6 +163,12 @@ export const CollectionSection = styled.section`
   }
 `;
 
+export const MapSection = styled.section`
+  background-color: ${bgClrLight};
+`;
+export const AboutSection = styled.section`
+  background-color: ${bgClrLight};
+`;
 /**
  * Featured Section
  */
@@ -172,7 +179,7 @@ export const FeaturedSection = styled.section`
  * Article Section
  */
 export const ArticlesSection = styled.section`
-  background-color: #b3a18f;
+  background-color: ${bgClrMain};
 `;
 export const HomeContainer = styled.div`
   .book-ride {

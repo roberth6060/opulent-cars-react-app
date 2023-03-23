@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 export const FeaturedCarsContainer = styled.div`
-  display: flex;
+  /* background-color: red; */
+  /* margin: auto; */
+  text-align: center;
+  width: 100%;
+  /* display: flex;
   max-width: 1024px;
   width: 100%;
   flex-direction: column;
@@ -10,11 +14,14 @@ export const FeaturedCarsContainer = styled.div`
   margin-left: 4px;
   margin-right: 4px;
   margin-bottom: 10px;
-  margin: auto;
+  margin: auto; */
 `;
 
 export const CarsContainer = styled.div`
+  /* background-color: red; */
+  margin: auto;
   max-width: 1024px;
+  min-width: 100%;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
@@ -23,5 +30,6 @@ export const CarsContainer = styled.div`
 
   ul {
     display: flex;
+    flex-direction: row !important;
   }
 `;

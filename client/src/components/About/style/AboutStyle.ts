@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { bgClrLight } from "../../../style/variables";
 
-export const AboutContainer = styled.div``;
+export const AboutContainer = styled.div`
+  background-color: ${bgClrLight};
+`;
 export const ImageContainer = styled.div`
   h2 {
     text-align: center;
