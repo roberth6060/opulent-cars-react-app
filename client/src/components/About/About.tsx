@@ -4,6 +4,7 @@ import {
   CEOIMage,
   Content,
   ImageContainer,
+  MissionStatement,
   ServiceImage,
   Title,
 } from "./style/AboutStyle";
@@ -17,7 +18,16 @@ const About = () => {
     <>
       <AboutContainer>
         <Container>
-          <CEOIMage />
+          <FlexRow>
+            <CEOIMage />
+            <MissionStatement>
+              "Our mission is to provide an unparalleled luxury car buying
+              experience that exceeds our customers' expectations by offering
+              the highest quality and most exclusive selection of vehicles,
+              combined with exceptional customer service and a welcoming and
+              luxurious environment."
+            </MissionStatement>
+          </FlexRow>
           <Title>About Us</Title>
           <Content>
             At Opulent Cars, we are proud to offer an exceptional selection of
