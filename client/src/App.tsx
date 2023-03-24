@@ -23,9 +23,8 @@ const App: React.FC = () => {
         console.log(error)
       });
       if(collection)setCollection(collection);
-      console.log("Colection", collection);
+      console.log("%cData","color: #e205ba", collection)
     }
-    
     useEffect(()=> {
       fetchCollection();
     }, [])

@@ -17,6 +17,7 @@ import { makeSelectCollection } from "../../../store/features/homPageSelector";
 const stateSelector = createSelector(makeSelectCollection, (collection)=> ({collection}));
 
 const FeaturedCars = ()=> {
+    
 const [current, setCurrent] = useState(0);
 const [collection, setCollection] = useState([]);
 
@@ -31,7 +32,7 @@ const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
  const {loading, error, data }= useQuery(GET_COLLECTION, {
   onCompleted(data) {
-
+    
     console.log("%cdata", "color: blue;", data)
       setCollection(data.getCars.filter((car: ICollection)=>car.isFeaturedCar === true));
   },
@@ -76,8 +77,6 @@ const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
         </FeaturedCarsContainer>
       </>
        )
- 
-  
 }
 
 export default FeaturedCars

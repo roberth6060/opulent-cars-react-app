@@ -15,13 +15,18 @@ export const FeaturedCarsContainer = styled.div`
   margin-right: 4px;
   margin-bottom: 10px;
   margin: auto; */
+
+  .BrainhubCarousel__trackContainer {
+    /* background-color: blue; */
+    margin: auto;
+  }
 `;
 
 export const CarsContainer = styled.div`
   /* background-color: red; */
   margin: auto;
   max-width: 1024px;
-  min-width: 100%;
+  /* min-width: 100%; */
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
