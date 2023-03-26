@@ -15,11 +15,11 @@ const Navigation = ()=> {
             <li><NavLink to="/about">About</NavLink></li>
             <li>
             <li><NavLink to="/collection">Collection</NavLink></li>
-              <DropDown>
+              {/* <DropDown>
                 <li><NavLink to ="/collection">Muscle Cars</NavLink></li>
                 <li><NavLink to ="/collection">Suv Cars</NavLink></li>
                 <li><NavLink to ="/collection">Sports Cars</NavLink></li>
-              </DropDown>
+              </DropDown> */}
             </li>
             <Logo>Opulent Cars</Logo>
              <li><NavLink to ="" className="hidden-text">Shop</NavLink></li>

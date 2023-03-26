@@ -1,7 +1,13 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'; 
 import { Container, FlexRow } from "../../../style";
 import { FooterContainer } from "./style/FooterStyle";
+import { faSchool } from "@fortawesome/free-solid-svg-icons";
+
+//  library.add(faFacebookF); 
 
 const Footer = ()=> {
+ 
     return (
     <FooterContainer>
             <Container>
@@ -16,11 +22,12 @@ const Footer = ()=> {
               <li>+385 xx xxx xxxx</li>
               <li>haye.robert@yahoo.com</li>
             </ul>
-            {/* <div className="social-media row">
-              <a href="https://www.facebook.com"><i className="fa-brands fa-facebook"></i></a>
+            <div className="social-media row">
+              {/* <a href="https://www.facebook.com"></a> */}
+                {/* <a href=""><FontAwesomeIcon icon={faSchool} /></a>  */}
               <a href="https://www.instagram.com/"><i className="fa-brands fa-instagram"></i></a>
               <a href="https://twitter.com/"><i className="fa-brands fa-twitter"></i></a>
-            </div> */}
+            </div>
            </FlexRow>
           </Container>
          </FooterContainer>
