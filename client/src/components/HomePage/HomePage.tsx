@@ -8,13 +8,13 @@ import BookCard from "../common/BookCar/BookCar";
 import FeaturedCars from "../../components/common/FeaturedCars/FeaturedCars";
 import { Container, FlexRow } from "../../style";
 
-
 const HomePage = ()=> {
   const navigate = useNavigate();
   // reroute 
  const navigateAbout = ()=> {
   navigate("/about")
  }
+
   return (  
     <HomeContainer>
     <HomeHeader>

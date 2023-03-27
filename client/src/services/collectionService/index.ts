@@ -10,8 +10,8 @@ class CollectionService {
         throw error;
       });
 
-    if (response && response.data)
-      return response.data as Get_Collection_getCars[];
+    if (response && response.data && response.data.getCars)
+      return response.data.getCars as Get_Collection_getCars[];
     //or return empty array
     return [];
   }
